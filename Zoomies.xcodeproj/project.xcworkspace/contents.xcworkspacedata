@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Zoomies.xcodeproj">
+      location = "self:/Users/jdcorn/Desktop/PawPin/PawPin/Zoomies.xcodeproj">
    </FileRef>
 </Workspace>

@@ -6,6 +6,7 @@
 //  Copyright © 2020 Jon Corn. All rights reserved.
 //
 
+
 import Foundation
 import FirebaseAuth
 import Firebase
@@ -33,12 +34,5 @@ class FirebaseNetworking {
   static func showErrorLabel(message: String, errorLabel: UILabel) {
     errorLabel.text = message
     errorLabel.alpha = 1
-  }
-  
-  // MARK:  Transition to home
-  func transitionToHome() {
-    let storyboard = UIStoryboard()
-    let homeViewController = storyboard.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-    
   }
 }

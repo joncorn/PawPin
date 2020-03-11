@@ -12,6 +12,10 @@
 		6D8392FA2416B95A00398C3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D8392F82416B95A00398C3C /* Main.storyboard */; };
 		6D8392FC2416B95E00398C3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D8392FB2416B95E00398C3C /* Assets.xcassets */; };
 		6D8392FF2416B95E00398C3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D8392FD2416B95E00398C3C /* LaunchScreen.storyboard */; };
+		A98F34CB24198F9300AAEA5D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98F34CA24198F9300AAEA5D /* Home.storyboard */; };
+		A98F34CE24198FBD00AAEA5D /* Parks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98F34CC24198FBD00AAEA5D /* Parks.storyboard */; };
+		A98F34D1241990CF00AAEA5D /* Connect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98F34D0241990CF00AAEA5D /* Connect.storyboard */; };
+		A98F34D62419912D00AAEA5D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98F34D42419912D00AAEA5D /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		6D8392FB2416B95E00398C3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D8392FE2416B95E00398C3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D8393002416B95E00398C3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A98F34CA24198F9300AAEA5D /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		A98F34CD24198FBD00AAEA5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Zoomies/Views/Storyboards/Base.lproj/Parks.storyboard; sourceTree = "<group>"; };
+		A98F34D0241990CF00AAEA5D /* Connect.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Connect.storyboard; sourceTree = "<group>"; };
+		A98F34D52419912D00AAEA5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Zoomies/Views/Storyboards/Main/Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +62,7 @@
 		6D8392F12416B95A00398C3C /* Zoomies */ = {
 			isa = PBXGroup;
 			children = (
-				6D8393082416BB1300398C3C /* Models */,
+				A98F34CF2419900000AAEA5D /* Models */,
 				6D8393092416BB1A00398C3C /* Views */,
 				6D83930A2416BB1E00398C3C /* Controllers */,
 				6D83930F2416BB5600398C3C /* Utilities */,
@@ -66,8 +74,8 @@
 		6D8393062416BAFB00398C3C /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				6D8392F82416B95A00398C3C /* Main.storyboard */,
-				6D8392FD2416B95E00398C3C /* LaunchScreen.storyboard */,
+				A98F34D3241990FF00AAEA5D /* Launch Screen */,
+				A98F34D2241990F500AAEA5D /* Main */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -81,13 +89,6 @@
 				6D8393002416B95E00398C3C /* Info.plist */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		6D8393082416BB1300398C3C /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		6D8393092416BB1A00398C3C /* Views */ = {
@@ -142,6 +143,33 @@
 			children = (
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A98F34CF2419900000AAEA5D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A98F34D2241990F500AAEA5D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6D8392F82416B95A00398C3C /* Main.storyboard */,
+				A98F34CA24198F9300AAEA5D /* Home.storyboard */,
+				A98F34CC24198FBD00AAEA5D /* Parks.storyboard */,
+				A98F34D0241990CF00AAEA5D /* Connect.storyboard */,
+				A98F34D42419912D00AAEA5D /* Profile.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A98F34D3241990FF00AAEA5D /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				6D8392FD2416B95E00398C3C /* LaunchScreen.storyboard */,
+			);
+			path = "Launch Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,7 +231,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D8392FF2416B95E00398C3C /* LaunchScreen.storyboard in Resources */,
+				A98F34CB24198F9300AAEA5D /* Home.storyboard in Resources */,
 				6D8392FC2416B95E00398C3C /* Assets.xcassets in Resources */,
+				A98F34D1241990CF00AAEA5D /* Connect.storyboard in Resources */,
+				A98F34CE24198FBD00AAEA5D /* Parks.storyboard in Resources */,
+				A98F34D62419912D00AAEA5D /* Profile.storyboard in Resources */,
 				6D8392FA2416B95A00398C3C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +269,22 @@
 				6D8392FE2416B95E00398C3C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A98F34CC24198FBD00AAEA5D /* Parks.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A98F34CD24198FBD00AAEA5D /* Base */,
+			);
+			name = Parks.storyboard;
+			sourceTree = "<group>";
+		};
+		A98F34D42419912D00AAEA5D /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A98F34D52419912D00AAEA5D /* Base */,
+			);
+			name = Profile.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -361,8 +409,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GL869MT3HY;
-				INFOPLIST_FILE = Zoomies/Info.plist;
+				DEVELOPMENT_TEAM = M2R26CX5Y9;
+				INFOPLIST_FILE = "$(SRCROOT)/Zoomies/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,8 +427,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GL869MT3HY;
-				INFOPLIST_FILE = Zoomies/Info.plist;
+				DEVELOPMENT_TEAM = M2R26CX5Y9;
+				INFOPLIST_FILE = "$(SRCROOT)/Zoomies/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n5P-xY-2Fq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="lR1-RQ-jPB">
+            <objects>
+                <viewController id="n5P-xY-2Fq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VPQ-S4-5Fj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello &quot;Name&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiy-Zv-jZd">
+                                <rect key="frame" x="20.5" y="59" width="373" height="62.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oB-WC-fbX">
+                                <rect key="frame" x="20.5" y="151.5" width="207" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="S3D-l7-zRU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type status here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3VH-0m-W6D">
+                                <rect key="frame" x="20.5" y="184" width="373" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Nqf-h4-Tj2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Check Ins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnv-Hv-0e9">
+                                <rect key="frame" x="20.5" y="259" width="373" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dZj-z6-Q7x">
+                                <rect key="frame" x="20.5" y="315" width="373" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5h-Xi-ODF">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="60"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2e7-L8-y5O">
+                                        <rect key="frame" x="0.0" y="60" width="46" height="60"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2s-Yq-jxn">
+                                        <rect key="frame" x="0.0" y="120" width="46" height="60"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="7NE-I2-fdA"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0oB-WC-fbX" firstAttribute="top" secondItem="kiy-Zv-jZd" secondAttribute="bottom" constant="30" id="3De-AI-rY2"/>
+                            <constraint firstItem="dZj-z6-Q7x" firstAttribute="width" secondItem="VPQ-S4-5Fj" secondAttribute="width" multiplier="0.9" id="7Dy-Q5-I9T"/>
+                            <constraint firstItem="dZj-z6-Q7x" firstAttribute="leading" secondItem="kiy-Zv-jZd" secondAttribute="leading" id="FLH-Jn-Tma"/>
+                            <constraint firstItem="kiy-Zv-jZd" firstAttribute="top" secondItem="ik8-vo-JEX" secondAttribute="top" constant="15" id="HPs-mb-jER"/>
+                            <constraint firstItem="lnv-Hv-0e9" firstAttribute="width" secondItem="VPQ-S4-5Fj" secondAttribute="width" multiplier="0.9" id="JHY-y3-c9e"/>
+                            <constraint firstItem="lnv-Hv-0e9" firstAttribute="leading" secondItem="kiy-Zv-jZd" secondAttribute="leading" id="MeO-AH-GHU"/>
+                            <constraint firstItem="kiy-Zv-jZd" firstAttribute="height" secondItem="VPQ-S4-5Fj" secondAttribute="height" multiplier="0.07" id="RBs-ED-VZB"/>
+                            <constraint firstItem="3VH-0m-W6D" firstAttribute="leading" secondItem="kiy-Zv-jZd" secondAttribute="leading" id="UDv-b7-8Ne"/>
+                            <constraint firstItem="kiy-Zv-jZd" firstAttribute="width" secondItem="VPQ-S4-5Fj" secondAttribute="width" multiplier="0.9" id="VA2-Xy-Vmk"/>
+                            <constraint firstItem="kiy-Zv-jZd" firstAttribute="centerX" secondItem="ik8-vo-JEX" secondAttribute="centerX" id="XuE-Xu-Y0g"/>
+                            <constraint firstItem="0oB-WC-fbX" firstAttribute="width" secondItem="VPQ-S4-5Fj" secondAttribute="width" multiplier="0.5" id="hLy-dZ-nn0"/>
+                            <constraint firstItem="lnv-Hv-0e9" firstAttribute="top" secondItem="3VH-0m-W6D" secondAttribute="bottom" constant="25" id="jn7-md-523"/>
+                            <constraint firstItem="0oB-WC-fbX" firstAttribute="leading" secondItem="kiy-Zv-jZd" secondAttribute="leading" id="se0-bk-O4d"/>
+                            <constraint firstItem="3VH-0m-W6D" firstAttribute="width" secondItem="VPQ-S4-5Fj" secondAttribute="width" multiplier="0.9" id="tjF-Ta-Gxm"/>
+                            <constraint firstItem="3VH-0m-W6D" firstAttribute="top" secondItem="0oB-WC-fbX" secondAttribute="bottom" constant="7.5" id="xFJ-bk-7Xw"/>
+                            <constraint firstItem="dZj-z6-Q7x" firstAttribute="top" secondItem="lnv-Hv-0e9" secondAttribute="bottom" constant="20" id="xIw-kq-NKx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ik8-vo-JEX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="2Kv-fe-oRQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OX9-7G-b3j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="541" y="-191"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house" catalog="system" width="64" height="54"/>
+        <image name="house.fill" catalog="system" width="64" height="52"/>
+    </resources>
+</document>

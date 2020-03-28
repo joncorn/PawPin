@@ -6,8 +6,7 @@
 //  Copyright © 2020 Jon Corn. All rights reserved.
 //
 
-import Foundation
-import UIKit.UIImage
+import UIKit
 
 class Dog {
   

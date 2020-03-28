@@ -18,13 +18,14 @@ class LandingViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    setupElements()
+    setupButtons()
   }
   
   // MARK: - Methods
   
-  func setupElements() {
-    StyleGuide.styleFilledButton(SignUpButton)
-    StyleGuide.styledHollowButton(LogInButton)
+  func setupButtons() {
+    // 73 is the height of the buttons
+    SignUpButton.layer.cornerRadius = 73 / 2
+    LogInButton.layer.cornerRadius = 73 / 2
   }
 }

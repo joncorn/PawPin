@@ -12,8 +12,15 @@ import FirebaseAuth
 class LogInViewController: UIViewController {
   
   // MARK: - Outlets
+  
+  // views
+  @IBOutlet weak var emailView: UIView!
+  @IBOutlet weak var passwordView: UIView!
+  
+  // text fields
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
+  
   @IBOutlet weak var loginButton: UIButton!
   @IBOutlet weak var errorLabel: UILabel!
   
@@ -76,8 +83,8 @@ class LogInViewController: UIViewController {
     //  Hide error label
     errorLabel.alpha = 0
     //  Stylize elements
-    StyleGuide.styleTextField(emailTextField)
-    StyleGuide.styleTextField(passwordTextField)
-    StyleGuide.styleFilledButton(loginButton)
+    emailView.layer.cornerRadius = 10
+    passwordView.layer.cornerRadius = 10
+    loginButton.layer.cornerRadius = 10
   }
 }

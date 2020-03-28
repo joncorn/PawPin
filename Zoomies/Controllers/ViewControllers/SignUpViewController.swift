@@ -13,6 +13,15 @@ import Firebase
 class SignUpViewController: UIViewController {
   
   // MARK: - Outlets
+  
+  // Views
+  @IBOutlet weak var passwordView: UIView!
+  @IBOutlet weak var emailView: UIView!
+  @IBOutlet weak var lastNameView: UIView!
+  @IBOutlet weak var firstNameView: UIView!
+  
+  
+  // Text Fields
   @IBOutlet weak var firstNameTextField: UITextField!
   @IBOutlet weak var lastNameTextField: UITextField!
   @IBOutlet weak var emailTextField: UITextField!
@@ -89,11 +98,11 @@ class SignUpViewController: UIViewController {
   func setupElements() {
     //  Hide error label
     errorLabel.alpha = 0
-    //  Stylize elements
-    StyleGuide.styleTextField(firstNameTextField)
-    StyleGuide.styleTextField(lastNameTextField)
-    StyleGuide.styleTextField(emailTextField)
-    StyleGuide.styleTextField(passwordTextField)
-    StyleGuide.styleFilledButton(signUpButton)
+    //  textfield views height = 65
+    firstNameView.layer.cornerRadius = 10
+    lastNameView.layer.cornerRadius = 10
+    passwordView.layer.cornerRadius = 10
+    emailView.layer.cornerRadius = 10
+    signUpButton.layer.cornerRadius = 10
   }
 }

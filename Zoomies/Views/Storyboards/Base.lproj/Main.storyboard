@@ -98,7 +98,7 @@
                                         <rect key="frame" x="16" y="12" width="358" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.7725490196" green="0.81176470590000005" blue="0.75294117650000003" alpha="0.53799229449999997" colorSpace="custom" customColorSpace="sRGB"/>
@@ -267,7 +267,7 @@
                                         <rect key="frame" x="16" y="12" width="358" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.7725490196" green="0.81176470590000005" blue="0.75294117650000003" alpha="0.53799229449999997" colorSpace="custom" customColorSpace="sRGB"/>
@@ -364,7 +364,6 @@
             <point key="canvasLocation" x="-436.23188405797106" y="112.5"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="0.19504329455516084" green="0.21379034319504864" blue="0.20549007141941883" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
         <image name="Pawpin" width="221" height="65"/>
         <image name="dogSignUpBanner" width="375" height="141"/>

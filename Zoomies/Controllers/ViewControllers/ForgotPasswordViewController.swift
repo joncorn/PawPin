@@ -24,6 +24,9 @@ class ForgotPasswordViewController: UIViewController {
   }
   
   // MARK: - Actions
+  @IBAction func backToLoginButtonTapped(_ sender: Any) {
+    navigationController?.popViewController(animated: true)
+  }
   
   
   // MARK: - Methods

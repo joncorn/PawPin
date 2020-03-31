@@ -30,6 +30,8 @@
 		6DBA9F592417FBAA0087002F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA9F582417FBAA0087002F /* Constants.swift */; };
 		6DBA9F5B2417FC1C0087002F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA9F5A2417FC1C0087002F /* HomeViewController.swift */; };
 		6DBA9F5E24182D240087002F /* FirebaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA9F5D24182D240087002F /* FirebaseNetworking.swift */; };
+		6DDCCCE12433D92E00892A8B /* SignUpEmailPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDCCCE02433D92E00892A8B /* SignUpEmailPassViewController.swift */; };
+		6DDCCCE32433E3D700892A8B /* SignupUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDCCCE22433E3D700892A8B /* SignupUtility.swift */; };
 		E028947B13E8A55FC54C126A /* Pods_Zoomies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F50C102DCAAA7FC7ABFBB3C /* Pods_Zoomies.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		6DBA9F582417FBAA0087002F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6DBA9F5A2417FC1C0087002F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6DBA9F5D24182D240087002F /* FirebaseNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworking.swift; sourceTree = "<group>"; };
+		6DDCCCE02433D92E00892A8B /* SignUpEmailPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpEmailPassViewController.swift; sourceTree = "<group>"; };
+		6DDCCCE22433E3D700892A8B /* SignupUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupUtility.swift; sourceTree = "<group>"; };
 		97612753EA6FAD1A0C35BFA1 /* Pods-Zoomies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zoomies.release.xcconfig"; path = "Target Support Files/Pods-Zoomies/Pods-Zoomies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +175,7 @@
 			children = (
 				6DBA9F542417F3940087002F /* LandingViewController.swift */,
 				6DBA9F522417F15A0087002F /* SignUpViewController.swift */,
+				6DDCCCE02433D92E00892A8B /* SignUpEmailPassViewController.swift */,
 				6DBA9F502417F0F50087002F /* LogInViewController.swift */,
 				6DBA9F5A2417FC1C0087002F /* HomeViewController.swift */,
 				6D09495B24303E6100633AB4 /* ForgotPasswordViewController.swift */,
@@ -210,6 +215,7 @@
 				6DBA9F4C2417ED3A0087002F /* StyleGuide.swift */,
 				6DBA9F4E2417EF380087002F /* LoginUtility.swift */,
 				6DBA9F582417FBAA0087002F /* Constants.swift */,
+				6DDCCCE22433E3D700892A8B /* SignupUtility.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DBA9F532417F15A0087002F /* SignUpViewController.swift in Sources */,
+				6DDCCCE32433E3D700892A8B /* SignupUtility.swift in Sources */,
 				6DBA9F552417F3940087002F /* LandingViewController.swift in Sources */,
 				6D8576CF24194DEB007E0A74 /* Dog.swift in Sources */,
 				6D8392F32416B95A00398C3C /* AppDelegate.swift in Sources */,
@@ -364,6 +371,7 @@
 				6DBA9F592417FBAA0087002F /* Constants.swift in Sources */,
 				6D8576D624195553007E0A74 /* PersonController.swift in Sources */,
 				6D8576D224195476007E0A74 /* DogPark.swift in Sources */,
+				6DDCCCE12433D92E00892A8B /* SignUpEmailPassViewController.swift in Sources */,
 				6D8576DC2419556E007E0A74 /* CheckInController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -45,6 +45,7 @@ class SignUpEmailPassViewController: UIViewController {
   
   // MARK: - ACTIONS
   @IBAction func submitButtonTapped(_ sender: Any) {
+    // If there aren't any values in the name fields, user won't be created
     guard let firstName = firstNameLanding,
       let lastName = lastNameLanding else { return }
 
@@ -58,7 +59,7 @@ class SignUpEmailPassViewController: UIViewController {
       let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
       let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
       
-      // ..and create user
+      // MARK:  Create user
       FirebaseNetworking.createUser(firstName: firstName, lastName: lastName, email: email, password: password, errorLabel: errorLabel) { (error) in
         if !error {
           print("There was an error.")
@@ -93,5 +94,4 @@ class SignUpEmailPassViewController: UIViewController {
     window.makeKeyAndVisible()
   }
   
-
 }

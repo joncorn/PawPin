@@ -28,6 +28,12 @@ class SignUpViewController: UIViewController {
     setupElements()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    errorLabel.alpha = 0
+  }
+  
   // MARK: - ACTIONS
   @IBAction func nextButtonTapped(_ sender: Any) {
     

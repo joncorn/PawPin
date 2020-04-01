@@ -43,6 +43,12 @@ class SignUpEmailPassViewController: UIViewController {
     setupViews()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    errorLabel.alpha = 0
+  }
+  
   // MARK: - ACTIONS
   @IBAction func submitButtonTapped(_ sender: Any) {
     // If there aren't any values in the name fields, user won't be created

@@ -31,6 +31,12 @@ class LogInViewController: UIViewController {
     setupElements()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    errorLabel.alpha = 0
+  }
+  
   // MARK: - Actions
   @IBAction func logInButtonTapped(_ sender: Any) {
     let error = validateFields()

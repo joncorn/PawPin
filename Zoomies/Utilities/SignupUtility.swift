@@ -34,13 +34,35 @@ class SignupUtility {
       return "Please fill in both fields"
     }
     
+    // Check if email is in a valid format
+    let cleanedEmail = email.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+    if LoginUtility.isEmailValid(cleanedEmail) == false {
+      return "Please enter a valid email"
+    }
+    
     // Check if password is secure
     let cleanedPassword = password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
     if LoginUtility.isPasswordValid(cleanedPassword) == false {
-      return "Please make sure your password is at least 8 characters, and contains a special character and number."
+      return "Please make sure your password is at least 8 characters, and contains a number and a special character."
     }
     
     // Otherwise, don't return a value
     return nil
   }
+  
+  func validateEmail(email: String) -> String? {
+    
+    // Check if field has a value
+    if email.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+      return "Please enter your email"
+    }
+    
+    // Check if email is in a valid format
+    let cleanedEmail = email.trimmingCharacters(in: .whitespacesAndNewlines)
+    if LoginUtility.isEmailValid(cleanedEmail) == false {
+      return "Please enter a valid email"
+    }
+    return nil
+  }
+
 }

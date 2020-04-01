@@ -77,9 +77,15 @@ class LogInViewController: UIViewController {
       passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
       return "Please fill in both fields"
     }
+    
+    let cleanedEmail = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+    if LoginUtility.isEmailValid(cleanedEmail) == false {
+      return "Please enter a valid email"
+    }
+    
     let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
     if LoginUtility.isPasswordValid(cleanedPassword) == false {
-      return "Please make sure your password is at least 8 characters, and contains a special character and number"
+      return "Please make sure your password is at least 8 characters, and contains a number and a special character"
     }
     return nil
   }

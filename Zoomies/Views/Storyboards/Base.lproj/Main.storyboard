@@ -136,24 +136,33 @@
                                     <color key="titleColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="nFy-hW-CMR" kind="show" identifier="toEmailPassVC" id="EYN-jG-Oxj"/>
+                                    <action selector="nextButtonTapped:" destination="dT1-Kh-zwD" eventType="touchUpInside" id="SHh-uJ-j0h"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="signUpBottomCornerArt" translatesAutoresizingMaskIntoConstraints="NO" id="mAZ-BL-XnA">
                                 <rect key="frame" x="24" y="771" width="87" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="oeJ-xs-8Dp">
+                                <rect key="frame" x="40" y="463" width="334" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2LX-xU-Gi7"/>
                     </view>
                     <navigationItem key="navigationItem" id="z38-Ib-59U"/>
                     <connections>
+                        <outlet property="errorLabel" destination="oeJ-xs-8Dp" id="CbR-Xn-j8R"/>
                         <outlet property="firstNameTextField" destination="Aez-S9-BcP" id="i5b-LL-fax"/>
                         <outlet property="firstNameView" destination="6Ly-2e-uio" id="hDq-eL-N9Q"/>
                         <outlet property="lastNameTextField" destination="0mb-ga-w3e" id="NkZ-gY-jME"/>
                         <outlet property="lastNameView" destination="24u-Vk-VFH" id="jWC-Al-gLh"/>
                         <outlet property="signUpButton" destination="8nd-Nv-bX1" id="02Z-Ex-jPM"/>
+                        <segue destination="nFy-hW-CMR" kind="show" identifier="toEmailPassVC" id="5uc-uD-gC4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OEj-VZ-dd3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -312,7 +321,7 @@
         <!--Log In View Controller-->
         <scene sceneID="GUl-HT-9jU">
             <objects>
-                <viewController id="W9b-Ui-9Kl" customClass="LogInViewController" customModule="Zoomies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="W9b-Ui-9Kl" customClass="LogInViewController" customModule="Zoomies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mj1-Lu-qwO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -536,6 +545,9 @@
                                 <state key="normal" title="SEND">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="kLV-BH-hDz" kind="show" id="mhX-Eb-XOW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -553,10 +565,10 @@
             </objects>
             <point key="canvasLocation" x="2137.68115942029" y="462.72321428571428"/>
         </scene>
-        <!--Forgot Password View Controller-->
+        <!--Password Reset Sent View Controller-->
         <scene sceneID="Okc-dg-c6T">
             <objects>
-                <viewController id="kLV-BH-hDz" customClass="ForgotPasswordViewController" customModule="Zoomies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kLV-BH-hDz" customClass="PasswordResetSentViewController" customModule="Zoomies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0w5-ec-wgA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -569,7 +581,7 @@
                                     <color key="titleColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backToLoginButtonTapped:" destination="Zks-NG-aj9" eventType="touchUpInside" id="aw0-8G-aw8"/>
+                                    <action selector="backToLoginButtonTapped:" destination="kLV-BH-hDz" eventType="touchUpInside" id="KZF-zO-qzf"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="openEnvelope" translatesAutoresizingMaskIntoConstraints="NO" id="Zex-jH-5Sa">
@@ -590,7 +602,6 @@
                     <navigationItem key="navigationItem" id="tS3-7a-Ob3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VvW-MA-pEc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="Zks-NG-aj9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2876.811594202899" y="462.72321428571428"/>
         </scene>
@@ -600,6 +611,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4wX-yV-h28" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nBN-UE-9Hm">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

@@ -37,7 +37,7 @@ class FirebaseNetworking {
   }
   
   // MARK: - RESET PASSWORD
-  func resetPassword(email: String, onSuccess: @escaping() -> Void, onError: @escaping(_ errorMessage: String) -> Void) {
+  static func resetPassword(email: String, onSuccess: @escaping() -> Void, onError: @escaping(_ errorMessage: String) -> Void) {
     Auth.auth().sendPasswordReset(withEmail: email) { (error) in
       if error == nil {
         onSuccess()

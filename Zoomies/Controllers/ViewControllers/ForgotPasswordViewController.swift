@@ -10,29 +10,69 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController {
   
-  // MARK: - Outlets
+  // MARK: - PROPERTIES
+  let activityIndicator = UIActivityIndicatorView(style: .medium)
+  
+  // MARK: - OUTLETS
   @IBOutlet weak var emailView: UIView!
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var errorLabel: UILabel!
-  @IBOutlet weak var submitButton: UIButton!
+  @IBOutlet weak var sendButton: UIButton!
   
-  // MARK: - View Lifecycle
+  // MARK: - VIEW LIFECYCLE
   override func viewDidLoad() {
     super.viewDidLoad()
     
     setupElements()
   }
   
-  // MARK: - Actions
+  // MARK: - ACTIONS
+  @IBAction func sendButtonTapped(_ sender: Any) {
+    
+    // validate email
+//    let error = SignupUtility().validateEmail(email: emailTextField)
+//    if error != nil {
+//      showError(error!)
+//    } else { return }
+    
+    guard let email = emailTextField.text, email != "" else {
+      self.showError("Enter your email")
+      return
+    }
+    
+    let error = SignupUtility().validateEmail(email: email)
+    if error != nil {
+      showError(error!)
+      return
+    }
+    
+    // password reset call
+    FirebaseNetworking.resetPassword(email: email, onSuccess: {
+      self.view.endEditing(true)
+      self.performSegue(withIdentifier: "toEmailSentVC", sender: self)
+    }) { (error) in
+      self.showError("Please enter a valid email")
+    }
+  }
+  
+  @IBAction func backToLoginButtonTapped(_ sender: Any) {
+    self.popBack(2)
+  }
   
   
-  // MARK: - Methods
+  // MARK: - METHODS
+  
   func setupElements() {
     //  Hide error label
     errorLabel.alpha = 0
     //  Stylize elements
     emailView.layer.cornerRadius = 10
-    submitButton.layer.cornerRadius = 10
+    sendButton.layer.cornerRadius = 10
+  }
+  
+  func showError(_ message: String) {
+    errorLabel.text = message
+    errorLabel.alpha = 1
   }
   
 }

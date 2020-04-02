@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6D09495C24303E6100633AB4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D09495B24303E6100633AB4 /* ForgotPasswordViewController.swift */; };
+		6D15F91424359B0600221E22 /* AboutDogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D15F91324359B0600221E22 /* AboutDogViewController.swift */; };
 		6D8392F32416B95A00398C3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8392F22416B95A00398C3C /* AppDelegate.swift */; };
 		6D8392F52416B95A00398C3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8392F42416B95A00398C3C /* SceneDelegate.swift */; };
 		6D8392FA2416B95A00398C3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D8392F82416B95A00398C3C /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		3F50C102DCAAA7FC7ABFBB3C /* Pods_Zoomies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zoomies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		556020C5CEF3D7E1030635C2 /* Pods-Zoomies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zoomies.debug.xcconfig"; path = "Target Support Files/Pods-Zoomies/Pods-Zoomies.debug.xcconfig"; sourceTree = "<group>"; };
 		6D09495B24303E6100633AB4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		6D15F91324359B0600221E22 /* AboutDogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutDogViewController.swift; sourceTree = "<group>"; };
 		6D8392EF2416B95A00398C3C /* Zoomies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zoomies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D8392F22416B95A00398C3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D8392F42416B95A00398C3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				6DBA9F5A2417FC1C0087002F /* HomeViewController.swift */,
 				6D09495B24303E6100633AB4 /* ForgotPasswordViewController.swift */,
 				6DDCCCE72434072100892A8B /* PasswordResetSentViewController.swift */,
+				6D15F91324359B0600221E22 /* AboutDogViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				6DBA9F532417F15A0087002F /* SignUpViewController.swift in Sources */,
 				6DDCCCE32433E3D700892A8B /* SignupUtility.swift in Sources */,
 				6DBA9F552417F3940087002F /* LandingViewController.swift in Sources */,
+				6D15F91424359B0600221E22 /* AboutDogViewController.swift in Sources */,
 				6DDCCCE82434072100892A8B /* PasswordResetSentViewController.swift in Sources */,
 				6D8576CF24194DEB007E0A74 /* Dog.swift in Sources */,
 				6D8392F32416B95A00398C3C /* AppDelegate.swift in Sources */,

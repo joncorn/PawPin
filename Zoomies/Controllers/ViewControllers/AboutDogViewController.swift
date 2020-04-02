@@ -11,7 +11,11 @@ import UIKit
 class AboutDogViewController: UIViewController {
   
   // MARK: - OUTLETS
+  @IBOutlet weak var breedView: UIView!
+  @IBOutlet weak var breedTextField: UITextField!
   
+  @IBOutlet weak var ageView: UIView!
+  @IBOutlet weak var ageTextField: UITextField!
   
   
   // MARK: - VIEW LIFECYCLE

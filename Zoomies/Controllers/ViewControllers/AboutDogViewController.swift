@@ -26,11 +26,11 @@ class AboutDogViewController: UIViewController {
   
   // Medium size check box
   @IBOutlet weak var mediumDogSizeView: UIView!
-  @IBOutlet weak var mediumCheckBoxButton: UIView!
+  @IBOutlet weak var mediumCheckBoxButton: UIButton!
   
   // Large size check box
   @IBOutlet weak var largeDogSizeView: UIView!
-  @IBOutlet weak var largeCheckBoxButton: UIView!
+  @IBOutlet weak var largeCheckBoxButton: UIButton!
   
   @IBOutlet weak var errorLabel: UILabel!
   @IBOutlet weak var nextButton: UIButton!

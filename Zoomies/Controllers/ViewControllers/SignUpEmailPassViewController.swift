@@ -70,7 +70,7 @@ class SignUpEmailPassViewController: UIViewController {
         if !error {
           print("There was an error.")
         } else {
-          self.transitionToHome()
+          self.performSegue(withIdentifier: Constants.Storyboard.toHomeScreen, sender: self)
         }
       }
     }
@@ -92,12 +92,13 @@ class SignUpEmailPassViewController: UIViewController {
     errorLabel.alpha = 1
   }
   
-  func transitionToHome() {
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let homeViewController = storyboard.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-    guard let window = view.window else {return}
-    window.rootViewController = homeViewController
-    window.makeKeyAndVisible()
-  }
+  // Programmatically creates a "home viewcontroller" to transition to from the controller it's called in"
+//  func transitionToHome() {
+//    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//    let homeViewController = storyboard.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+//    guard let window = view.window else {return}
+//    window.rootViewController = homeViewController
+//    window.makeKeyAndVisible()
+//  }
   
 }

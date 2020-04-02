@@ -52,18 +52,18 @@ class LogInViewController: UIViewController {
           self.errorLabel.text = error!.localizedDescription
           self.errorLabel.alpha = 1
         } else {
-          self.transitionToHome()
+          self.performSegue(withIdentifier: Constants.Storyboard.toHomeScreen, sender: self)
         }
       }
     }
   }
   
   // MARK: - Methods
-  func transitionToHome() {
-    let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-    view.window?.rootViewController = homeViewController
-    view.window?.makeKeyAndVisible()
-  }
+//  func transitionToHome() {
+//    let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+//    view.window?.rootViewController = homeViewController
+//    view.window?.makeKeyAndVisible()
+//  }
   
   // MARK:  Show error
   func showError(_ message: String) {

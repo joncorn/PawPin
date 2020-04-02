@@ -11,7 +11,15 @@ import Foundation
 struct Constants {
   
   struct Storyboard {
-    static let homeViewController = "HomeVC"
+    
+    // Segues
+    static let toHomeScreen = "toHomeScreenRef"
+    
+    // View Controllers
+    static let homeViewController = "HomePageVC"
+    static let parksViewController = "ParksVC"
+    static let connectViewController = "ConnectVC"
+    static let profileViewController = "ProfileVC"
   }
   
   struct DogInfo {

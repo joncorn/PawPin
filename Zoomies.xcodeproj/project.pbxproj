@@ -221,10 +221,10 @@
 			children = (
 				6DDCCCE42434065400892A8B /* Extensions */,
 				6DBA9F5C24182D110087002F /* Networking */,
-				6DBA9F4C2417ED3A0087002F /* StyleGuide.swift */,
+				6DDCCCE22433E3D700892A8B /* SignupUtility.swift */,
 				6DBA9F4E2417EF380087002F /* LoginUtility.swift */,
 				6DBA9F582417FBAA0087002F /* Constants.swift */,
-				6DDCCCE22433E3D700892A8B /* SignupUtility.swift */,
+				6DBA9F4C2417ED3A0087002F /* StyleGuide.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";

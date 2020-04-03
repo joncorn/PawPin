@@ -46,6 +46,7 @@
 		6DF4A4B92436E44000E0C0F8 /* RecentParkSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4A4B82436E44000E0C0F8 /* RecentParkSearchTableViewCell.swift */; };
 		6DF4A4BB2436E4E400E0C0F8 /* LikedParksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4A4BA2436E4E400E0C0F8 /* LikedParksTableViewCell.swift */; };
 		6DF4A4C92436EBC400E0C0F8 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4A4C82436EBC400E0C0F8 /* UIViewExtension.swift */; };
+		6DF4A4CB243703B600E0C0F8 /* CheckInsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4A4CA243703B600E0C0F8 /* CheckInsTableViewCell.swift */; };
 		E028947B13E8A55FC54C126A /* Pods_Zoomies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F50C102DCAAA7FC7ABFBB3C /* Pods_Zoomies.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		6DF4A4B82436E44000E0C0F8 /* RecentParkSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentParkSearchTableViewCell.swift; sourceTree = "<group>"; };
 		6DF4A4BA2436E4E400E0C0F8 /* LikedParksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedParksTableViewCell.swift; sourceTree = "<group>"; };
 		6DF4A4C82436EBC400E0C0F8 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		6DF4A4CA243703B600E0C0F8 /* CheckInsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInsTableViewCell.swift; sourceTree = "<group>"; };
 		97612753EA6FAD1A0C35BFA1 /* Pods-Zoomies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zoomies.release.xcconfig"; path = "Target Support Files/Pods-Zoomies/Pods-Zoomies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,6 +254,7 @@
 			children = (
 				6DF4A4B82436E44000E0C0F8 /* RecentParkSearchTableViewCell.swift */,
 				6DF4A4BA2436E4E400E0C0F8 /* LikedParksTableViewCell.swift */,
+				6DF4A4CA243703B600E0C0F8 /* CheckInsTableViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D7F5A2B24366A0900B4BBDB /* ParksViewController.swift in Sources */,
+				6DF4A4CB243703B600E0C0F8 /* CheckInsTableViewCell.swift in Sources */,
 				6DF4A4BB2436E4E400E0C0F8 /* LikedParksTableViewCell.swift in Sources */,
 				6DBA9F532417F15A0087002F /* SignUpViewController.swift in Sources */,
 				6DDCCCE32433E3D700892A8B /* SignupUtility.swift in Sources */,

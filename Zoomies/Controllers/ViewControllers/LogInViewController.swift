@@ -52,7 +52,7 @@ class LogInViewController: UIViewController {
           self.errorLabel.text = error!.localizedDescription
           self.errorLabel.alpha = 1
         } else {
-          self.performSegue(withIdentifier: Constants.Storyboard.toHomeScreen, sender: self)
+          self.performSegue(withIdentifier: Constants.Storyboard.Segues.toHomeScreen, sender: self)
         }
       }
     }

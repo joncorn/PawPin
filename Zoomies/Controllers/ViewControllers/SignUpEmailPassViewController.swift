@@ -70,7 +70,7 @@ class SignUpEmailPassViewController: UIViewController {
         if !error {
           print("There was an error.")
         } else {
-          self.performSegue(withIdentifier: Constants.Storyboard.toHomeScreen, sender: self)
+          self.performSegue(withIdentifier: Constants.Storyboard.Segues.toHomeScreen, sender: self)
         }
       }
     }

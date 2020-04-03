@@ -39,10 +39,12 @@ class ParksViewController: UIViewController {
   // MARK: - ACTIONS
   @IBAction func recentlySearchedParksTapped(_ sender: Any) {
     print("Recent Parks")
+    performSegue(withIdentifier: Constants.Storyboard.Segues.recentParks, sender: self)
   }
   
   @IBAction func favoriteParksTapped(_ sender: Any) {
     print("Favorite Parks")
+    performSegue(withIdentifier: Constants.Storyboard.Segues.favoriteParks, sender: self)
   }
   
   // MARK: - METHODS
@@ -67,10 +69,23 @@ class ParksViewController: UIViewController {
 // MARK: - TABLEVIEW EXT.
 extension ParksViewController: UITableViewDelegate, UITableViewDataSource {
   
+  // MARK:  numberOfRowsInSection
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 5
   }
   
+  // MARK:  didSelectRowAt
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    if tableView == self.recentParkSearchTableView {
+      tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    if tableView == self.favoriteParksTableView {
+      tableView.deselectRow(at: indexPath, animated: true)
+    }
+  }
+  
+  // MARK:  cellForRowAt
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if tableView == self.recentParkSearchTableView {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "recentParkCell", for: indexPath) as? RecentParkSearchTableViewCell else { return UITableViewCell()}
@@ -85,11 +100,12 @@ extension ParksViewController: UITableViewDelegate, UITableViewDataSource {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteParkCell", for: indexPath) as? FavoriteParksTableViewCell else { return UITableViewCell()}
       // configure cell here
       
+      cell.setupElements()
+      
       return cell
     }
     
     return UITableViewCell()
   }
-  
   
 }

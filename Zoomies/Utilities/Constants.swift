@@ -12,14 +12,18 @@ struct Constants {
   
   struct Storyboard {
     
-    // Segues
-    static let toHomeScreen = "toHomeScreenRef"
-    
-    // View Controllers
-    static let homeViewController = "HomePageVC"
-    static let parksViewController = "ParksVC"
-    static let connectViewController = "ConnectVC"
-    static let profileViewController = "ProfileVC"
+    struct Segues {
+      static let toHomeScreen = "toHomeScreenRef"
+      static let favoriteParks = "toFavoriteParksVC"
+      static let recentParks = "toRecentParksVC"
+    }
+
+    struct VCReference {
+      static let homeViewController = "HomePageVC"
+      static let parksViewController = "ParksVC"
+      static let connectViewController = "ConnectVC"
+      static let profileViewController = "ProfileVC"
+    }
   }
   
   struct DogInfo {

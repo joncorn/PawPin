@@ -25,4 +25,6 @@ class HomePageViewController: UIViewController {
   }
   
   
+  // MARK: - METHODS
+  
 }

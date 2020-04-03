@@ -47,6 +47,12 @@ class ParksViewController: UIViewController {
     performSegue(withIdentifier: Constants.Storyboard.Segues.favoriteParks, sender: self)
   }
   
+  @IBAction func parkMapImageTapped(_ sender: Any) {
+    print("Map")
+    performSegue(withIdentifier: Constants.Storyboard.Segues.toMap, sender: self)
+  }
+  
+  
   // MARK: - METHODS
   func setupElements() {
     dogParkMapImageView.layer.cornerRadius = 10

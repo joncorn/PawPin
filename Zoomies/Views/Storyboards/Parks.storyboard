@@ -45,6 +45,9 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="J0C-5M-8Kf">
                                                         <rect key="frame" x="12" y="53" width="382" height="170"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="q3f-Dy-p8N" appends="YES" id="lcm-1b-Gko"/>
+                                                        </connections>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WlP-S0-fsY">
                                                         <rect key="frame" x="16" y="294" width="382" height="61"/>
@@ -264,6 +267,7 @@
                         <outlet property="recentParkSearchView" destination="WlP-S0-fsY" id="MpA-2f-GP1"/>
                         <segue destination="1LY-ga-Rla" kind="show" identifier="toRecentParksVC" id="1sm-gG-oEr"/>
                         <segue destination="YBL-Yb-phW" kind="show" identifier="toFavoriteParksVC" id="PWV-uH-e3f"/>
+                        <segue destination="RvO-c1-vIA" kind="show" identifier="toMapVC" id="vUq-I1-2uM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6CU-KZ-pC9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -277,8 +281,38 @@
                         <action selector="favoriteParksTapped:" destination="9sN-qM-1ey" id="Qhq-1R-YXu"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="q3f-Dy-p8N">
+                    <connections>
+                        <action selector="parkMapImageTapped:" destination="9sN-qM-1ey" id="Iwc-hQ-ULw"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1130.4347826086957" y="1214.7321428571429"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Jcb-2J-gkB">
+            <objects>
+                <viewController id="RvO-c1-vIA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xf1-Pv-qk9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foa-lL-Ohs">
+                                <rect key="frame" x="186" y="438" width="34" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3XM-dY-6YY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tgU-o2-u9r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qBY-cW-eWT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52" y="552"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tc4-JQ-ew2">
@@ -303,7 +337,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kad-i7-AzZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136" y="876"/>
+            <point key="canvasLocation" x="-51" y="1215"/>
         </scene>
         <!--Parks-->
         <scene sceneID="DaB-tQ-Q63">
@@ -348,13 +382,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S0E-86-SzA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136" y="1554"/>
+            <point key="canvasLocation" x="-51" y="1892"/>
         </scene>
     </scenes>
     <resources>
         <image name="DogParksCornerArt" width="198" height="152"/>
-        <image name="map" width="528" height="268"/>
         <image name="map" catalog="system" width="128" height="113"/>
+        <image name="map" width="528" height="268"/>
         <image name="mockParkPhoto" width="567" height="850"/>
     </resources>
 </document>

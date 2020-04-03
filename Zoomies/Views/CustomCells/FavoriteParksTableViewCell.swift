@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LikedParksTableViewCell: UITableViewCell {
+class FavoriteParksTableViewCell: UITableViewCell {
 
 
 }

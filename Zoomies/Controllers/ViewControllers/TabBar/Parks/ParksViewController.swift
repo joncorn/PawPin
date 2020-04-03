@@ -16,12 +16,12 @@ class ParksViewController: UIViewController {
   @IBOutlet weak var dogParkMapImageView: UIImageView!
   
   // Views
-  @IBOutlet weak var likedDogParksView: UIView!
+  @IBOutlet weak var favoriteParksView: UIView!
   @IBOutlet weak var recentParkSearchView: UIView!
   
   // Tableviews
   @IBOutlet weak var recentParkSearchTableView: UITableView!
-  @IBOutlet weak var likedParksTableView: UITableView!
+  @IBOutlet weak var favoriteParksTableView: UITableView!
   
   
   // MARK: - VIEW LIFECYCLE
@@ -30,25 +30,31 @@ class ParksViewController: UIViewController {
     
     recentParkSearchTableView.delegate = self
     recentParkSearchTableView.dataSource = self
-    likedParksTableView.delegate = self
-    likedParksTableView.dataSource = self
+    favoriteParksTableView.delegate = self
+    favoriteParksTableView.dataSource = self
     
     setupUI()
   }
   
   // MARK: - ACTIONS
+  @IBAction func recentlySearchedParksTapped(_ sender: Any) {
+    print("Recent Parks")
+  }
   
+  @IBAction func favoriteParksTapped(_ sender: Any) {
+    print("Favorite Parks")
+  }
   
   // MARK: - METHODS
   func setupElements() {
     dogParkMapImageView.layer.cornerRadius = 10
-    likedDogParksView.layer.cornerRadius = 10
+    favoriteParksView.layer.cornerRadius = 10
     recentParkSearchView.layer.cornerRadius = 10
   }
   
   func setupTableViews() {
     recentParkSearchTableView.separatorStyle = .none
-    likedParksTableView.separatorStyle = .none
+    favoriteParksTableView.separatorStyle = .none
     
   }
   
@@ -67,7 +73,7 @@ extension ParksViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if tableView == self.recentParkSearchTableView {
-      guard let cell = tableView.dequeueReusableCell(withIdentifier: "parkCell", for: indexPath) as? RecentParkSearchTableViewCell else { return UITableViewCell()}
+      guard let cell = tableView.dequeueReusableCell(withIdentifier: "recentParkCell", for: indexPath) as? RecentParkSearchTableViewCell else { return UITableViewCell()}
       // configure cell here
       
       cell.setupElements()
@@ -75,8 +81,8 @@ extension ParksViewController: UITableViewDelegate, UITableViewDataSource {
       return cell
     }
 
-    if tableView == self.likedParksTableView {
-      guard let cell = tableView.dequeueReusableCell(withIdentifier: "likedParkCell", for: indexPath) as? LikedParksTableViewCell else { return UITableViewCell()}
+    if tableView == self.favoriteParksTableView {
+      guard let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteParkCell", for: indexPath) as? FavoriteParksTableViewCell else { return UITableViewCell()}
       // configure cell here
       
       return cell

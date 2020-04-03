@@ -19,10 +19,15 @@ class HomePageViewController: UIViewController {
   // Recent Check Ins
   @IBOutlet weak var checkInsTableView: UITableView!
   
+  // Favorite Parks
+  @IBOutlet weak var favoriteParksTableView: UITableView!
+  
   // MARK: - VIEW LIFECYCLE
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    favoriteParksTableView.delegate = self
+    favoriteParksTableView.dataSource = self
     checkInsTableView.delegate = self
     checkInsTableView.dataSource = self
     
@@ -38,9 +43,12 @@ class HomePageViewController: UIViewController {
   // MARK: - METHODS
   
   func setupElements() {
+    
+    // Statusbar
     statusView.layer.cornerRadius = 10
     
     // TableViews
+    favoriteParksTableView.separatorStyle = .none
     checkInsTableView.separatorStyle = .none
     checkInsTableView.allowsSelection = false
   }
@@ -57,13 +65,36 @@ extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
     return 5
   }
   
+  // MARK:  didSelectRowAt
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    if tableView == favoriteParksTableView {
+      tableView.deselectRow(at: indexPath, animated: true)
+    }
+  }
+  
+  // MARK:  cellForRowAt
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    if tableView == checkInsTableView {
+      guard let cell = tableView.dequeueReusableCell(withIdentifier: "checkInCell", for: indexPath) as? CheckInsTableViewCell
+        else {return UITableViewCell()}
+      // Setup cell
+      
+      cell.setupElements()
+      
+      return cell
+    }
     
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: "checkInCell", for: indexPath) as? CheckInsTableViewCell else {return UITableViewCell()}
+    if tableView == favoriteParksTableView {
+      guard let cell = tableView.dequeueReusableCell(withIdentifier: "parkCell", for: indexPath) as? FavoriteParksTableViewCell
+        else { return UITableViewCell()}
+      // Setup cell
+      
+      cell.setupElements()
+      
+      return cell
+    }
     
-    cell.setupElements()
-    
-    return cell
+    return UITableViewCell()
   }
   
   

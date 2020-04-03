@@ -49,6 +49,7 @@ class ParksViewController: UIViewController {
   func setupTableViews() {
     recentParkSearchTableView.separatorStyle = .none
     likedParksTableView.separatorStyle = .none
+    
   }
   
   func setupUI() {
@@ -59,15 +60,12 @@ class ParksViewController: UIViewController {
 
 // MARK: - TABLEVIEW EXT.
 extension ParksViewController: UITableViewDelegate, UITableViewDataSource {
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 1
+    return 5
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//    guard let cell = tableView.dequeueReusableCell(withIdentifier: "parkCell", for: indexPath) as? RecentParkSearchTableViewCell else { return UITableViewCell()}
-    
-//    var cell: UITableViewCell?
-
     if tableView == self.recentParkSearchTableView {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "parkCell", for: indexPath) as? RecentParkSearchTableViewCell else { return UITableViewCell()}
       // configure cell here

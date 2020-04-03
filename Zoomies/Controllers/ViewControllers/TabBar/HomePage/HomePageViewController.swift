@@ -40,7 +40,9 @@ class HomePageViewController: UIViewController {
   func setupElements() {
     statusView.layer.cornerRadius = 10
     
+    // TableViews
     checkInsTableView.separatorStyle = .none
+    checkInsTableView.allowsSelection = false
   }
   
   // Hide navigation bar after logging in
@@ -52,10 +54,11 @@ class HomePageViewController: UIViewController {
 // MARK: - TABLEVIEW EXT.
 extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 2
+    return 5
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "checkInCell", for: indexPath) as? CheckInsTableViewCell else {return UITableViewCell()}
     
     cell.setupElements()

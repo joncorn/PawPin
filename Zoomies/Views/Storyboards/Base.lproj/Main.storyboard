@@ -660,6 +660,31 @@
             </objects>
             <point key="canvasLocation" x="1371.0144927536232" y="463.39285714285711"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="6cz-UP-121">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="OvS-xJ-z0d" customClass="HomeViewController" customModule="Zoomies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Per-iU-DZ5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qq7-Le-RJd">
+                                <rect key="frame" x="136" y="433" width="143" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kMM-6v-wVX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="k1v-gI-FhB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f5s-7e-E8J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5014" y="113"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="N2w-N9-9dq">
             <objects>

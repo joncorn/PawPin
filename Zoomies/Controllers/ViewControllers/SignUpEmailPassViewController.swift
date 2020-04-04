@@ -41,6 +41,8 @@ class SignUpEmailPassViewController: UIViewController {
     super.viewDidLoad()
     
     setupViews()
+    setupTextFields()
+    setupTapGesture()
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -92,13 +94,33 @@ class SignUpEmailPassViewController: UIViewController {
     errorLabel.alpha = 1
   }
   
-  // Programmatically creates a "home viewcontroller" to transition to from the controller it's called in"
-//  func transitionToHome() {
-//    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//    let homeViewController = storyboard.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-//    guard let window = view.window else {return}
-//    window.rootViewController = homeViewController
-//    window.makeKeyAndVisible()
-//  }
+  func setupTextFields() {
+    
+    // Create toolbar
+    let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: view.frame.size.width, height: 30)))
+    
+    // Create left side empty space so that done button set on right side
+    let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+    
+    // Create done button
+    let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonTapped))
+    
+    toolbar.setItems([flexSpace, doneButton], animated: false)
+    toolbar.sizeToFit()
+    
+    // Add toolbar to keyboards
+    emailTextField.inputAccessoryView = toolbar
+    passwordTextField.inputAccessoryView = toolbar
+    
+  }
+  
+  @objc func doneButtonTapped() {
+    self.view.endEditing(true)
+  }
+  
+  func setupTapGesture() {
+    let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+    view.addGestureRecognizer(tap)
+  }
   
 }

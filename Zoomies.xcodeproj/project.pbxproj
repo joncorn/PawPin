@@ -122,10 +122,10 @@
 		6D7F5A28243669CD00B4BBDB /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				6DF4A4BC2436E50E00E0C0F8 /* HomePage */,
-				6DF4A4BD2436E51800E0C0F8 /* Parks */,
-				6DF4A4BE2436E52200E0C0F8 /* Connect */,
-				6DF4A4BF2436E52900E0C0F8 /* Profile */,
+				6DBA9F5A2417FC1C0087002F /* HomePageViewController.swift */,
+				6D7F5A2A24366A0900B4BBDB /* ParksViewController.swift */,
+				6D7F5A2C24366A1200B4BBDB /* ConnectViewController.swift */,
+				6D7F5A2E24366A2800B4BBDB /* ProfileViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -287,38 +287,6 @@
 				6DF4A4C82436EBC400E0C0F8 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		6DF4A4BC2436E50E00E0C0F8 /* HomePage */ = {
-			isa = PBXGroup;
-			children = (
-				6DBA9F5A2417FC1C0087002F /* HomePageViewController.swift */,
-			);
-			path = HomePage;
-			sourceTree = "<group>";
-		};
-		6DF4A4BD2436E51800E0C0F8 /* Parks */ = {
-			isa = PBXGroup;
-			children = (
-				6D7F5A2A24366A0900B4BBDB /* ParksViewController.swift */,
-			);
-			path = Parks;
-			sourceTree = "<group>";
-		};
-		6DF4A4BE2436E52200E0C0F8 /* Connect */ = {
-			isa = PBXGroup;
-			children = (
-				6D7F5A2C24366A1200B4BBDB /* ConnectViewController.swift */,
-			);
-			path = Connect;
-			sourceTree = "<group>";
-		};
-		6DF4A4BF2436E52900E0C0F8 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				6D7F5A2E24366A2800B4BBDB /* ProfileViewController.swift */,
-			);
-			path = Profile;
 			sourceTree = "<group>";
 		};
 		DD89A87F4FA4DC1E2F48C726 /* Frameworks */ = {

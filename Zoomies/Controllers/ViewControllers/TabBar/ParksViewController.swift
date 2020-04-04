@@ -15,9 +15,9 @@ class ParksViewController: UIViewController {
   // Map image view
   @IBOutlet weak var dogParkMapImageView: UIImageView!
   
-  // Views
-  @IBOutlet weak var favoriteParksView: UIView!
-  @IBOutlet weak var recentParkSearchView: UIView!
+  // Buttons
+  @IBOutlet weak var recentParkSearchButton: UIButton!
+  @IBOutlet weak var favoriteParksButton: UIButton!
   
   // Tableviews
   @IBOutlet weak var recentParkSearchTableView: UITableView!
@@ -37,20 +37,7 @@ class ParksViewController: UIViewController {
   }
   
   // MARK: - ACTIONS
-  @IBAction func recentlySearchedParksTapped(_ sender: Any) {
-    print("Recent Parks")
-    performSegue(withIdentifier: Constants.Storyboard.Segues.recentParks, sender: self)
-  }
-  
-  @IBAction func favoriteParksTapped(_ sender: Any) {
-    print("Favorite Parks")
-    performSegue(withIdentifier: Constants.Storyboard.Segues.favoriteParks, sender: self)
-  }
-  
-  @IBAction func parkMapImageTapped(_ sender: Any) {
-    print("Map")
-    performSegue(withIdentifier: Constants.Storyboard.Segues.toMap, sender: self)
-  }
+
   
   
   // MARK: - METHODS

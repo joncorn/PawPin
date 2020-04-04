@@ -39,27 +39,20 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" red="0.58039215690000001" green="0.68235294120000001" blue="0.56078431370000004" alpha="0.65753424660000004" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="26"/>
-                                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="75" maxY="0.0"/>
+                                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="195" maxY="0.0"/>
                                                         <state key="normal" title="Liked Friends">
                                                             <color key="titleColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         </state>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vw-Gp-2tb">
-                                                        <rect key="frame" x="16" y="387" width="382" height="61"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="0.58039215690000001" green="0.68235294120000001" blue="0.56078431370000004" alpha="0.65753424660000004" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="26"/>
-                                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="75" maxY="0.0"/>
-                                                        <state key="normal" title="Friends Recent Check Ins">
-                                                            <color key="titleColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                        </state>
+                                                        <connections>
+                                                            <segue destination="9CL-2G-DBP" kind="show" id="2L1-d2-diF"/>
+                                                        </connections>
                                                     </button>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pIe-UP-wX2">
                                                         <rect key="frame" x="16" y="77" width="390" height="236"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recentParkCell" rowHeight="113" id="XRs-gE-aJd" customClass="RecentParkSearchTableViewCell" customModule="Zoomies" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="friendCell" rowHeight="113" id="XRs-gE-aJd" customClass="ConnectLikedFriendsTableViewCell" customModule="Zoomies" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="28" width="390" height="113"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XRs-gE-aJd" id="PlS-Ig-Sgu">
@@ -80,15 +73,15 @@
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                     <state key="normal" title="Button"/>
                                                                                 </button>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doggie Dayland Park" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nM9-go-62K">
-                                                                                    <rect key="frame" x="8" y="8" width="178" height="23"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Samantha West" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nM9-go-62K">
+                                                                                    <rect key="frame" x="8" y="8" width="134" height="23"/>
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Payson Utah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJi-YG-tlr">
-                                                                                    <rect key="frame" x="8" y="52" width="80" height="17"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dog - Sunny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJi-YG-tlr">
+                                                                                    <rect key="frame" x="8" y="64" width="80" height="17"/>
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                                                     <nil key="textColor"/>
@@ -113,8 +106,11 @@
                                                                     </constraints>
                                                                 </tableViewCellContentView>
                                                                 <connections>
-                                                                    <outlet property="parkDetailsView" destination="vf6-zy-6sn" id="NpA-wa-yFX"/>
-                                                                    <outlet property="parkImageView" destination="Iu0-NE-4rL" id="uKR-HI-P9S"/>
+                                                                    <outlet property="friendDetailView" destination="vf6-zy-6sn" id="WJs-VG-uDE"/>
+                                                                    <outlet property="friendDogImageView" destination="Iu0-NE-4rL" id="4yv-Ro-22x"/>
+                                                                    <outlet property="friendDogNameLabel" destination="MJi-YG-tlr" id="xPG-1X-MP1"/>
+                                                                    <outlet property="friendNameLabel" destination="nM9-go-62K" id="SI3-p7-xRM"/>
+                                                                    <outlet property="likedButton" destination="oTT-kE-DD3" id="25w-Cd-mG8"/>
                                                                 </connections>
                                                             </tableViewCell>
                                                         </prototypes>
@@ -124,7 +120,7 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recentParkCell" rowHeight="113" id="hqh-ER-eVI" customClass="RecentParkSearchTableViewCell" customModule="Zoomies" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="checkInCell" rowHeight="113" id="hqh-ER-eVI" customClass="ConnectFriendsCheckInsTableViewCell" customModule="Zoomies" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="28" width="390" height="113"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hqh-ER-eVI" id="mEm-hZ-ky7">
@@ -140,23 +136,25 @@
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bab-1L-QCe">
                                                                             <rect key="frame" x="98" y="12" width="284" height="89"/>
                                                                             <subviews>
-                                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDB-bS-ucW">
-                                                                                    <rect key="frame" x="218" y="16" width="58" height="58"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sammy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7k-W8-ko4">
+                                                                                    <rect key="frame" x="15" y="14" width="54" height="20"/>
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                    <state key="normal" title="Button"/>
-                                                                                </button>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doggie Dayland Park" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7k-W8-ko4">
-                                                                                    <rect key="frame" x="8" y="8" width="178" height="23"/>
-                                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                                                    <nil key="textColor"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Payson Utah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTR-AY-JnP">
-                                                                                    <rect key="frame" x="8" y="52" width="80" height="17"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Checked In at 5:55 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iru-AY-L4q">
+                                                                                    <rect key="frame" x="15" y="61" width="162" height="20"/>
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                                                                    <nil key="textColor"/>
+                                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                                                    <color key="textColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doggy Dayland Park" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTR-AY-JnP">
+                                                                                    <rect key="frame" x="15" y="45" width="113" height="15"/>
+                                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                                                    <color key="textColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
@@ -178,12 +176,28 @@
                                                                     </constraints>
                                                                 </tableViewCellContentView>
                                                                 <connections>
-                                                                    <outlet property="parkDetailsView" destination="Bab-1L-QCe" id="5vu-2S-o2g"/>
-                                                                    <outlet property="parkImageView" destination="M4S-US-eTg" id="YDY-Wv-xKc"/>
+                                                                    <outlet property="checkInDetailView" destination="Bab-1L-QCe" id="P7Q-MU-bvm"/>
+                                                                    <outlet property="checkInLocationLabel" destination="XTR-AY-JnP" id="xhy-oX-y2V"/>
+                                                                    <outlet property="checkInTimeLabel" destination="Iru-AY-L4q" id="ZFi-tW-cRx"/>
+                                                                    <outlet property="friendDogImageView" destination="M4S-US-eTg" id="roQ-Vb-klB"/>
+                                                                    <outlet property="friendDogNameLabel" destination="h7k-W8-ko4" id="MkQ-Rs-MvF"/>
                                                                 </connections>
                                                             </tableViewCell>
                                                         </prototypes>
                                                     </tableView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vw-Gp-2tb">
+                                                        <rect key="frame" x="16" y="387" width="382" height="61"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="0.58039215690000001" green="0.68235294120000001" blue="0.56078431370000004" alpha="0.65753424660000004" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="26"/>
+                                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="62" maxY="0.0"/>
+                                                        <state key="normal" title="Friends Recent Check Ins">
+                                                            <color key="titleColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="ORU-8E-kY5" kind="show" id="AxE-WQ-7me"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
@@ -216,6 +230,12 @@
                         <viewLayoutGuide key="safeArea" id="eh3-93-XYi"/>
                     </view>
                     <navigationItem key="navigationItem" id="0LE-0X-k2n"/>
+                    <connections>
+                        <outlet property="friendsCheckInsButton" destination="9Vw-Gp-2tb" id="lRM-Ji-qFL"/>
+                        <outlet property="friendsRecentCheckInsTableView" destination="OTa-iE-ibm" id="l9Q-30-UPr"/>
+                        <outlet property="likedFriendsButton" destination="NX2-9T-QeE" id="oAz-ms-xBo"/>
+                        <outlet property="likedFriendsTableView" destination="pIe-UP-wX2" id="W6s-QB-vhI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4L2-Mc-EdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,9 +248,19 @@
                     <view key="view" contentMode="scaleToFill" id="4tG-yE-Njf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="liked friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ouv-fv-L99">
+                                <rect key="frame" x="186" y="227" width="93" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Lqp-iE-TjY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="BbP-OU-7zN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZCf-al-Ejp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -263,9 +293,19 @@
                     <view key="view" contentMode="scaleToFill" id="0AN-o9-TpC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="friends check ins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKf-gI-WAw">
+                                <rect key="frame" x="142" y="438" width="130" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="qeX-DM-IRe"/>
                     </view>
+                    <navigationItem key="navigationItem" id="SzS-h7-gUr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k1g-oz-Kvw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

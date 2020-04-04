@@ -9,5 +9,18 @@
 import UIKit
 
 class ProfileDogCollectionViewCell: UICollectionViewCell {
-    
+  
+  // MARK: - OUTLETS
+  
+  // Label
+  @IBOutlet weak var dogNameLabel: UILabel!
+  
+  // Image
+  @IBOutlet weak var dogImageView: UIImageView!
+  
+  // MARK: - METHODS
+  func setupElements() {
+    dogImageView.layer.cornerRadius = 10
+  }
+  
 }

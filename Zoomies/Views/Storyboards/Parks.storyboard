@@ -358,8 +358,9 @@
             <point key="canvasLocation" x="-51" y="1892"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
     <resources>
-        <image name="DogParksCornerArt" width="198" height="152"/>
+        <image name="DogParksCornerArt" width="85" height="70"/>
         <image name="map" catalog="system" width="128" height="113"/>
         <image name="map" width="528" height="268"/>
         <image name="mockParkPhoto" width="567" height="850"/>

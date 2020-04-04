@@ -21,7 +21,7 @@
                                 <color key="textColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DogParksCornerArt" translatesAutoresizingMaskIntoConstraints="NO" id="dp8-fb-yYe">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeCornerArt" translatesAutoresizingMaskIntoConstraints="NO" id="dp8-fb-yYe">
                                 <rect key="frame" x="305" y="101" width="89" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="MBh-7g-OQy"/>
@@ -92,11 +92,6 @@
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hju-ha-oq3">
                                                                             <rect key="frame" x="98" y="12" width="284" height="89"/>
                                                                             <subviews>
-                                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLj-30-Dll">
-                                                                                    <rect key="frame" x="218" y="16" width="58" height="58"/>
-                                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                    <state key="normal" title="Button"/>
-                                                                                </button>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doggie Dayland Park" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeD-7t-KLi">
                                                                                     <rect key="frame" x="8" y="8" width="178" height="23"/>
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -111,10 +106,20 @@
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
+                                                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLj-30-Dll">
+                                                                                    <rect key="frame" x="234" y="25" width="42" height="38"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="width" constant="42" id="Jhp-2c-Zdp"/>
+                                                                                    </constraints>
+                                                                                    <state key="normal" backgroundImage="heartEmpty"/>
+                                                                                </button>
                                                                             </subviews>
                                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                             <constraints>
+                                                                                <constraint firstItem="hLj-30-Dll" firstAttribute="top" secondItem="Hju-ha-oq3" secondAttribute="top" constant="25" id="Zx3-EJ-xj6"/>
                                                                                 <constraint firstAttribute="width" constant="284" id="itt-7c-3qo"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="hLj-30-Dll" secondAttribute="bottom" constant="26" id="iu8-T0-wmZ"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="hLj-30-Dll" secondAttribute="trailing" constant="8" id="mik-yU-FOG"/>
                                                                                 <constraint firstAttribute="height" constant="90" id="rm6-zb-FJz"/>
                                                                             </constraints>
                                                                         </view>
@@ -300,7 +305,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="DogParksCornerArt" width="198" height="152"/>
+        <image name="heartEmpty" width="36" height="33"/>
+        <image name="homeCornerArt" width="99" height="75"/>
         <image name="house" catalog="system" width="128" height="110"/>
         <image name="mockParkPhoto" width="567" height="850"/>
     </resources>

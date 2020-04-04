@@ -25,6 +25,8 @@ class FavoriteParksTableViewCell: UITableViewCell {
   // Park details view
   @IBOutlet weak var parkDetailsView: UIView!
   
+  // MARK: - ACTIONS
+  
   // MARK: - METHODS
   func setupElements() {
     parkImageView.layer.cornerRadius = 10

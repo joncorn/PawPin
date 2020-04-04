@@ -826,6 +826,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="x2z-jF-5qf"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
     <resources>
         <image name="Pawpin" width="221" height="65"/>
         <image name="camera" catalog="system" width="128" height="96"/>

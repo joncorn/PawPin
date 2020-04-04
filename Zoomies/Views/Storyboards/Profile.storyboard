@@ -53,6 +53,7 @@
             <point key="canvasLocation" x="149.27536231884059" y="132.58928571428572"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
     <resources>
         <image name="ProfileIcon" width="27" height="27"/>
     </resources>

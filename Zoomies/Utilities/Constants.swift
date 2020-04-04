@@ -16,7 +16,7 @@ struct Constants {
       static let toHomeScreen = "toHomeScreenRef"
       static let favoriteParks = "toFavoriteParksVC"
       static let recentParks = "toRecentParksVC"
-      static let toMap = "toMapVC"
+      static let toParkMap = "toParkMapVC"
     }
 
     struct VCReference {

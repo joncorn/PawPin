@@ -42,10 +42,6 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gvu-MA-51L">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1012"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="J0C-5M-8Kf">
-                                                        <rect key="frame" x="16" y="53" width="382" height="170"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Foh-3f-Tyw">
                                                         <rect key="frame" x="16" y="363" width="390" height="236"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -210,6 +206,14 @@
                                                             <segue destination="1LY-ga-Rla" kind="show" id="Q0H-Pu-Efq"/>
                                                         </connections>
                                                     </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="x01-ZF-18r">
+                                                        <rect key="frame" x="16" y="53" width="382" height="170"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <gestureRecognizers/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="8kB-hJ-FSB" appends="YES" id="28s-PB-gPp"/>
+                                                        </connections>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
@@ -241,14 +245,20 @@
                     </view>
                     <navigationItem key="navigationItem" id="G7B-OD-OaX"/>
                     <connections>
-                        <outlet property="dogParkMapImageView" destination="J0C-5M-8Kf" id="uoE-SD-g2T"/>
                         <outlet property="favoriteParksButton" destination="uwa-3L-dHR" id="fcM-nz-Ji1"/>
                         <outlet property="favoriteParksTableView" destination="Igj-hw-xc1" id="kN5-Qu-2eW"/>
+                        <outlet property="parkMapImageView" destination="x01-ZF-18r" id="APB-mk-Tba"/>
                         <outlet property="recentParkSearchButton" destination="3vm-D9-6xF" id="fpu-Ac-ar5"/>
                         <outlet property="recentParkSearchTableView" destination="Foh-3f-Tyw" id="hb6-Y4-n5W"/>
+                        <segue destination="RvO-c1-vIA" kind="show" identifier="toParkMapVC" id="uAo-fV-dHR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6CU-KZ-pC9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8kB-hJ-FSB">
+                    <connections>
+                        <action selector="parkMapTapped:" destination="9sN-qM-1ey" id="IH4-VD-zzY"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1130.4347826086957" y="1214.7321428571429"/>
         </scene>
@@ -300,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kad-i7-AzZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-51" y="1215"/>
+            <point key="canvasLocation" x="-52.173913043478265" y="1214.7321428571429"/>
         </scene>
         <!--Parks-->
         <scene sceneID="DaB-tQ-Q63">
@@ -350,8 +360,8 @@
     </scenes>
     <resources>
         <image name="DogParksCornerArt" width="198" height="152"/>
-        <image name="map" width="528" height="268"/>
         <image name="map" catalog="system" width="128" height="113"/>
+        <image name="map" width="528" height="268"/>
         <image name="mockParkPhoto" width="567" height="850"/>
     </resources>
 </document>

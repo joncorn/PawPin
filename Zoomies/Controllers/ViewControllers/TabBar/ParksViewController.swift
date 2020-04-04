@@ -12,10 +12,10 @@ class ParksViewController: UIViewController {
   
   // MARK: - OUTLETS
   
-  // Map image view
-  @IBOutlet weak var dogParkMapImageView: UIImageView!
+  // Map button
+  @IBOutlet weak var parkMapImageView: UIImageView!
   
-  // Buttons
+  // Header buttons
   @IBOutlet weak var recentParkSearchButton: UIButton!
   @IBOutlet weak var favoriteParksButton: UIButton!
   
@@ -37,14 +37,19 @@ class ParksViewController: UIViewController {
   }
   
   // MARK: - ACTIONS
-
+  @IBAction func parkMapTapped(_ sender: UITapGestureRecognizer) {
+    print("map")
+    performSegue(withIdentifier: Constants.Storyboard.Segues.toParkMap, sender: self)
+  }
+  
   
   
   // MARK: - METHODS
   func setupElements() {
-    dogParkMapImageView.layer.cornerRadius = 10
-    favoriteParksView.layer.cornerRadius = 10
-    recentParkSearchView.layer.cornerRadius = 10
+    parkMapImageView.layer.cornerRadius = 10
+    parkMapImageView.isUserInteractionEnabled = true
+    recentParkSearchButton.layer.cornerRadius = 10
+    favoriteParksButton.layer.cornerRadius = 10
   }
   
   func setupTableViews() {

@@ -25,7 +25,12 @@ class SignUpViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    self.firstNameTextField.delegate = self
+    self.lastNameTextField.delegate = self
+    
     setupElements()
+    setupTextFields()
+    setupTapGesture()
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -63,6 +68,31 @@ class SignUpViewController: UIViewController {
     errorLabel.alpha = 1
   }
   
+  func setupTextFields() {
+    
+    let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: view.frame.size.width, height: 30)))
+    
+    let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+    
+    let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonTapped))
+    
+    toolbar.setItems([flexSpace, doneButton], animated: false)
+    toolbar.sizeToFit()
+    
+    firstNameTextField.inputAccessoryView = toolbar
+    lastNameTextField.inputAccessoryView = toolbar
+    
+  }
+  
+  @objc func doneButtonTapped() {
+    self.view.endEditing(true)
+  }
+  
+  func setupTapGesture() {
+    let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+    view.addGestureRecognizer(tap)
+  }
+  
   // MARK: - SEGUE
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
@@ -77,4 +107,9 @@ class SignUpViewController: UIViewController {
       destinationVC.lastNameLanding = lastName
     }
   }
+}
+
+// MARK: - TextFieldDelegate
+extension SignUpViewController: UITextFieldDelegate {
+  
 }

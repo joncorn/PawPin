@@ -24,6 +24,20 @@ class SignupUtility {
     return nil
   }
   
+  func validateBreedAge(dogBreed: UITextField, dogAge: UITextField) -> String? {
+    
+    // Check if fields have a value
+    if dogBreed.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+      dogAge.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+      
+      // If not, return this string
+      return "Please fill in both fields"
+    }
+    
+    // Otherwise, don't return a value
+    return nil
+  }
+  
   func validateEmailPass(email: UITextField, password: UITextField) -> String? {
     
     // Check if fields have a value

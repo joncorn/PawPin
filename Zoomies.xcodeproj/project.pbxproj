@@ -41,6 +41,7 @@
 		6DBA9F5E24182D240087002F /* FirebaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA9F5D24182D240087002F /* FirebaseNetworking.swift */; };
 		6DD0B58524390F5600A996B8 /* ConnectLikedFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD0B58424390F5600A996B8 /* ConnectLikedFriendsTableViewCell.swift */; };
 		6DD0B58724390F6E00A996B8 /* ConnectFriendsCheckInsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD0B58624390F6E00A996B8 /* ConnectFriendsCheckInsTableViewCell.swift */; };
+		6DD0B5892439378500A996B8 /* ProfileDogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD0B5882439378500A996B8 /* ProfileDogCollectionViewCell.swift */; };
 		6DDCCCE12433D92E00892A8B /* SignUpEmailPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDCCCE02433D92E00892A8B /* SignUpEmailPassViewController.swift */; };
 		6DDCCCE32433E3D700892A8B /* SignupUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDCCCE22433E3D700892A8B /* SignupUtility.swift */; };
 		6DDCCCE62434066800892A8B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDCCCE52434066800892A8B /* UIViewControllerExtension.swift */; };
@@ -91,6 +92,7 @@
 		6DBA9F5D24182D240087002F /* FirebaseNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworking.swift; sourceTree = "<group>"; };
 		6DD0B58424390F5600A996B8 /* ConnectLikedFriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectLikedFriendsTableViewCell.swift; sourceTree = "<group>"; };
 		6DD0B58624390F6E00A996B8 /* ConnectFriendsCheckInsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFriendsCheckInsTableViewCell.swift; sourceTree = "<group>"; };
+		6DD0B5882439378500A996B8 /* ProfileDogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDogCollectionViewCell.swift; sourceTree = "<group>"; };
 		6DDCCCE02433D92E00892A8B /* SignUpEmailPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpEmailPassViewController.swift; sourceTree = "<group>"; };
 		6DDCCCE22433E3D700892A8B /* SignupUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupUtility.swift; sourceTree = "<group>"; };
 		6DDCCCE52434066800892A8B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				6DF4A4CA243703B600E0C0F8 /* CheckInsTableViewCell.swift */,
 				6DD0B58424390F5600A996B8 /* ConnectLikedFriendsTableViewCell.swift */,
 				6DD0B58624390F6E00A996B8 /* ConnectFriendsCheckInsTableViewCell.swift */,
+				6DD0B5882439378500A996B8 /* ProfileDogCollectionViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				6DF4A4CB243703B600E0C0F8 /* CheckInsTableViewCell.swift in Sources */,
 				6DF4A4BB2436E4E400E0C0F8 /* FavoriteParksTableViewCell.swift in Sources */,
 				6DBA9F532417F15A0087002F /* SignUpViewController.swift in Sources */,
+				6DD0B5892439378500A996B8 /* ProfileDogCollectionViewCell.swift in Sources */,
 				6DDCCCE32433E3D700892A8B /* SignupUtility.swift in Sources */,
 				6DF4A4B92436E44000E0C0F8 /* RecentParkSearchTableViewCell.swift in Sources */,
 				6DBA9F552417F3940087002F /* LandingViewController.swift in Sources */,

@@ -27,6 +27,9 @@ class ProfileViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    dogsCollectionView.delegate = self
+    dogsCollectionView.dataSource = self
+    
     setupElements()
     setupKeyboard()
   }
@@ -92,7 +95,7 @@ class ProfileViewController: UIViewController {
     }
   }
   
-}
+} // Class end
 
 // MARK: - COLLECTIONVIEW DELEGATE
 extension ProfileViewController: UICollectionViewDataSource, UICollectionViewDelegate {

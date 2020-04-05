@@ -15,10 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgJ-T4-ZCl">
-                                <rect key="frame" x="85" y="611" width="245" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgJ-T4-ZCl">
+                                <rect key="frame" x="84.666666666666671" y="610.66666666666663" width="244.66666666666663" height="73"/>
                                 <color key="backgroundColor" red="0.99990195039999996" green="1" blue="0.99987989659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="OY0-Za-U7F"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -27,10 +29,12 @@
                                     <segue destination="dT1-Kh-zwD" kind="show" id="OZv-WE-19y"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ay-Ef-ujG">
-                                <rect key="frame" x="85" y="734" width="245" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ay-Ef-ujG">
+                                <rect key="frame" x="84.666666666666671" y="733.66666666666663" width="244.66666666666663" height="73"/>
                                 <color key="backgroundColor" red="0.99990195039999996" green="1" blue="0.99987989659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="K9F-is-35l"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -40,15 +44,15 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pawpin" translatesAutoresizingMaskIntoConstraints="NO" id="ItD-Cj-Gk9">
-                                <rect key="frame" x="97" y="357" width="221" height="65"/>
+                                <rect key="frame" x="96.666666666666671" y="357.66666666666669" width="220.66666666666663" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dogSignUpBanner" translatesAutoresizingMaskIntoConstraints="NO" id="2wQ-sm-d9E">
-                                <rect key="frame" x="0.0" y="88" width="414" height="142"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="141"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmY-6o-ddH">
-                                <rect key="frame" x="152" y="307" width="111" height="26"/>
+                                <rect key="frame" x="151.66666666666666" y="307" width="110.99999999999997" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                                 <color key="textColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -858,10 +862,10 @@
         <image name="dogSignUpBanner" width="375" height="141"/>
         <image name="envelope" width="156" height="84"/>
         <image name="face-nerve-paralysis" width="590" height="428"/>
-        <image name="loginCornerArt" width="170" height="152"/>
+        <image name="loginCornerArt" width="85" height="76"/>
         <image name="openEnvelope" width="215" height="174"/>
-        <image name="signUpBottomCornerArt" width="174" height="154"/>
-        <image name="signUpCornerArt" width="320" height="184"/>
+        <image name="signUpBottomCornerArt" width="87" height="77"/>
+        <image name="signUpCornerArt" width="165" height="95"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
     </resources>
 </document>

@@ -20,7 +20,7 @@ class ProfileDogCollectionViewCell: UICollectionViewCell {
   
   // MARK: - METHODS
   func setupElements() {
-    dogImageView.layer.cornerRadius = 10
+    dogImageView.layer.cornerRadius = 5
   }
   
 }

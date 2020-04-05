@@ -15,12 +15,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgJ-T4-ZCl">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgJ-T4-ZCl">
                                 <rect key="frame" x="84.666666666666671" y="610.66666666666663" width="244.66666666666663" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99990195039999996" green="1" blue="0.99987989659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="73" id="OY0-Za-U7F"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -29,12 +27,10 @@
                                     <segue destination="dT1-Kh-zwD" kind="show" id="OZv-WE-19y"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ay-Ef-ujG">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ay-Ef-ujG">
                                 <rect key="frame" x="84.666666666666671" y="733.66666666666663" width="244.66666666666663" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99990195039999996" green="1" blue="0.99987989659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="73" id="K9F-is-35l"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>

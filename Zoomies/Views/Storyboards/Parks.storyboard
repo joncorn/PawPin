@@ -262,30 +262,102 @@
             </objects>
             <point key="canvasLocation" x="-1130.4347826086957" y="1214.7321428571429"/>
         </scene>
-        <!--View Controller-->
+        <!--Park Map View Controller-->
         <scene sceneID="Jcb-2J-gkB">
             <objects>
-                <viewController id="RvO-c1-vIA" sceneMemberID="viewController">
+                <viewController id="RvO-c1-vIA" customClass="ParkMapViewController" customModule="Zoomies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xf1-Pv-qk9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foa-lL-Ohs">
-                                <rect key="frame" x="186" y="438" width="34" height="21"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dZN-aJ-GbU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="3XM-dY-6YY"/>
                     </view>
                     <navigationItem key="navigationItem" id="tgU-o2-u9r"/>
+                    <connections>
+                        <outlet property="parkMapView" destination="dZN-aJ-GbU" id="sIq-5E-95w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qBY-cW-eWT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-52" y="552"/>
+            <point key="canvasLocation" x="-52.173913043478265" y="551.11607142857144"/>
+        </scene>
+        <!--Park Location Search Table-->
+        <scene sceneID="h6J-3A-U6b">
+            <objects>
+                <tableViewController storyboardIdentifier="parkLocationSearchTable" id="gY0-fG-bH3" customClass="parkLocationSearchTable" customModule="Zoomies" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8g3-ux-zwa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultCell" rowHeight="112" id="z6k-mD-JvD" customClass="parkLocationsSearchTableViewCell" customModule="Zoomies" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="112"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z6k-mD-JvD" id="WTQ-TR-cfy">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JeR-m2-ZQw">
+                                            <rect key="frame" x="117" y="12" width="277" height="88"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doggie Dayland Park" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TOq-lx-fnU">
+                                                    <rect key="frame" x="8" y="8" width="261" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wI-rC-Nwc">
+                                                    <rect key="frame" x="8" y="39" width="152" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                    <color key="textColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </view>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mockParkPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="LMD-Lk-lqn">
+                                            <rect key="frame" x="20" y="12" width="89" height="88"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="89" id="2Wi-8f-Qld"/>
+                                                <constraint firstAttribute="width" secondItem="LMD-Lk-lqn" secondAttribute="height" multiplier="1:1" id="O1F-lC-eeu"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="LMD-Lk-lqn" firstAttribute="leading" secondItem="WTQ-TR-cfy" secondAttribute="leading" constant="20" id="0de-Ek-vVZ"/>
+                                        <constraint firstItem="JeR-m2-ZQw" firstAttribute="leading" secondItem="LMD-Lk-lqn" secondAttribute="trailing" constant="8" id="6zT-GV-CLp"/>
+                                        <constraint firstAttribute="bottom" secondItem="LMD-Lk-lqn" secondAttribute="bottom" constant="12" id="9jC-co-KUg"/>
+                                        <constraint firstItem="LMD-Lk-lqn" firstAttribute="top" secondItem="WTQ-TR-cfy" secondAttribute="top" constant="12" id="9tq-Ed-QTQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="JeR-m2-ZQw" secondAttribute="bottom" constant="12" id="EWh-oD-Nub"/>
+                                        <constraint firstAttribute="trailing" secondItem="JeR-m2-ZQw" secondAttribute="trailing" constant="20" id="L9F-cM-6on"/>
+                                        <constraint firstItem="JeR-m2-ZQw" firstAttribute="top" secondItem="WTQ-TR-cfy" secondAttribute="top" constant="12" id="vsc-qt-4cM"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="parkDetailsView" destination="JeR-m2-ZQw" id="U11-3s-QCe"/>
+                                    <outlet property="parkImageView" destination="LMD-Lk-lqn" id="weA-W7-g8q"/>
+                                    <outlet property="parkLocationLabel" destination="0wI-rC-Nwc" id="QMO-k8-ehe"/>
+                                    <outlet property="parkNameLabel" destination="TOq-lx-fnU" id="OiB-vK-zVo"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gY0-fG-bH3" id="vOj-De-RCT"/>
+                            <outlet property="delegate" destination="gY0-fG-bH3" id="zsM-HG-d4N"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fY-YG-MMg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="688.40579710144937" y="551.11607142857144"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tc4-JQ-ew2">
@@ -361,8 +433,8 @@
     <color key="tintColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
     <resources>
         <image name="DogParksCornerArt" width="85" height="70"/>
-        <image name="map" catalog="system" width="128" height="113"/>
         <image name="map" width="528" height="268"/>
+        <image name="map" catalog="system" width="128" height="113"/>
         <image name="mockParkPhoto" width="567" height="850"/>
     </resources>
 </document>

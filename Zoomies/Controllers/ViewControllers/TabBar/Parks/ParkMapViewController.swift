@@ -93,7 +93,7 @@ extension ParkMapViewController: CLLocationManagerDelegate {
       print("location: \(location)")
       
       // Span is the "frame" W x H of the view of the map
-      let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+      let span = MKCoordinateSpan(latitudeDelta: 0.10, longitudeDelta: 0.10)
       let region = MKCoordinateRegion(center: location.coordinate, span: span)
       parkMapView.setRegion(region, animated: true)
     }
@@ -123,7 +123,7 @@ extension ParkMapViewController: HandleMapSearch {
     
     // Adds annotation to mapview
     parkMapView.addAnnotation(annotation)
-    let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+    let span = MKCoordinateSpan(latitudeDelta: 0.10, longitudeDelta: 0.10)
     let region = MKCoordinateRegion(center: placemark.coordinate, span: span)
     parkMapView.setRegion(region, animated: true)
   }
@@ -147,7 +147,7 @@ extension ParkMapViewController: MKMapViewDelegate {
     let reuseID = "pin"
     var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseID) as? MKPinAnnotationView
     pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
-    pinView?.pinTintColor = UIColor.orange
+    pinView?.pinTintColor = UIColor.green
     pinView?.canShowCallout = true
     
     // Sets size of button
@@ -155,6 +155,8 @@ extension ParkMapViewController: MKMapViewDelegate {
     let button = UIButton(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: smallSquare))
     button.setBackgroundImage(UIImage(named: "bone"), for: .normal)
     button.addTarget(self, action: #selector(getDirections), for: .touchUpInside)
+    // Adds button to the left side of the annotation box
+    pinView?.leftCalloutAccessoryView = button
     
     return pinView
   }

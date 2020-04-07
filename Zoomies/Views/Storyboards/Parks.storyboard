@@ -270,9 +270,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dZN-aJ-GbU">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZN-aJ-GbU">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.2274509804" green="0.33333333329999998" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -433,8 +434,8 @@
     <color key="tintColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
     <resources>
         <image name="DogParksCornerArt" width="85" height="70"/>
-        <image name="map" width="528" height="268"/>
         <image name="map" catalog="system" width="128" height="113"/>
+        <image name="map" width="528" height="268"/>
         <image name="mockParkPhoto" width="567" height="850"/>
     </resources>
 </document>

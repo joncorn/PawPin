@@ -41,6 +41,7 @@ class ParkMapViewController: UIViewController {
       mapItem.openInMaps(launchOptions: launchOptions)
     }
   }
+
   
   func setupLocationManager() {
     locationManager.desiredAccuracy = kCLLocationAccuracyBest

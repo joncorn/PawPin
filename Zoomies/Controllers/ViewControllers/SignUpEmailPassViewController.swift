@@ -40,6 +40,9 @@ class SignUpEmailPassViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    emailTextField.delegate = self
+    passwordTextField.delegate = self
+    
     setupViews()
     setupTextFields()
     setupTapGesture()
@@ -128,7 +131,13 @@ class SignUpEmailPassViewController: UIViewController {
 // MARK: - UITextFieldDelegate
 extension SignUpEmailPassViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    self.view.endEditing(true)
-    return false
+    
+    if textField == emailTextField {
+      passwordTextField.becomeFirstResponder()
+    } else {
+      passwordTextField.resignFirstResponder()
+    }
+    
+    return true
   }
 }

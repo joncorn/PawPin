@@ -28,6 +28,9 @@ class LogInViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    emailTextField.delegate = self
+    passwordTextField.delegate = self
+    
     setupElements()
     setupTextFields()
     setupTapGesture()
@@ -130,8 +133,18 @@ class LogInViewController: UIViewController {
 
 // MARK: - UITextFieldDelegate
 extension LogInViewController: UITextFieldDelegate {
+  
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    self.view.endEditing(true)
-    return false
+    
+    if textField == emailTextField {
+      passwordTextField.becomeFirstResponder()
+    } else {
+      passwordTextField.resignFirstResponder()
+    }
+    
+    return true
+    
+//    self.view.endEditing(true)
+//    return false
   }
 }

@@ -23,6 +23,8 @@ class ForgotPasswordViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    emailTextField.delegate = self
+    
     setupElements()
     setupTextFields()
     setupTapGesture()

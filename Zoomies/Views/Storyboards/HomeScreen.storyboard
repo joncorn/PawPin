@@ -10,7 +10,7 @@
         <!--Home-->
         <scene sceneID="WAr-9l-tHY">
             <objects>
-                <viewController storyboardIdentifier="ConnectVC" id="hA0-7Z-5f7" customClass="HomePageViewController" customModule="Zoomies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConnectVC" id="hA0-7Z-5f7" customClass="HomePageViewController" customModule="PawPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wVr-44-2rM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,7 +63,7 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="parkCell" rowHeight="113" id="NLv-sq-E2H" customClass="FavoriteParksTableViewCell" customModule="Zoomies" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="parkCell" rowHeight="113" id="NLv-sq-E2H" customClass="FavoriteParksTableViewCell" customModule="PawPin" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="28" width="390" height="113"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NLv-sq-E2H" id="mmt-a6-bhb">
@@ -136,7 +136,7 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="checkInCell" rowHeight="73" id="Shw-Mv-ZYc" customClass="CheckInsTableViewCell" customModule="Zoomies" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="checkInCell" rowHeight="73" id="Shw-Mv-ZYc" customClass="CheckInsTableViewCell" customModule="PawPin" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="28" width="398" height="73"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Shw-Mv-ZYc" id="LHo-v4-uj7">

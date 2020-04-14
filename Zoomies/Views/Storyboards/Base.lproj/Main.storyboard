@@ -10,7 +10,7 @@
         <!--Landing View Controller-->
         <scene sceneID="qsj-UA-rKb">
             <objects>
-                <viewController id="QWk-ly-y4R" customClass="LandingViewController" customModule="Zoomies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QWk-ly-y4R" customClass="LandingViewController" customModule="PawPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7er-Nt-uNO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,7 +90,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="khl-fb-bTQ">
             <objects>
-                <viewController id="dT1-Kh-zwD" customClass="SignUpViewController" customModule="Zoomies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dT1-Kh-zwD" customClass="SignUpViewController" customModule="PawPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oh3-mZ-oh9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,8 +120,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24u-Vk-VFH">
                                 <rect key="frame" x="16" y="367" width="382" height="65"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type..." textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="0mb-ga-w3e">
-                                        <rect key="frame" x="16" y="12" width="358" height="40"/>
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type..." textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="0mb-ga-w3e">
+                                        <rect key="frame" x="16" y="12" width="358" height="41"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" textContentType="family-name"/>
                                     </textField>
@@ -130,7 +130,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="7x5-dE-s5d"/>
                                     <constraint firstAttribute="trailing" secondItem="0mb-ga-w3e" secondAttribute="trailing" constant="8" id="Cqn-Cj-fcE"/>
-                                    <constraint firstAttribute="bottom" secondItem="0mb-ga-w3e" secondAttribute="bottom" constant="13" id="Qom-v4-b4C"/>
+                                    <constraint firstAttribute="bottom" secondItem="0mb-ga-w3e" secondAttribute="bottom" constant="12" id="Qom-v4-b4C"/>
                                     <constraint firstItem="0mb-ga-w3e" firstAttribute="top" secondItem="24u-Vk-VFH" secondAttribute="top" constant="12" id="azL-20-alb"/>
                                     <constraint firstItem="0mb-ga-w3e" firstAttribute="leading" secondItem="24u-Vk-VFH" secondAttribute="leading" constant="16" id="oRH-ay-IsQ"/>
                                 </constraints>
@@ -149,7 +149,7 @@
                                 <rect key="frame" x="16" y="249" width="382" height="65"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type..." textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="Aez-S9-BcP">
-                                        <rect key="frame" x="16" y="12" width="358" height="40"/>
+                                        <rect key="frame" x="16" y="12" width="358" height="41"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
@@ -158,7 +158,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Aez-S9-BcP" secondAttribute="trailing" constant="8" id="97e-Vg-0d5"/>
                                     <constraint firstItem="Aez-S9-BcP" firstAttribute="top" secondItem="6Ly-2e-uio" secondAttribute="top" constant="12" id="AQN-ht-sfw"/>
-                                    <constraint firstAttribute="bottom" secondItem="Aez-S9-BcP" secondAttribute="bottom" constant="13" id="PLE-1y-BPk"/>
+                                    <constraint firstAttribute="bottom" secondItem="Aez-S9-BcP" secondAttribute="bottom" constant="12" id="PLE-1y-BPk"/>
                                     <constraint firstAttribute="height" constant="65" id="gUt-1e-Gyg"/>
                                     <constraint firstItem="Aez-S9-BcP" firstAttribute="leading" secondItem="6Ly-2e-uio" secondAttribute="leading" constant="16" id="ina-Vb-rA2"/>
                                 </constraints>
@@ -238,7 +238,7 @@
         <!--Sign Up Email Pass View Controller-->
         <scene sceneID="bQn-oT-zQV">
             <objects>
-                <viewController id="nFy-hW-CMR" customClass="SignUpEmailPassViewController" customModule="Zoomies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nFy-hW-CMR" customClass="SignUpEmailPassViewController" customModule="PawPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7DH-7J-38T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,7 +247,7 @@
                                 <rect key="frame" x="16" y="367" width="382" height="65"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type..." textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="Gha-4m-T5s">
-                                        <rect key="frame" x="16" y="12" width="358" height="40"/>
+                                        <rect key="frame" x="16" y="12" width="358" height="41"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
@@ -256,7 +256,7 @@
                                 <constraints>
                                     <constraint firstItem="Gha-4m-T5s" firstAttribute="top" secondItem="lby-7G-Mc6" secondAttribute="top" constant="12" id="Ite-6Y-DWq"/>
                                     <constraint firstAttribute="height" constant="65" id="TaI-Oi-FuR"/>
-                                    <constraint firstAttribute="bottom" secondItem="Gha-4m-T5s" secondAttribute="bottom" constant="13" id="fP1-Fd-1ys"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gha-4m-T5s" secondAttribute="bottom" constant="12" id="fP1-Fd-1ys"/>
                                     <constraint firstItem="Gha-4m-T5s" firstAttribute="leading" secondItem="lby-7G-Mc6" secondAttribute="leading" constant="16" id="fuQ-Hx-GX1"/>
                                     <constraint firstAttribute="trailing" secondItem="Gha-4m-T5s" secondAttribute="trailing" constant="8" id="lzW-Oc-GbT"/>
                                 </constraints>
@@ -285,7 +285,7 @@
                                 <rect key="frame" x="16" y="249" width="382" height="65"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type..." textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="Vo6-oX-2hu">
-                                        <rect key="frame" x="16" y="12" width="358" height="40"/>
+                                        <rect key="frame" x="16" y="12" width="358" height="41"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
@@ -294,7 +294,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="CVE-SP-pRF"/>
                                     <constraint firstItem="Vo6-oX-2hu" firstAttribute="top" secondItem="JbR-uI-GnB" secondAttribute="top" constant="12" id="GIY-Yh-XdO"/>
-                                    <constraint firstAttribute="bottom" secondItem="Vo6-oX-2hu" secondAttribute="bottom" constant="13" id="IdQ-Ot-yNc"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vo6-oX-2hu" secondAttribute="bottom" constant="12" id="IdQ-Ot-yNc"/>
                                     <constraint firstAttribute="trailing" secondItem="Vo6-oX-2hu" secondAttribute="trailing" constant="8" id="coC-QD-YrP"/>
                                     <constraint firstItem="Vo6-oX-2hu" firstAttribute="leading" secondItem="JbR-uI-GnB" secondAttribute="leading" constant="16" id="jDe-ZS-R6L"/>
                                 </constraints>
@@ -456,7 +456,7 @@
         <!--About Dog View Controller-->
         <scene sceneID="sVT-kN-vtz">
             <objects>
-                <viewController id="Ia6-H9-hW1" customClass="AboutDogViewController" customModule="Zoomies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ia6-H9-hW1" customClass="AboutDogViewController" customModule="PawPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y3X-mi-EXv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -620,7 +620,7 @@
         <!--Upload Dog Pic View Controller-->
         <scene sceneID="rGV-Sj-DYf">
             <objects>
-                <viewController id="3fY-Ea-u8z" customClass="UploadDogPicViewController" customModule="Zoomies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3fY-Ea-u8z" customClass="UploadDogPicViewController" customModule="PawPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZCb-sP-GB2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -685,7 +685,7 @@
         <!--Log In View Controller-->
         <scene sceneID="GUl-HT-9jU">
             <objects>
-                <viewController storyboardIdentifier="LoginVC" id="W9b-Ui-9Kl" customClass="LogInViewController" customModule="Zoomies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="W9b-Ui-9Kl" customClass="LogInViewController" customModule="PawPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mj1-Lu-qwO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -724,10 +724,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Q3-HJ-ebt">
                                 <rect key="frame" x="16" y="249" width="382" height="65"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hBv-Dz-D0n">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hBv-Dz-D0n">
                                         <rect key="frame" x="16" y="12" width="358" height="40"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.7725490196" green="0.81176470590000005" blue="0.75294117650000003" alpha="0.53799229449999997" colorSpace="custom" customColorSpace="sRGB"/>
@@ -742,10 +742,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9J-SN-xGH">
                                 <rect key="frame" x="16" y="367" width="382" height="65"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V5f-5Y-JJn">
+                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V5f-5Y-JJn">
                                         <rect key="frame" x="16" y="12" width="358" height="40"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.7725490196" green="0.81176470590000005" blue="0.75294117650000003" alpha="0.53799229449999997" colorSpace="custom" customColorSpace="sRGB"/>
@@ -852,7 +852,7 @@
         <!--Item-->
         <scene sceneID="6cz-UP-121">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" id="OvS-xJ-z0d" customClass="HomeViewController" customModule="Zoomies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="OvS-xJ-z0d" customClass="HomeViewController" customModule="PawPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Per-iU-DZ5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -896,7 +896,7 @@
         <!--Forgot Password View Controller-->
         <scene sceneID="grL-4A-Hz8">
             <objects>
-                <viewController id="Gd6-fA-hec" customClass="ForgotPasswordViewController" customModule="Zoomies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Gd6-fA-hec" customClass="ForgotPasswordViewController" customModule="PawPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GpH-Qf-MBx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -940,7 +940,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uqQ-61-sn0">
                                         <rect key="frame" x="16" y="12" width="358" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.7725490196" green="0.81176470590000005" blue="0.75294117650000003" alpha="0.53799229449999997" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1029,7 +1029,7 @@
         <!--Password Reset Sent View Controller-->
         <scene sceneID="Okc-dg-c6T">
             <objects>
-                <viewController id="kLV-BH-hDz" customClass="PasswordResetSentViewController" customModule="Zoomies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kLV-BH-hDz" customClass="PasswordResetSentViewController" customModule="PawPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0w5-ec-wgA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1095,7 +1095,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="x2z-jF-5qf"/>
+        <segue reference="KBz-1r-e9Q"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
     <resources>

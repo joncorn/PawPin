@@ -112,7 +112,13 @@ class SignUpViewController: UIViewController {
 // MARK: - TextFieldDelegate
 extension SignUpViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    self.view.endEditing(true)
-    return false
+    
+    if textField == firstNameTextField {
+      lastNameTextField.becomeFirstResponder()
+    } else {
+      lastNameTextField.resignFirstResponder()
+    }
+    
+    return true
   }
 }

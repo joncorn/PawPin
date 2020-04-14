@@ -72,7 +72,7 @@
 		6D7F5A2A24366A0900B4BBDB /* ParksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParksViewController.swift; sourceTree = "<group>"; };
 		6D7F5A2C24366A1200B4BBDB /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		6D7F5A2E24366A2800B4BBDB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		6D8392EF2416B95A00398C3C /* Zoomies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zoomies.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D8392EF2416B95A00398C3C /* PawPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PawPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D8392F22416B95A00398C3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D8392F42416B95A00398C3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6D8392F92416B95A00398C3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 		6D8392F02416B95A00398C3C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6D8392EF2416B95A00398C3C /* Zoomies.app */,
+				6D8392EF2416B95A00398C3C /* PawPin.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -342,7 +342,7 @@
 			);
 			name = Zoomies;
 			productName = Zoomies;
-			productReference = 6D8392EF2416B95A00398C3C /* Zoomies.app */;
+			productReference = 6D8392EF2416B95A00398C3C /* PawPin.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -633,7 +633,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.joncorn.PawPin;
-				PRODUCT_NAME = Zoomies;
+				PRODUCT_NAME = PawPin;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -652,7 +652,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.joncorn.PawPin;
-				PRODUCT_NAME = Zoomies;
+				PRODUCT_NAME = PawPin;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

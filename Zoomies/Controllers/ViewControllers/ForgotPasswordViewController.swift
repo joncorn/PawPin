@@ -104,4 +104,13 @@ class ForgotPasswordViewController: UIViewController {
     let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
     view.addGestureRecognizer(tap)
   }
+  
+} // Class end
+
+// MARK: - UITextFieldDelegate
+extension ForgotPasswordViewController: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    self.view.endEditing(true)
+    return false
+  }
 }

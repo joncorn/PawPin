@@ -56,7 +56,7 @@ class SignUpEmailPassViewController: UIViewController {
     // If there aren't any values in the name fields, user won't be created
     guard let firstName = firstNameLanding,
       let lastName = lastNameLanding else { return }
-
+    
     // Validate fields
     let error = SignupUtility().validateEmailPass(email: emailTextField, password: passwordTextField)
     if error != nil {
@@ -123,4 +123,12 @@ class SignUpEmailPassViewController: UIViewController {
     view.addGestureRecognizer(tap)
   }
   
+} // Class end
+
+// MARK: - UITextFieldDelegate
+extension SignUpEmailPassViewController: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    self.view.endEditing(true)
+    return false
+  }
 }

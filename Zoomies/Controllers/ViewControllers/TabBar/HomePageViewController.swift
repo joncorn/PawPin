@@ -12,6 +12,9 @@ class HomePageViewController: UIViewController {
   
   // MARK: - OUTLETS
   
+  // Views
+  @IBOutlet weak var headerView: UIView!
+  
   // Status text field
   @IBOutlet weak var statusView: UIView!
   @IBOutlet weak var statusTextField: UITextField!
@@ -52,6 +55,9 @@ class HomePageViewController: UIViewController {
     favoriteParksTableView.separatorStyle = .none
     checkInsTableView.separatorStyle = .none
     checkInsTableView.allowsSelection = false
+    
+    // Header view
+    headerView.dropShadowHeader()
   }
   
   // Hide navigation bar after logging in

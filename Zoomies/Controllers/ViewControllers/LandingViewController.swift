@@ -21,8 +21,18 @@ class LandingViewController: UIViewController {
     setupButtons()
   }
   
+//  override func viewWillAppear(_ animated: Bool) {
+//     super.viewWillAppear(animated)
+//     hideNavigationBar(animated: animated)
+//   }
+  
   // MARK: - Methods
   
+//  // Hide navigation bar after logging in
+//   func hideNavigationBar(animated: Bool) {
+//     self.navigationController?.setNavigationBarHidden(true, animated: animated)
+//   }
+//  
   func setupButtons() {
     // 73 is the height of the buttons
     SignUpButton.layer.cornerRadius = 73 / 2

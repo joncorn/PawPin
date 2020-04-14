@@ -34,6 +34,8 @@ class FavoriteParksTableViewCell: UITableViewCell {
     // View
     parkDetailsView.layer.cornerRadius = 10
     parkDetailsView.dropShadow()
+    
+    self.selectionStyle = .none
   }
 
 }

@@ -23,6 +23,8 @@ class ForgotPasswordViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    emailTextField.delegate = self
+    
     setupElements()
     setupTextFields()
     setupTapGesture()
@@ -103,5 +105,14 @@ class ForgotPasswordViewController: UIViewController {
   func setupTapGesture() {
     let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
     view.addGestureRecognizer(tap)
+  }
+  
+} // Class end
+
+// MARK: - UITextFieldDelegate
+extension ForgotPasswordViewController: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    self.view.endEditing(true)
+    return false
   }
 }

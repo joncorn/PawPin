@@ -40,6 +40,9 @@ class SignUpEmailPassViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    emailTextField.delegate = self
+    passwordTextField.delegate = self
+    
     setupViews()
     setupTextFields()
     setupTapGesture()
@@ -56,7 +59,7 @@ class SignUpEmailPassViewController: UIViewController {
     // If there aren't any values in the name fields, user won't be created
     guard let firstName = firstNameLanding,
       let lastName = lastNameLanding else { return }
-
+    
     // Validate fields
     let error = SignupUtility().validateEmailPass(email: emailTextField, password: passwordTextField)
     if error != nil {
@@ -123,4 +126,18 @@ class SignUpEmailPassViewController: UIViewController {
     view.addGestureRecognizer(tap)
   }
   
+} // Class end
+
+// MARK: - UITextFieldDelegate
+extension SignUpEmailPassViewController: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    
+    if textField == emailTextField {
+      passwordTextField.becomeFirstResponder()
+    } else {
+      passwordTextField.resignFirstResponder()
+    }
+    
+    return true
+  }
 }

@@ -42,13 +42,14 @@ class ParkMapViewController: UIViewController {
     }
   }
 
-  
+  // Setup location manager
   func setupLocationManager() {
     locationManager.desiredAccuracy = kCLLocationAccuracyBest
     locationManager.requestWhenInUseAuthorization()
     locationManager.requestLocation()
   }
   
+  // Setup search bar in nav bar
   func setupSearchBar() {
     
     // Points to our tableview where our results will show

@@ -24,6 +24,8 @@ class ForgotPasswordViewController: UIViewController {
     super.viewDidLoad()
     
     setupElements()
+    setupTextFields()
+    setupTapGesture()
   }
   
   // MARK: - ACTIONS

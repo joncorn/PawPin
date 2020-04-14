@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		6D09495C24303E6100633AB4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D09495B24303E6100633AB4 /* ForgotPasswordViewController.swift */; };
 		6D15F91424359B0600221E22 /* AboutDogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D15F91324359B0600221E22 /* AboutDogViewController.swift */; };
+		6D60CE29243A3C60008AF5EC /* ParkMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D60CE28243A3C60008AF5EC /* ParkMapViewController.swift */; };
+		6D60CE2B243A40BD008AF5EC /* parkLocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D60CE2A243A40BD008AF5EC /* parkLocationSearchTable.swift */; };
+		6D60CE2D243A4886008AF5EC /* parkLocationsSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D60CE2C243A4886008AF5EC /* parkLocationsSearchTableViewCell.swift */; };
 		6D7F5A1F243651CA00B4BBDB /* UploadDogPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F5A1E243651CA00B4BBDB /* UploadDogPicViewController.swift */; };
 		6D7F5A212436539500B4BBDB /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D7F5A202436539500B4BBDB /* HomeScreen.storyboard */; };
 		6D7F5A23243663D900B4BBDB /* Parks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D7F5A22243663D900B4BBDB /* Parks.storyboard */; };
@@ -41,6 +44,7 @@
 		6DBA9F5E24182D240087002F /* FirebaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA9F5D24182D240087002F /* FirebaseNetworking.swift */; };
 		6DD0B58524390F5600A996B8 /* ConnectLikedFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD0B58424390F5600A996B8 /* ConnectLikedFriendsTableViewCell.swift */; };
 		6DD0B58724390F6E00A996B8 /* ConnectFriendsCheckInsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD0B58624390F6E00A996B8 /* ConnectFriendsCheckInsTableViewCell.swift */; };
+		6DD0B5892439378500A996B8 /* ProfileDogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD0B5882439378500A996B8 /* ProfileDogCollectionViewCell.swift */; };
 		6DDCCCE12433D92E00892A8B /* SignUpEmailPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDCCCE02433D92E00892A8B /* SignUpEmailPassViewController.swift */; };
 		6DDCCCE32433E3D700892A8B /* SignupUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDCCCE22433E3D700892A8B /* SignupUtility.swift */; };
 		6DDCCCE62434066800892A8B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDCCCE52434066800892A8B /* UIViewControllerExtension.swift */; };
@@ -57,6 +61,9 @@
 		556020C5CEF3D7E1030635C2 /* Pods-Zoomies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zoomies.debug.xcconfig"; path = "Target Support Files/Pods-Zoomies/Pods-Zoomies.debug.xcconfig"; sourceTree = "<group>"; };
 		6D09495B24303E6100633AB4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		6D15F91324359B0600221E22 /* AboutDogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutDogViewController.swift; sourceTree = "<group>"; };
+		6D60CE28243A3C60008AF5EC /* ParkMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkMapViewController.swift; sourceTree = "<group>"; };
+		6D60CE2A243A40BD008AF5EC /* parkLocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parkLocationSearchTable.swift; sourceTree = "<group>"; };
+		6D60CE2C243A4886008AF5EC /* parkLocationsSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parkLocationsSearchTableViewCell.swift; sourceTree = "<group>"; };
 		6D7F5A1E243651CA00B4BBDB /* UploadDogPicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDogPicViewController.swift; sourceTree = "<group>"; };
 		6D7F5A202436539500B4BBDB /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
 		6D7F5A22243663D900B4BBDB /* Parks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Parks.storyboard; sourceTree = "<group>"; };
@@ -65,7 +72,7 @@
 		6D7F5A2A24366A0900B4BBDB /* ParksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParksViewController.swift; sourceTree = "<group>"; };
 		6D7F5A2C24366A1200B4BBDB /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		6D7F5A2E24366A2800B4BBDB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		6D8392EF2416B95A00398C3C /* Zoomies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zoomies.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D8392EF2416B95A00398C3C /* PawPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PawPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D8392F22416B95A00398C3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D8392F42416B95A00398C3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6D8392F92416B95A00398C3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +98,7 @@
 		6DBA9F5D24182D240087002F /* FirebaseNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworking.swift; sourceTree = "<group>"; };
 		6DD0B58424390F5600A996B8 /* ConnectLikedFriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectLikedFriendsTableViewCell.swift; sourceTree = "<group>"; };
 		6DD0B58624390F6E00A996B8 /* ConnectFriendsCheckInsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFriendsCheckInsTableViewCell.swift; sourceTree = "<group>"; };
+		6DD0B5882439378500A996B8 /* ProfileDogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDogCollectionViewCell.swift; sourceTree = "<group>"; };
 		6DDCCCE02433D92E00892A8B /* SignUpEmailPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpEmailPassViewController.swift; sourceTree = "<group>"; };
 		6DDCCCE22433E3D700892A8B /* SignupUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupUtility.swift; sourceTree = "<group>"; };
 		6DDCCCE52434066800892A8B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -123,11 +131,21 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		6D60CE27243A3C03008AF5EC /* Parks */ = {
+			isa = PBXGroup;
+			children = (
+				6D7F5A2A24366A0900B4BBDB /* ParksViewController.swift */,
+				6D60CE28243A3C60008AF5EC /* ParkMapViewController.swift */,
+				6D60CE2A243A40BD008AF5EC /* parkLocationSearchTable.swift */,
+			);
+			path = Parks;
+			sourceTree = "<group>";
+		};
 		6D7F5A28243669CD00B4BBDB /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
 				6DBA9F5A2417FC1C0087002F /* HomePageViewController.swift */,
-				6D7F5A2A24366A0900B4BBDB /* ParksViewController.swift */,
+				6D60CE27243A3C03008AF5EC /* Parks */,
 				6D7F5A2C24366A1200B4BBDB /* ConnectViewController.swift */,
 				6D7F5A2E24366A2800B4BBDB /* ProfileViewController.swift */,
 			);
@@ -147,7 +165,7 @@
 		6D8392F02416B95A00398C3C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6D8392EF2416B95A00398C3C /* Zoomies.app */,
+				6D8392EF2416B95A00398C3C /* PawPin.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -261,6 +279,8 @@
 				6DF4A4CA243703B600E0C0F8 /* CheckInsTableViewCell.swift */,
 				6DD0B58424390F5600A996B8 /* ConnectLikedFriendsTableViewCell.swift */,
 				6DD0B58624390F6E00A996B8 /* ConnectFriendsCheckInsTableViewCell.swift */,
+				6DD0B5882439378500A996B8 /* ProfileDogCollectionViewCell.swift */,
+				6D60CE2C243A4886008AF5EC /* parkLocationsSearchTableViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -322,7 +342,7 @@
 			);
 			name = Zoomies;
 			productName = Zoomies;
-			productReference = 6D8392EF2416B95A00398C3C /* Zoomies.app */;
+			productReference = 6D8392EF2416B95A00398C3C /* PawPin.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -427,6 +447,8 @@
 				6DF4A4CB243703B600E0C0F8 /* CheckInsTableViewCell.swift in Sources */,
 				6DF4A4BB2436E4E400E0C0F8 /* FavoriteParksTableViewCell.swift in Sources */,
 				6DBA9F532417F15A0087002F /* SignUpViewController.swift in Sources */,
+				6D60CE2D243A4886008AF5EC /* parkLocationsSearchTableViewCell.swift in Sources */,
+				6DD0B5892439378500A996B8 /* ProfileDogCollectionViewCell.swift in Sources */,
 				6DDCCCE32433E3D700892A8B /* SignupUtility.swift in Sources */,
 				6DF4A4B92436E44000E0C0F8 /* RecentParkSearchTableViewCell.swift in Sources */,
 				6DBA9F552417F3940087002F /* LandingViewController.swift in Sources */,
@@ -455,6 +477,8 @@
 				6DDCCCE12433D92E00892A8B /* SignUpEmailPassViewController.swift in Sources */,
 				6D7F5A1F243651CA00B4BBDB /* UploadDogPicViewController.swift in Sources */,
 				6DDCCCE62434066800892A8B /* UIViewControllerExtension.swift in Sources */,
+				6D60CE2B243A40BD008AF5EC /* parkLocationSearchTable.swift in Sources */,
+				6D60CE29243A3C60008AF5EC /* ParkMapViewController.swift in Sources */,
 				6DF4A4C92436EBC400E0C0F8 /* UIViewExtension.swift in Sources */,
 				6D8576DC2419556E007E0A74 /* CheckInController.swift in Sources */,
 			);
@@ -609,7 +633,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.joncorn.PawPin;
-				PRODUCT_NAME = Zoomies;
+				PRODUCT_NAME = PawPin;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -628,7 +652,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.joncorn.PawPin;
-				PRODUCT_NAME = Zoomies;
+				PRODUCT_NAME = PawPin;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

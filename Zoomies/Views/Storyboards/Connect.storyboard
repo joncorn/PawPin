@@ -26,7 +26,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="muD-Xy-GwC">
-                                <rect key="frame" x="0.0" y="245" width="414" height="568"/>
+                                <rect key="frame" x="0.0" y="235" width="414" height="578"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CBJ-KY-N4Z">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
@@ -217,12 +217,16 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="aTF-vd-qoJ"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Un7-bj-GZD"/>
                             </scrollView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connectCornerArt" translatesAutoresizingMaskIntoConstraints="NO" id="bSz-tN-9BM">
+                                <rect key="frame" x="307" y="111" width="83" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="s1Q-uX-ETq" firstAttribute="leading" secondItem="eh3-93-XYi" secondAttribute="leading" constant="16" id="1g6-3s-ufB"/>
                             <constraint firstItem="muD-Xy-GwC" firstAttribute="leading" secondItem="eh3-93-XYi" secondAttribute="leading" id="5Ve-dS-DGh"/>
-                            <constraint firstItem="muD-Xy-GwC" firstAttribute="top" secondItem="s1Q-uX-ETq" secondAttribute="bottom" constant="74" id="TAp-rE-0zy"/>
+                            <constraint firstItem="muD-Xy-GwC" firstAttribute="top" secondItem="s1Q-uX-ETq" secondAttribute="bottom" constant="64" id="TAp-rE-0zy"/>
                             <constraint firstItem="muD-Xy-GwC" firstAttribute="trailing" secondItem="eh3-93-XYi" secondAttribute="trailing" id="Vl1-fI-8PJ"/>
                             <constraint firstItem="muD-Xy-GwC" firstAttribute="bottom" secondItem="eh3-93-XYi" secondAttribute="bottom" id="Xrp-Lg-UAK"/>
                             <constraint firstItem="s1Q-uX-ETq" firstAttribute="top" secondItem="eh3-93-XYi" secondAttribute="top" constant="40" id="dmp-Y9-vfC"/>
@@ -312,7 +316,9 @@
             <point key="canvasLocation" x="1129" y="180"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
     <resources>
+        <image name="connectCornerArt" width="83" height="76"/>
         <image name="mockParkPhoto" width="567" height="850"/>
         <image name="person.2" catalog="system" width="128" height="81"/>
     </resources>

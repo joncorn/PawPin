@@ -83,6 +83,17 @@ extension ConnectViewController: UITableViewDataSource, UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
+    // MARK:  didSelectRowAt
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      if tableView == self.likedFriendsTableView {
+        tableView.deselectRow(at: indexPath, animated: true)
+      }
+      
+      if tableView == self.friendsRecentCheckInsTableView {
+        tableView.deselectRow(at: indexPath, animated: true)
+      }
+    }
+    
     // MARK:  LikedFriends Tableview
     if tableView == likedFriendsTableView {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "friendCell", for: indexPath)

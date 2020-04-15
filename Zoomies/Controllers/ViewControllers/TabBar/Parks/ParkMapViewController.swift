@@ -48,6 +48,8 @@ class ParkMapViewController: UIViewController {
     locationManager.requestLocation()
   }
   
+  
+  
   // Setup search bar in nav bar
   func setupSearchBar() {
     

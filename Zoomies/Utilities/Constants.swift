@@ -17,6 +17,7 @@ struct Constants {
       static let favoriteParks = "toFavoriteParksVC"
       static let recentParks = "toRecentParksVC"
       static let toParkMap = "toParkMapVC"
+      static let toParkDetails = "toParkDetailsVC"
     }
 
     struct VCReference {
@@ -24,6 +25,7 @@ struct Constants {
       static let parksViewController = "ParksVC"
       static let connectViewController = "ConnectVC"
       static let profileViewController = "ProfileVC"
+      static let parkDetailsViewController = "ParkDetailsVC"
     }
   }
   

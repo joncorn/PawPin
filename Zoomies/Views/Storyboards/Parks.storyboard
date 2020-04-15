@@ -97,6 +97,7 @@
                                                                 <connections>
                                                                     <outlet property="parkDetailsView" destination="XGu-Za-QXQ" id="9Kh-fh-N1B"/>
                                                                     <outlet property="parkImageView" destination="3vN-8w-vdd" id="iZt-Ps-eeU"/>
+                                                                    <segue destination="BJo-5b-hFA" kind="show" identifier="toParkDetailsVC" id="mxM-Dj-30r"/>
                                                                 </connections>
                                                             </tableViewCell>
                                                         </prototypes>
@@ -192,6 +193,7 @@
                                                                     <outlet property="parkImageView" destination="jIq-1N-ZpX" id="Vkg-VL-JfR"/>
                                                                     <outlet property="parkLocationLabel" destination="iyN-Fg-8U2" id="ohk-va-ZBz"/>
                                                                     <outlet property="parkNameLabel" destination="NK9-QU-mxW" id="iwd-1P-f2U"/>
+                                                                    <segue destination="BJo-5b-hFA" kind="show" identifier="toParkDetailsVC" id="A6L-Ve-ml7"/>
                                                                 </connections>
                                                             </tableViewCell>
                                                         </prototypes>
@@ -334,6 +336,16 @@
             </objects>
             <point key="canvasLocation" x="-1130.4347826086957" y="1214.7321428571429"/>
         </scene>
+        <!--ParkDetails-->
+        <scene sceneID="n5M-kN-wh7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ParkDetails" id="BJo-5b-hFA" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ay0-fy-apo"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kyd-nb-uST" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1130" y="1683"/>
+        </scene>
         <!--Park Map View Controller-->
         <scene sceneID="Jcb-2J-gkB">
             <objects>
@@ -433,21 +445,6 @@
             <point key="canvasLocation" x="688.40579710144937" y="551.11607142857144"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="hZM-z3-0HD">
-            <objects>
-                <viewController id="5ZN-0o-rLD" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vtT-Me-dJM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="JS7-YL-kIq"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="axL-0i-52P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1130" y="1906"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="tc4-JQ-ew2">
             <objects>
                 <viewController id="1LY-ga-Rla" sceneMemberID="viewController">
@@ -518,6 +515,9 @@
             <point key="canvasLocation" x="-51" y="1892"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="A6L-Ve-ml7"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
     <resources>
         <image name="DogParksCornerArt" width="85" height="70"/>

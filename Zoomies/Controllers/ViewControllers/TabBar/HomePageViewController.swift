@@ -55,6 +55,7 @@ class HomePageViewController: UIViewController {
     StyleGuide.styleViewsCornerRadius(statusView)
     StyleGuide.styleViewsCornerRadius(checkInsTableView)
     StyleGuide.styleViewsCornerRadius(favoriteParksTableView)
+    StyleGuide.styleViewsCornerRadius(headerView)
     // Seperator Style
     favoriteParksTableView.separatorStyle = .none
     checkInsTableView.separatorStyle = .none

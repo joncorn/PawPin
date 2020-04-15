@@ -53,6 +53,7 @@ class ConnectViewController: UIViewController {
     StyleGuide.styleViewsCornerRadius(friendsCheckInsButton)
     StyleGuide.styleViewsCornerRadius(friendsRecentCheckInsTableView)
     StyleGuide.styleViewsCornerRadius(likedFriendsTableView)
+    StyleGuide.styleViewsCornerRadius(headerView)
     // Drop shadow
     headerView.dropShadowHeader()
   }

@@ -14,7 +14,6 @@ class SignUpViewController: UIViewController {
   // Views
   @IBOutlet weak var lastNameView: UIView!
   @IBOutlet weak var firstNameView: UIView!
-  
   // Text Fields
   @IBOutlet weak var firstNameTextField: UITextField!
   @IBOutlet weak var lastNameTextField: UITextField!
@@ -24,18 +23,16 @@ class SignUpViewController: UIViewController {
   // MARK: - View Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    // Delegates
     self.firstNameTextField.delegate = self
     self.lastNameTextField.delegate = self
-    
-    setupElements()
-    setupTextFields()
-    setupTapGesture()
+    // UI
+    setupUI()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    
+    // Make error label invisible
     errorLabel.alpha = 0
   }
   
@@ -54,13 +51,19 @@ class SignUpViewController: UIViewController {
   
   
   // MARK: - Methods
+  func setupUI() {
+    setupElements()
+    setupTextFields()
+    setupTapGesture()
+  }
+  
   func setupElements() {
     // Error label
     errorLabel.alpha = 0
-    // Setup views
-    firstNameView.layer.cornerRadius = 10
-    lastNameView.layer.cornerRadius = 10
-    signUpButton.layer.cornerRadius = 10
+    // Corner radius
+    StyleGuide.styleViewsCornerRadius(firstNameView)
+    StyleGuide.styleViewsCornerRadius(lastNameView)
+    StyleGuide.styleViewsCornerRadius(signUpButton)
   }
   
   func showError(_ message: String) {
@@ -69,11 +72,8 @@ class SignUpViewController: UIViewController {
   }
   
   func setupTextFields() {
-    
     let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: view.frame.size.width, height: 30)))
-    
     let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-    
     let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonTapped))
     
     toolbar.setItems([flexSpace, doneButton], animated: false)
@@ -81,7 +81,6 @@ class SignUpViewController: UIViewController {
     
     firstNameTextField.inputAccessoryView = toolbar
     lastNameTextField.inputAccessoryView = toolbar
-    
   }
   
   @objc func doneButtonTapped() {
@@ -95,9 +94,7 @@ class SignUpViewController: UIViewController {
   
   // MARK: - SEGUE
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
     if segue.identifier == "toEmailPassVC" {
-      
       guard let destinationVC = segue.destination as? SignUpEmailPassViewController,
         let firstName = firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
         let lastName = lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)

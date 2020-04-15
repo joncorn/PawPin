@@ -22,23 +22,14 @@ class ForgotPasswordViewController: UIViewController {
   // MARK: - VIEW LIFECYCLE
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    // Delegate
     emailTextField.delegate = self
-    
-    setupElements()
-    setupTextFields()
-    setupTapGesture()
+    // UI
+    setupUI()
   }
   
   // MARK: - ACTIONS
   @IBAction func sendButtonTapped(_ sender: Any) {
-    
-    // validate email
-//    let error = SignupUtility().validateEmail(email: emailTextField)
-//    if error != nil {
-//      showError(error!)
-//    } else { return }
-    
     guard let email = emailTextField.text, email != "" else {
       self.showError("Enter your email")
       return
@@ -65,13 +56,18 @@ class ForgotPasswordViewController: UIViewController {
   
   
   // MARK: - METHODS
+  func setupUI() {
+    setupElements()
+    setupTextFields()
+    setupTapGesture()
+  }
   
   func setupElements() {
-    //  Hide error label
+    // Hide error label
     errorLabel.alpha = 0
-    //  Stylize elements
-    emailView.layer.cornerRadius = 10
-    sendButton.layer.cornerRadius = 10
+    // Corner radius
+    StyleGuide.styleViewsCornerRadius(emailView)
+    StyleGuide.styleViewsCornerRadius(sendButton)
   }
   
   func showError(_ message: String) {
@@ -80,22 +76,14 @@ class ForgotPasswordViewController: UIViewController {
   }
   
   func setupTextFields() {
-    
-    // Create toolbar
     let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: view.frame.size.width, height: 30)))
-    
-    // Create left side empty space so that done button set on right side
     let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-    
-    // Create done button
     let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonTapped))
     
     toolbar.setItems([flexSpace, doneButton], animated: false)
     toolbar.sizeToFit()
     
-    // Add toolbar to keyboards
     emailTextField.inputAccessoryView = toolbar
-    
   }
   
   @objc func doneButtonTapped() {

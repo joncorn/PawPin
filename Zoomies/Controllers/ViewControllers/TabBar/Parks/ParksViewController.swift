@@ -11,32 +11,36 @@ import UIKit
 class ParksViewController: UIViewController {
   
   // MARK: - OUTLETS
-  
-  // Header view
+  // Views
   @IBOutlet weak var headerView: UIView!
-  
+  @IBOutlet weak var scrollView: UIScrollView!
   // Map button
   @IBOutlet weak var parkMapImageView: UIImageView!
-  
   // Header buttons
   @IBOutlet weak var recentParkSearchButton: UIButton!
   @IBOutlet weak var favoriteParksButton: UIButton!
-  
   // Tableviews
   @IBOutlet weak var recentParkSearchTableView: UITableView!
   @IBOutlet weak var favoriteParksTableView: UITableView!
   
-  
   // MARK: - VIEW LIFECYCLE
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    // DataSource/Delegates
     recentParkSearchTableView.delegate = self
     recentParkSearchTableView.dataSource = self
     favoriteParksTableView.delegate = self
     favoriteParksTableView.dataSource = self
-    
+    // UI
     setupUI()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    // Reset scrollview position
+    scrollView.setContentOffset(CGPoint.zero, animated: false)
+    recentParkSearchTableView.setContentOffset(CGPoint.zero, animated: false)
+    favoriteParksTableView.setContentOffset(CGPoint.zero, animated: false)
   }
   
   // MARK: - ACTIONS
@@ -45,28 +49,33 @@ class ParksViewController: UIViewController {
     performSegue(withIdentifier: Constants.Storyboard.Segues.toParkMap, sender: self)
   }
   
-  
-  
   // MARK: - METHODS
-  func setupElements() {
-    parkMapImageView.layer.cornerRadius = 10
-    parkMapImageView.isUserInteractionEnabled = true
-    recentParkSearchButton.layer.cornerRadius = 10
-    favoriteParksButton.layer.cornerRadius = 10
-    headerView.dropShadowHeader()
-  }
-  
-  func setupTableViews() {
-    recentParkSearchTableView.separatorStyle = .none
-    favoriteParksTableView.separatorStyle = .none
-    
-  }
-  
   func setupUI() {
     setupElements()
     setupTableViews()
   }
-}
+  
+  func setupElements() {
+    // Corner radius
+    StyleGuide.styleViewsCornerRadius(parkMapImageView)
+    StyleGuide.styleViewsCornerRadius(recentParkSearchButton)
+    StyleGuide.styleViewsCornerRadius(favoriteParksButton)
+    // Allow action when image is tapped
+    parkMapImageView.isUserInteractionEnabled = true
+    // Drop shadow
+    headerView.dropShadowHeader()
+  }
+  
+  func setupTableViews() {
+    // Corner radius
+    StyleGuide.styleViewsCornerRadius(recentParkSearchTableView)
+    StyleGuide.styleViewsCornerRadius(favoriteParksTableView)
+    // Separator style
+    recentParkSearchTableView.separatorStyle = .none
+    favoriteParksTableView.separatorStyle = .none
+  }
+  
+} // Class end
 
 // MARK: - TABLEVIEW EXT.
 extension ParksViewController: UITableViewDelegate, UITableViewDataSource {

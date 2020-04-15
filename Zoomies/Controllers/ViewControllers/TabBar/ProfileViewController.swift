@@ -11,14 +11,11 @@ import UIKit
 class ProfileViewController: UIViewController {
   
   // MARK: - OUTLETS
-  
   // Status bar
   @IBOutlet weak var statusView: UIView!
   @IBOutlet weak var statusTextField: UITextField!
-  
   // Dogs collection view
   @IBOutlet weak var dogsCollectionView: UICollectionView!
-  
   // Buttons
   @IBOutlet weak var editButton: UIButton!
   @IBOutlet weak var settingsButton: UIButton!
@@ -26,20 +23,22 @@ class ProfileViewController: UIViewController {
   // MARK: - VIEW LIFECYCLE
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    // DataSource/Delegate
     dogsCollectionView.delegate = self
     dogsCollectionView.dataSource = self
-    
+    // UI
+    setupUI()
+  }
+  
+  // MARK: - METHODS
+  func setupUI() {
     setupElements()
     setupKeyboard()
   }
   
-  // MARK: - ACTIONS
-  
-  
-  // MARK: - METHODS
   func setupElements() {
-    statusView.layer.cornerRadius = 10
+    // Corner radius
+    StyleGuide.styleViewsCornerRadius(statusView)
   }
   
   func setupKeyboard() {
@@ -49,22 +48,16 @@ class ProfileViewController: UIViewController {
   }
   
   func setupTextFields() {
-    
     // Create toolbar
     let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: view.frame.size.width, height: 30)))
-    
     // Create left side empty space so that done button set on right side
     let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-    
     // Create done button
     let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonTapped))
-    
     toolbar.setItems([flexSpace, doneButton], animated: false)
     toolbar.sizeToFit()
-    
     // Add toolbar to keyboards
     statusTextField.inputAccessoryView = toolbar
-    
   }
   
   @objc func doneButtonTapped() {
@@ -112,6 +105,5 @@ extension ProfileViewController: UICollectionViewDataSource, UICollectionViewDel
     
     return cell
   }
-  
   
 }

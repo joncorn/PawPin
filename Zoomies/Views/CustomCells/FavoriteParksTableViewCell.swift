@@ -29,13 +29,13 @@ class FavoriteParksTableViewCell: UITableViewCell {
   
   // MARK: - METHODS
   func setupElements() {
-    parkImageView.layer.cornerRadius = 10
     
-    // View
-    parkDetailsView.layer.cornerRadius = 10
+    // Stylize views
+    StyleGuide.styleViewsCornerRadius(parkImageView)
+    StyleGuide.styleViewsCornerRadius(parkDetailsView)
+    
+    // Drop shadow on parkDetailView
     parkDetailsView.dropShadow()
-    
-    self.selectionStyle = .none
   }
 
 }

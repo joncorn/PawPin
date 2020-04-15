@@ -11,46 +11,40 @@ import UIKit
 class AboutDogViewController: UIViewController {
   
   // MARK: - OUTLETS
-  
   // Dog breed text field
   @IBOutlet weak var breedView: UIView!
   @IBOutlet weak var breedTextField: UITextField!
-  
   // Dog age text field
   @IBOutlet weak var ageView: UIView!
   @IBOutlet weak var ageTextField: UITextField!
-  
   // Small size check box
   @IBOutlet weak var smallDogSizeView: UIView!
   @IBOutlet weak var smallCheckBoxButton: UIButton!
-  
   // Medium size check box
   @IBOutlet weak var mediumDogSizeView: UIView!
   @IBOutlet weak var mediumCheckBoxButton: UIButton!
-  
   // Large size check box
   @IBOutlet weak var largeDogSizeView: UIView!
   @IBOutlet weak var largeCheckBoxButton: UIButton!
-  
+  // Button, error label
   @IBOutlet weak var errorLabel: UILabel!
   @IBOutlet weak var nextButton: UIButton!
   
   // MARK: - VIEW LIFECYCLE
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    // UI
     setupElements()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    
+    // Make error label invisible
     errorLabel.alpha = 0
   }
   
   // MARK: - ACTIONS
   @IBAction func nextButtonTapped(_ sender: Any) {
-    
     // Checks if the text fields have a value, if not, show error
     let error = SignupUtility().validateBreedAge(dogBreed: breedTextField, dogAge: ageTextField)
     if error != nil {
@@ -66,17 +60,18 @@ class AboutDogViewController: UIViewController {
   }
   
   func setupElements() {
+    // Hide error label
     errorLabel.alpha = 0
-    
-    breedView.layer.cornerRadius = 10
-    ageView.layer.cornerRadius = 10
-    smallDogSizeView.layer.cornerRadius = 10
-    smallCheckBoxButton.layer.cornerRadius = 10
-    mediumDogSizeView.layer.cornerRadius = 10
-    mediumCheckBoxButton.layer.cornerRadius = 10
-    largeDogSizeView.layer.cornerRadius = 10
-    largeCheckBoxButton.layer.cornerRadius = 10
-    nextButton.layer.cornerRadius = 10
+    // Corner radius
+    StyleGuide.styleViewsCornerRadius(breedView)
+    StyleGuide.styleViewsCornerRadius(ageView)
+    StyleGuide.styleViewsCornerRadius(smallDogSizeView)
+    StyleGuide.styleViewsCornerRadius(smallCheckBoxButton)
+    StyleGuide.styleViewsCornerRadius(mediumDogSizeView)
+    StyleGuide.styleViewsCornerRadius(mediumCheckBoxButton)
+    StyleGuide.styleViewsCornerRadius(largeDogSizeView)
+    StyleGuide.styleViewsCornerRadius(largeCheckBoxButton)
+    StyleGuide.styleViewsCornerRadius(nextButton)
   }
   
-}
+} // Class end

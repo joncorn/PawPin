@@ -12,6 +12,9 @@ class ParksViewController: UIViewController {
   
   // MARK: - OUTLETS
   
+  // Header view
+  @IBOutlet weak var headerView: UIView!
+  
   // Map button
   @IBOutlet weak var parkMapImageView: UIImageView!
   
@@ -50,6 +53,7 @@ class ParksViewController: UIViewController {
     parkMapImageView.isUserInteractionEnabled = true
     recentParkSearchButton.layer.cornerRadius = 10
     favoriteParksButton.layer.cornerRadius = 10
+    headerView.dropShadowHeader()
   }
   
   func setupTableViews() {

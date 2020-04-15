@@ -35,12 +35,12 @@ class ParksViewController: UIViewController {
     setupUI()
   }
   
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     // Reset scrollview position
-    scrollView.setContentOffset(CGPoint.zero, animated: true)
-    recentParkSearchTableView.setContentOffset(CGPoint.zero, animated: true)
-    favoriteParksTableView.setContentOffset(CGPoint.zero, animated: true)
+    scrollView.setContentOffset(CGPoint.zero, animated: false)
+    recentParkSearchTableView.setContentOffset(CGPoint.zero, animated: false)
+    favoriteParksTableView.setContentOffset(CGPoint.zero, animated: false)
   }
   
   // MARK: - ACTIONS

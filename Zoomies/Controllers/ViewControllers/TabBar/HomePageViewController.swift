@@ -38,16 +38,11 @@ class HomePageViewController: UIViewController {
     super.viewWillAppear(animated)
     // Hide navbar
     hideNavigationBar(animated: animated)
-  }
-  
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
     // Reset scrollview position
-    scrollView.setContentOffset(CGPoint.zero, animated: true)
-    checkInsTableView.setContentOffset(CGPoint.zero, animated: true)
-    favoriteParksTableView.setContentOffset(CGPoint.zero, animated: true)
+    scrollView.setContentOffset(CGPoint.zero, animated: false)
+    checkInsTableView.setContentOffset(CGPoint.zero, animated: false)
+    favoriteParksTableView.setContentOffset(CGPoint.zero, animated: false)
   }
-  
   
   // MARK: - METHODS
   func setupUI() {

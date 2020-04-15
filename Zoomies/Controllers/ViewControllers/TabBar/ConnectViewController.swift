@@ -33,12 +33,12 @@ class ConnectViewController: UIViewController {
     setupUI()
   }
   
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     // Reset view positions
-    scrollView.setContentOffset(CGPoint.zero, animated: true)
-    likedFriendsTableView.setContentOffset(CGPoint.zero, animated: true)
-    friendsRecentCheckInsTableView.setContentOffset(CGPoint.zero, animated: true)
+    scrollView.setContentOffset(CGPoint.zero, animated: false)
+    likedFriendsTableView.setContentOffset(CGPoint.zero, animated: false)
+    friendsRecentCheckInsTableView.setContentOffset(CGPoint.zero, animated: false)
   }
   
   // MARK: - METHODS

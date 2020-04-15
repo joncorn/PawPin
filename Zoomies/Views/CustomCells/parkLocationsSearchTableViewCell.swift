@@ -24,9 +24,12 @@ class parkLocationsSearchTableViewCell: UITableViewCell {
   
   // MARK: - METHODS
   func setupElements() {
-    parkImageView.layer.cornerRadius = 10
-    parkDetailsView.layer.cornerRadius = 10
+
+    // Stylize views
+    StyleGuide.styleViewsCornerRadius(parkImageView)
+    StyleGuide.styleViewsCornerRadius(parkDetailsView)
     
+    // Drop shadow
     parkDetailsView.dropShadow()
   }
   

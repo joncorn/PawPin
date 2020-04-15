@@ -17,6 +17,7 @@ class PasswordResetSentViewController: UIViewController {
   
   // MARK: - ACTIONS
   @IBAction func backToLoginButtonTapped(_ sender: Any) {
+    // Popback to view number on stack
     self.popBack(3)
   }
   

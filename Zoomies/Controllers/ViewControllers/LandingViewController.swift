@@ -11,31 +11,22 @@ import UIKit
 class LandingViewController: UIViewController {
   
   // MARK: - Outlets
+  // Buttons
   @IBOutlet weak var SignUpButton: UIButton!
   @IBOutlet weak var LogInButton: UIButton!
   
   // MARK: - View Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    // UI
     setupButtons()
   }
   
-//  override func viewWillAppear(_ animated: Bool) {
-//     super.viewWillAppear(animated)
-//     hideNavigationBar(animated: animated)
-//   }
-  
   // MARK: - Methods
-  
-//  // Hide navigation bar after logging in
-//   func hideNavigationBar(animated: Bool) {
-//     self.navigationController?.setNavigationBarHidden(true, animated: animated)
-//   }
-//  
   func setupButtons() {
-    // 73 is the height of the buttons
-    SignUpButton.layer.cornerRadius = 73 / 2
-    LogInButton.layer.cornerRadius = 73 / 2
+    // Round corners
+    StyleGuide.styleLoginSignupButton(SignUpButton)
+    StyleGuide.styleLoginSignupButton(LogInButton)
   }
-}
+  
+} // Class end

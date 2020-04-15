@@ -23,9 +23,12 @@ class ConnectFriendsCheckInsTableViewCell: UITableViewCell {
   
   // MARK: - METHODS
   func setupElements() {
-    friendDogImageView.layer.cornerRadius = 10
-    checkInDetailView.layer.cornerRadius = 10
+
+    // Stylize views
+    StyleGuide.styleViewsCornerRadius(friendDogImageView)
+    StyleGuide.styleViewsCornerRadius(checkInDetailView)
     
+    // Drop shadow
     checkInDetailView.dropShadow()
   }
   

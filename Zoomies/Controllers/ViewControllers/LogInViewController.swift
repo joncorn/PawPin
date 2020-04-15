@@ -12,33 +12,29 @@ import FirebaseAuth
 class LogInViewController: UIViewController {
   
   // MARK: - Outlets
-  
-  // views
+  // Views
   @IBOutlet weak var emailView: UIView!
   @IBOutlet weak var passwordView: UIView!
-  
-  // text fields
+  // Text fields
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
-  
+  // Login button, erro label
   @IBOutlet weak var loginButton: UIButton!
   @IBOutlet weak var errorLabel: UILabel!
   
   // MARK: - View Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    // Delegates
     emailTextField.delegate = self
     passwordTextField.delegate = self
-    
-    setupElements()
-    setupTextFields()
-    setupTapGesture()
+    // UI
+    setupUI()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    
+    // Make error label invisible
     errorLabel.alpha = 0
   }
   
@@ -65,13 +61,17 @@ class LogInViewController: UIViewController {
   
   // MARK: - Methods
   
-  // MARK:  Show error
+  func setupUI() {
+    setupElements()
+    setupTextFields()
+    setupTapGesture()
+  }
+  
   func showError(_ message: String) {
     errorLabel.text = message
     errorLabel.alpha = 1
   }
   
-  // MARK:  ValidateFields
   func validateFields() -> String? {
     if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
       passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
@@ -90,34 +90,25 @@ class LogInViewController: UIViewController {
     return nil
   }
   
-  // MARK:  Setup elements
   func setupElements() {
-    //  Hide error label
+    // Hide error label
     errorLabel.alpha = 0
-    //  Stylize elements
-    emailView.layer.cornerRadius = 10
-    passwordView.layer.cornerRadius = 10
-    loginButton.layer.cornerRadius = 10
+    // Corner radius
+    StyleGuide.styleViewsCornerRadius(emailView)
+    StyleGuide.styleViewsCornerRadius(passwordView)
+    StyleGuide.styleViewsCornerRadius(loginButton)
   }
   
   func setupTextFields() {
-
-    // Create toolbar
     let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: view.frame.size.width, height: 30)))
-
-    // Create left side empty space so that done button set on right side
     let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-
-    // Create done button
     let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonTapped))
 
     toolbar.setItems([flexSpace, doneButton], animated: false)
     toolbar.sizeToFit()
 
-    // Add toolbar to keyboards
     emailTextField.inputAccessoryView = toolbar
     passwordTextField.inputAccessoryView = toolbar
-
   }
 
   @objc func doneButtonTapped() {
@@ -135,7 +126,6 @@ class LogInViewController: UIViewController {
 extension LogInViewController: UITextFieldDelegate {
   
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    
     if textField == emailTextField {
       passwordTextField.becomeFirstResponder()
     } else {
@@ -143,8 +133,5 @@ extension LogInViewController: UITextFieldDelegate {
     }
     
     return true
-    
-//    self.view.endEditing(true)
-//    return false
   }
 }

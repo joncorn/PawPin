@@ -25,9 +25,12 @@ class ConnectLikedFriendsTableViewCell: UITableViewCell {
   
   // MARK: - METHODS
   func setupElements() {
-    friendDetailView.layer.cornerRadius = 10
-    friendDogImageView.layer.cornerRadius = 10
     
+    // Stylize views
+    StyleGuide.styleViewsCornerRadius(friendDetailView)
+    StyleGuide.styleViewsCornerRadius(friendDogImageView)
+    
+    // Drop shadow
     friendDetailView.dropShadow()
   }
   

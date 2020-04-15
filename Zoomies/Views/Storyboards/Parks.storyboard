@@ -321,6 +321,7 @@
                         <outlet property="parkMapImageView" destination="x01-ZF-18r" id="APB-mk-Tba"/>
                         <outlet property="recentParkSearchButton" destination="3vm-D9-6xF" id="fpu-Ac-ar5"/>
                         <outlet property="recentParkSearchTableView" destination="Foh-3f-Tyw" id="hb6-Y4-n5W"/>
+                        <outlet property="scrollView" destination="Zjf-SX-FdU" id="L4Q-D8-GXg"/>
                         <segue destination="RvO-c1-vIA" kind="show" identifier="toParkMapVC" id="uAo-fV-dHR"/>
                     </connections>
                 </viewController>

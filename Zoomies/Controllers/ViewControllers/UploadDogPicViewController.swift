@@ -15,9 +15,7 @@ class UploadDogPicViewController: UIViewController {
   
   
   // MARK: - OUTLETS
-  
   @IBOutlet weak var DogPicImageView: UIImageView!
-  
   @IBOutlet weak var submitButton: UIButton!
   
   // MARK: - VIEW LIFECYCLE

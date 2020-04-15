@@ -14,7 +14,6 @@ class ParkMapViewController: UIViewController {
   // MARK: - PROPERTIES
   let locationManager = CLLocationManager()
   var resultSearchController: UISearchController? = nil
-  
   // Using this to cache any incoming placemarks
   var selectedPin: MKPlacemark? = nil
   
@@ -24,7 +23,7 @@ class ParkMapViewController: UIViewController {
   // MARK: - VIEW LIFECYCLE
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
     locationManager.delegate = self
     
     setupLocationManager()

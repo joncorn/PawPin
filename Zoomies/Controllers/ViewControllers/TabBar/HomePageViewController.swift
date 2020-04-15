@@ -11,57 +11,65 @@ import UIKit
 class HomePageViewController: UIViewController {
   
   // MARK: - OUTLETS
-  
   // Views
   @IBOutlet weak var headerView: UIView!
-  
+  @IBOutlet weak var scrollView: UIScrollView!
   // Status text field
   @IBOutlet weak var statusView: UIView!
   @IBOutlet weak var statusTextField: UITextField!
-  
   // Recent Check Ins
   @IBOutlet weak var checkInsTableView: UITableView!
-  
   // Favorite Parks
   @IBOutlet weak var favoriteParksTableView: UITableView!
   
   // MARK: - VIEW LIFECYCLE
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    // DataSource/Delegates
     favoriteParksTableView.delegate = self
     favoriteParksTableView.dataSource = self
     checkInsTableView.delegate = self
     checkInsTableView.dataSource = self
-    
-    setupKeyboard()
-    setupElements()
+    // UI
+    setupUI()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    // Hide navbar
     hideNavigationBar(animated: animated)
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    // Reset scrollview position
+    scrollView.setContentOffset(CGPoint.zero, animated: true)
+    checkInsTableView.setContentOffset(CGPoint.zero, animated: true)
+    favoriteParksTableView.setContentOffset(CGPoint.zero, animated: true)
   }
   
   
   // MARK: - METHODS
+  func setupUI() {
+    setupElements()
+    setupKeyboard()
+  }
   
   func setupElements() {
-    
-    // Statusbar
-    statusView.layer.cornerRadius = 10
-    
-    // TableViews
+    // Corner radius
+    StyleGuide.styleViewsCornerRadius(statusView)
+    StyleGuide.styleViewsCornerRadius(checkInsTableView)
+    StyleGuide.styleViewsCornerRadius(favoriteParksTableView)
+    // Seperator Style
     favoriteParksTableView.separatorStyle = .none
     checkInsTableView.separatorStyle = .none
     checkInsTableView.allowsSelection = false
-    
     // Header view
     headerView.dropShadowHeader()
   }
   
-  // Hide navigation bar after logging in
   func hideNavigationBar(animated: Bool) {
+    // Hide navigation bar after logging in
     self.navigationController?.setNavigationBarHidden(true, animated: animated)
   }
   
@@ -71,22 +79,16 @@ class HomePageViewController: UIViewController {
   }
   
   func setupTextFields() {
-    
     // Create toolbar
     let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: view.frame.size.width, height: 30)))
-    
     // Create left side empty space so that done button set on right side
     let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-    
     // Create done button
     let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonTapped))
-    
     toolbar.setItems([flexSpace, doneButton], animated: false)
     toolbar.sizeToFit()
-    
     // Add toolbar to keyboards
     statusTextField.inputAccessoryView = toolbar
-    
   }
   
   @objc func doneButtonTapped() {
@@ -98,7 +100,7 @@ class HomePageViewController: UIViewController {
     view.addGestureRecognizer(tap)
   }
   
-}
+} // class end
 
 // MARK: - TABLEVIEW EXT.
 extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
@@ -137,6 +139,5 @@ extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
     
     return UITableViewCell()
   }
-  
   
 }

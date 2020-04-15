@@ -19,8 +19,11 @@ class CheckInsTableViewCell: UITableViewCell {
   
   // MARK: - METHODS
   func setupElements() {
-    checkInView.layer.cornerRadius = 10
     
+    // Stylize views
+    StyleGuide.styleViewsCornerRadius(checkInView)
+    
+    // Drop shadow
     checkInView.dropShadow()
   }
   

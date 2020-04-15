@@ -314,6 +314,7 @@
                         <outlet property="checkInsTableView" destination="6QH-yN-xbi" id="gdb-gk-yhM"/>
                         <outlet property="favoriteParksTableView" destination="BZv-F7-ngw" id="UcR-hV-WIb"/>
                         <outlet property="headerView" destination="B5r-WC-5PA" id="l3x-PH-tIM"/>
+                        <outlet property="scrollView" destination="vOV-4U-nVL" id="rcG-KL-rex"/>
                         <outlet property="statusTextField" destination="grg-tt-gFZ" id="pra-wc-kmT"/>
                         <outlet property="statusView" destination="Lbs-RY-GRb" id="3ac-cp-i3w"/>
                     </connections>

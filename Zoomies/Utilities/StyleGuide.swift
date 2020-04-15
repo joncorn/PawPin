@@ -10,12 +10,20 @@ import UIKit
 
 class StyleGuide {
   
+  // MARK: - Constants
+  struct Constants {
+    static let cornerRadius: CGFloat = 10
+    static let dogCornerRadius: CGFloat = 5
+  }
+  
+  // MARK: - Views
+  static func styleViewsCornerRadius(_ view: UIView) {
+    view.layer.cornerRadius = Constants.cornerRadius
+  }
   
   // MARK: - TextFields
-  
   // Default
   static func styleTextField(_ textField: UITextField) {
-    
     let font = UIFont(name: "System", size: 23)
 //    let bottomLine = CALayer()
     
@@ -29,18 +37,9 @@ class StyleGuide {
   
   // MARK: - Buttons
   
-  // Filled
-  static func styleFilledButton(_ button: UIButton) {
-    button.backgroundColor = UIColor.init(red: 255/255, green: 150/255, blue: 102/255, alpha: 1)
-    button.layer.cornerRadius = 25.0
-    button.tintColor = UIColor.white
+  // Login/Signup
+  static func styleLoginSignupButton(_ button: UIButton) {
+    button.layer.cornerRadius = 73 / 2
   }
-  
-  // Hollow
-  static func styledHollowButton(_ button: UIButton) {
-    button.layer.borderWidth = 2
-    button.layer.borderColor = UIColor.black.cgColor
-    button.layer.cornerRadius = 25.0
-    button.tintColor = UIColor.black
-  }
-}
+
+} // Class end

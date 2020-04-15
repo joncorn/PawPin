@@ -11,11 +11,12 @@ import UIKit
 class ConnectViewController: UIViewController {
   
   // MARK: - OUTLETS
-  
+  // Views
+  @IBOutlet weak var headerView: UIView!
+  @IBOutlet weak var scrollView: UIScrollView!
   // Header buttons
   @IBOutlet weak var likedFriendsButton: UIButton!
   @IBOutlet weak var friendsCheckInsButton: UIButton!
-  
   // Table views
   @IBOutlet weak var likedFriendsTableView: UITableView!
   @IBOutlet weak var friendsRecentCheckInsTableView: UITableView!
@@ -23,22 +24,43 @@ class ConnectViewController: UIViewController {
   // MARK: - VIEW LIFECYCLE
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    // DataSource/Delegates
     likedFriendsTableView.dataSource = self
     likedFriendsTableView.delegate = self
     friendsRecentCheckInsTableView.dataSource = self
     friendsRecentCheckInsTableView.delegate = self
-    
-    likedFriendsTableView.separatorStyle = .none
-    friendsRecentCheckInsTableView.separatorStyle = .none
-    
-    setupElements()
+    // UI
+    setupUI()
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    // Reset view positions
+    scrollView.setContentOffset(CGPoint.zero, animated: true)
+    likedFriendsTableView.setContentOffset(CGPoint.zero, animated: true)
+    friendsRecentCheckInsTableView.setContentOffset(CGPoint.zero, animated: true)
   }
   
   // MARK: - METHODS
+  func setupUI() {
+    setupElements()
+    setupTableViews()
+  }
+  
   func setupElements() {
-    likedFriendsButton.layer.cornerRadius = 10
-    friendsCheckInsButton.layer.cornerRadius = 10
+    // Corner radius
+    StyleGuide.styleViewsCornerRadius(likedFriendsButton)
+    StyleGuide.styleViewsCornerRadius(friendsCheckInsButton)
+    StyleGuide.styleViewsCornerRadius(friendsRecentCheckInsTableView)
+    StyleGuide.styleViewsCornerRadius(likedFriendsTableView)
+    // Drop shadow
+    headerView.dropShadowHeader()
+  }
+  
+  func setupTableViews() {
+    // Tableview separator style
+    likedFriendsTableView.separatorStyle = .none
+    friendsRecentCheckInsTableView.separatorStyle = .none
   }
 }
 
@@ -86,5 +108,4 @@ extension ConnectViewController: UITableViewDataSource, UITableViewDelegate {
     return UITableViewCell()
   }
   
-  
-}
+} // ext. end

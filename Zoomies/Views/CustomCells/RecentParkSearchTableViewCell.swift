@@ -18,15 +18,15 @@ class RecentParkSearchTableViewCell: UITableViewCell {
   // View
   @IBOutlet weak var parkDetailsView: UIView!
   
-  
   // MARK: - METHODS
   func setupElements() {
-    parkImageView.layer.cornerRadius = 10
-    parkDetailsView.layer.cornerRadius = 10
+    
+    // Stylize views
+    StyleGuide.styleViewsCornerRadius(parkImageView)
+    StyleGuide.styleViewsCornerRadius(parkDetailsView)
     
     // Drop shadow on park detail view
     parkDetailsView.dropShadow()
   }
-  
   
 }

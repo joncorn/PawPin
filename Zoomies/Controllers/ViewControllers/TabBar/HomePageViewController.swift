@@ -38,10 +38,15 @@ class HomePageViewController: UIViewController {
     super.viewWillAppear(animated)
     // Hide navbar
     hideNavigationBar(animated: animated)
-    // Reset scrollview position
-    scrollView.setContentOffset(CGPoint.zero, animated: false)
+    // Reset tableviews positions
     checkInsTableView.setContentOffset(CGPoint.zero, animated: false)
     favoriteParksTableView.setContentOffset(CGPoint.zero, animated: false)
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    // Reset scrollview position
+    scrollView.setContentOffset(CGPoint.zero, animated: true)
   }
   
   // MARK: - METHODS
@@ -55,6 +60,7 @@ class HomePageViewController: UIViewController {
     StyleGuide.styleViewsCornerRadius(statusView)
     StyleGuide.styleViewsCornerRadius(checkInsTableView)
     StyleGuide.styleViewsCornerRadius(favoriteParksTableView)
+    StyleGuide.styleViewsCornerRadius(headerView)
     // Seperator Style
     favoriteParksTableView.separatorStyle = .none
     checkInsTableView.separatorStyle = .none
@@ -107,6 +113,7 @@ extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     if tableView == favoriteParksTableView {
       tableView.deselectRow(at: indexPath, animated: true)
+      performSegue(withIdentifier: Constants.Storyboard.Segues.toParkDetails, sender: self)
     }
   }
   
@@ -116,9 +123,7 @@ extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "checkInCell", for: indexPath) as? CheckInsTableViewCell
         else {return UITableViewCell()}
       // Setup cell
-      
       cell.setupElements()
-      
       return cell
     }
     
@@ -126,13 +131,21 @@ extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "parkCell", for: indexPath) as? FavoriteParksTableViewCell
         else { return UITableViewCell()}
       // Setup cell
-      
       cell.setupElements()
-      
       return cell
     }
     
     return UITableViewCell()
   }
   
+  // MARK: - Prepare for segue
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == Constants.Storyboard.Segues.toParkDetails {
+      guard let destinationVC = segue.destination as? ParkDetailsViewController,
+        let indexPath = favoriteParksTableView.indexPathForSelectedRow else {return}
+      
+      // let park = parkindex
+      // throw data to landing
+    }
+  }
 }

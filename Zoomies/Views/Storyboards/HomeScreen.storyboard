@@ -152,6 +152,7 @@
                                                                     <outlet property="parkImageView" destination="5jy-Yx-bnH" id="bsX-4d-xhf"/>
                                                                     <outlet property="parkLocationLabel" destination="3t1-6i-eho" id="nMT-2D-9gc"/>
                                                                     <outlet property="parkNameLabel" destination="ZeD-7t-KLi" id="Lti-34-3Yw"/>
+                                                                    <segue destination="CTi-LC-Vcs" kind="show" identifier="toParkDetailsVC" id="hkx-Vc-Doj"/>
                                                                 </connections>
                                                             </tableViewCell>
                                                         </prototypes>
@@ -322,6 +323,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFM-Im-0LV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2471.0144927536235" y="569.86607142857144"/>
+        </scene>
+        <!--ParkDetails-->
+        <scene sceneID="jp2-kO-JvV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ParkDetails" id="CTi-LC-Vcs" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="sZo-S5-kg3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SM0-1h-b7W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3036" y="319"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3v3-W8-Eqa">

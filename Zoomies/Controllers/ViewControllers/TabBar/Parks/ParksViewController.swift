@@ -70,6 +70,7 @@ class ParksViewController: UIViewController {
     // Corner radius
     StyleGuide.styleViewsCornerRadius(recentParkSearchTableView)
     StyleGuide.styleViewsCornerRadius(favoriteParksTableView)
+    StyleGuide.styleViewsCornerRadius(headerView)
     // Separator style
     recentParkSearchTableView.separatorStyle = .none
     favoriteParksTableView.separatorStyle = .none

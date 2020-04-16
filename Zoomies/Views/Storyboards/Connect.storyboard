@@ -327,19 +327,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyk-nK-cuj">
-                                <rect key="frame" x="16" y="104" width="382" height="61"/>
-                                <color key="backgroundColor" red="0.58039215690000001" green="0.68235294120000001" blue="0.56078431370000004" alpha="0.65753424660000004" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liked Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfg-I9-Dxm">
+                                <rect key="frame" x="16" y="114" width="209" height="43"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="8d4-MC-iao"/>
+                                    <constraint firstAttribute="width" constant="209" id="Ndx-j4-exQ"/>
+                                    <constraint firstAttribute="height" constant="43" id="jS6-eL-gcY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="26"/>
-                                <state key="normal" title="Liked Friends">
-                                    <color key="titleColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="connectCornerArt" translatesAutoresizingMaskIntoConstraints="NO" id="ZFY-eK-onc">
+                                <rect key="frame" x="315" y="90" width="83" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="3sG-rA-3qT"/>
+                                    <constraint firstAttribute="width" constant="83" id="Umm-RS-LZr"/>
+                                </constraints>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GTS-ja-lhm">
-                                <rect key="frame" x="16" y="173" width="390" height="640"/>
+                                <rect key="frame" x="16" y="202" width="390" height="611"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="friendCell" rowHeight="113" id="Al8-Yf-G12" customClass="ConnectLikedFriendsTableViewCell" customModule="PawPin" customModuleProvider="target">
@@ -422,19 +428,19 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Jyk-nK-cuj" firstAttribute="leading" secondItem="Lqp-iE-TjY" secondAttribute="leading" constant="16" id="Bbx-zG-ImV"/>
-                            <constraint firstItem="Jyk-nK-cuj" firstAttribute="width" secondItem="4tG-yE-Njf" secondAttribute="width" multiplier="0.922705" id="IcU-dm-caI"/>
-                            <constraint firstItem="GTS-ja-lhm" firstAttribute="top" secondItem="Jyk-nK-cuj" secondAttribute="bottom" constant="8" id="TTG-IJ-vn9"/>
+                            <constraint firstItem="yfg-I9-Dxm" firstAttribute="leading" secondItem="Lqp-iE-TjY" secondAttribute="leading" constant="16" id="5Lv-ZB-06P"/>
+                            <constraint firstItem="ZFY-eK-onc" firstAttribute="top" secondItem="Lqp-iE-TjY" secondAttribute="top" constant="2" id="9v8-0i-qpL"/>
                             <constraint firstItem="GTS-ja-lhm" firstAttribute="leading" secondItem="Lqp-iE-TjY" secondAttribute="leading" constant="16" id="Ulk-ze-gXI"/>
                             <constraint firstItem="GTS-ja-lhm" firstAttribute="bottom" secondItem="Lqp-iE-TjY" secondAttribute="bottom" id="VRd-9w-mXR"/>
                             <constraint firstItem="GTS-ja-lhm" firstAttribute="width" secondItem="4tG-yE-Njf" secondAttribute="width" multiplier="0.942029" id="YoL-TH-a4E"/>
-                            <constraint firstItem="Jyk-nK-cuj" firstAttribute="top" secondItem="Lqp-iE-TjY" secondAttribute="top" constant="16" id="xJ1-9W-hxz"/>
+                            <constraint firstItem="GTS-ja-lhm" firstAttribute="top" secondItem="ZFY-eK-onc" secondAttribute="bottom" constant="36" id="cw1-TL-jNY"/>
+                            <constraint firstItem="yfg-I9-Dxm" firstAttribute="top" secondItem="Lqp-iE-TjY" secondAttribute="top" constant="26" id="tR5-ZI-rrh"/>
+                            <constraint firstItem="Lqp-iE-TjY" firstAttribute="trailing" secondItem="ZFY-eK-onc" secondAttribute="trailing" constant="16" id="vt1-86-Z9Y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lqp-iE-TjY"/>
                     </view>
                     <navigationItem key="navigationItem" id="BbP-OU-7zN"/>
                     <connections>
-                        <outlet property="likedFriendsHeader" destination="Jyk-nK-cuj" id="dnu-f5-JuM"/>
                         <outlet property="likedFriendsTableView" destination="GTS-ja-lhm" id="QvB-6b-mhs"/>
                     </connections>
                 </viewController>
@@ -470,19 +476,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ky-w6-gQl">
-                                <rect key="frame" x="16" y="104" width="382" height="61"/>
-                                <color key="backgroundColor" red="0.58039215690000001" green="0.68235294120000001" blue="0.56078431370000004" alpha="0.65753424660000004" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="VKB-5F-mZ0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="26"/>
-                                <state key="normal" title="Friends Recent Check Ins">
-                                    <color key="titleColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vmU-9K-hQ6">
-                                <rect key="frame" x="16" y="173" width="390" height="640"/>
+                                <rect key="frame" x="16" y="202" width="390" height="611"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="checkInCell" rowHeight="113" id="0Yu-sv-0Oo" customClass="ConnectFriendsCheckInsTableViewCell" customModule="PawPin" customModuleProvider="target">
@@ -564,23 +559,40 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friends Checked In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgB-80-3g6">
+                                <rect key="frame" x="16" y="114" width="301" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="bgL-Ga-E4Z"/>
+                                    <constraint firstAttribute="width" constant="301" id="gF4-mW-2gK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkinCornerArt" translatesAutoresizingMaskIntoConstraints="NO" id="vOt-Jh-fOT">
+                                <rect key="frame" x="359" y="88" width="35" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="cVD-K1-gaG"/>
+                                    <constraint firstAttribute="height" constant="43" id="zfa-eq-j94"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="TgB-80-3g6" firstAttribute="leading" secondItem="qeX-DM-IRe" secondAttribute="leading" constant="16" id="1BP-56-q7P"/>
                             <constraint firstItem="vmU-9K-hQ6" firstAttribute="width" secondItem="0AN-o9-TpC" secondAttribute="width" multiplier="0.942029" id="EnR-ju-K8x"/>
                             <constraint firstItem="vmU-9K-hQ6" firstAttribute="bottom" secondItem="qeX-DM-IRe" secondAttribute="bottom" id="MdM-n0-6j2"/>
-                            <constraint firstItem="6Ky-w6-gQl" firstAttribute="width" secondItem="0AN-o9-TpC" secondAttribute="width" multiplier="0.922705" id="hvy-Mi-WgU"/>
-                            <constraint firstItem="vmU-9K-hQ6" firstAttribute="top" secondItem="6Ky-w6-gQl" secondAttribute="bottom" constant="8" id="kIa-YJ-9Ab"/>
-                            <constraint firstItem="6Ky-w6-gQl" firstAttribute="top" secondItem="qeX-DM-IRe" secondAttribute="top" constant="16" id="seg-HY-9oD"/>
-                            <constraint firstItem="6Ky-w6-gQl" firstAttribute="leading" secondItem="qeX-DM-IRe" secondAttribute="leading" constant="16" id="w19-8J-T5Y"/>
+                            <constraint firstItem="qeX-DM-IRe" firstAttribute="trailing" secondItem="vOt-Jh-fOT" secondAttribute="trailing" constant="20" id="Zj6-xd-mgG"/>
+                            <constraint firstItem="TgB-80-3g6" firstAttribute="top" secondItem="qeX-DM-IRe" secondAttribute="top" constant="26" id="j82-tV-dia"/>
+                            <constraint firstItem="vOt-Jh-fOT" firstAttribute="top" secondItem="qeX-DM-IRe" secondAttribute="top" id="uEa-G0-WNd"/>
                             <constraint firstItem="vmU-9K-hQ6" firstAttribute="leading" secondItem="qeX-DM-IRe" secondAttribute="leading" constant="16" id="xaa-T6-z2O"/>
+                            <constraint firstItem="vmU-9K-hQ6" firstAttribute="top" secondItem="TgB-80-3g6" secondAttribute="bottom" constant="45" id="y1z-dw-13I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qeX-DM-IRe"/>
                     </view>
                     <navigationItem key="navigationItem" id="SzS-h7-gUr"/>
                     <connections>
                         <outlet property="checkInsTableView" destination="vmU-9K-hQ6" id="uD4-1k-y4n"/>
-                        <outlet property="recentCheckInsHeader" destination="6Ky-w6-gQl" id="pQN-N5-Fei"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k1g-oz-Kvw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -590,6 +602,7 @@
     </scenes>
     <color key="tintColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
     <resources>
+        <image name="checkinCornerArt" width="35" height="43"/>
         <image name="connectCornerArt" width="83" height="76"/>
         <image name="heartFilled" width="34" height="31"/>
         <image name="heartHeader" width="34" height="31"/>

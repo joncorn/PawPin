@@ -489,30 +489,129 @@
             </objects>
             <point key="canvasLocation" x="-2036.2318840579712" y="1215.4017857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorite Parks View Controller-->
         <scene sceneID="jno-Qy-cZu">
             <objects>
-                <viewController id="YBL-Yb-phW" sceneMemberID="viewController">
+                <viewController id="YBL-Yb-phW" customClass="FavoriteParksViewController" customModule="PawPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ug7-DT-Lp0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="favorite parks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPm-7Z-Chn">
-                                <rect key="frame" x="155" y="419" width="104" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rO-NC-eVT">
+                                <rect key="frame" x="16" y="104" width="382" height="61"/>
+                                <color key="backgroundColor" red="0.58039215690000001" green="0.68235294120000001" blue="0.56078431370000004" alpha="0.65753424660000004" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="yz2-KS-Gux"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="26"/>
+                                <state key="normal" title="Favorite Parks">
+                                    <color key="titleColor" red="0.043137254899999998" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4hY-Vb-ZA6">
+                                <rect key="frame" x="16" y="173" width="390" height="640"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favoriteParkCell" rowHeight="113" id="imx-d2-Vl0" customClass="FavoriteParksTableViewCell" customModule="PawPin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="390" height="113"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="imx-d2-Vl0" id="czV-VL-pAB">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="113"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mockParkPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="R8X-Zc-7jz">
+                                                    <rect key="frame" x="0.0" y="12" width="90" height="89"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="R8X-Zc-7jz" secondAttribute="height" multiplier="1:1" id="ThT-bZ-Zr4"/>
+                                                        <constraint firstAttribute="width" constant="90" id="VHI-9v-uAD"/>
+                                                        <constraint firstAttribute="height" constant="90" id="dFx-GA-IuV"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZO8-ue-4lt">
+                                                    <rect key="frame" x="99" y="12" width="283" height="89"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doggie Dayland Park" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="R2T-In-mBp">
+                                                            <rect key="frame" x="8" y="12" width="178" height="23"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="23" id="Rkl-Ux-M5f"/>
+                                                                <constraint firstAttribute="width" constant="178" id="mfG-sq-BPH"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payson Utah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="3Vp-Wb-3Ip">
+                                                            <rect key="frame" x="8" y="56" width="178" height="17"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="178" id="Fhe-dT-Q2g"/>
+                                                                <constraint firstAttribute="height" constant="17" id="mgq-Xw-fdK"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40r-76-KKl">
+                                                            <rect key="frame" x="239" y="28" width="36" height="33"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="33" id="NqP-xA-xKc"/>
+                                                                <constraint firstAttribute="width" constant="36" id="pKz-s3-2u6"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Button" image="heartEmpty"/>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="40r-76-KKl" secondAttribute="bottom" constant="28" id="0cf-qb-P2p"/>
+                                                        <constraint firstItem="R2T-In-mBp" firstAttribute="top" secondItem="ZO8-ue-4lt" secondAttribute="top" constant="12" id="MfV-7X-9az"/>
+                                                        <constraint firstItem="R2T-In-mBp" firstAttribute="leading" secondItem="ZO8-ue-4lt" secondAttribute="leading" constant="8" id="Y9c-76-pma"/>
+                                                        <constraint firstAttribute="trailing" secondItem="40r-76-KKl" secondAttribute="trailing" constant="8" id="m8W-OC-eZx"/>
+                                                        <constraint firstItem="3Vp-Wb-3Ip" firstAttribute="leading" secondItem="ZO8-ue-4lt" secondAttribute="leading" constant="8" id="nGi-Lr-77k"/>
+                                                        <constraint firstAttribute="bottom" secondItem="3Vp-Wb-3Ip" secondAttribute="bottom" constant="16" id="nM0-gq-9Zc"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZO8-ue-4lt" firstAttribute="leading" secondItem="R8X-Zc-7jz" secondAttribute="trailing" constant="9" id="9nX-zd-3kP"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZO8-ue-4lt" secondAttribute="bottom" constant="12" id="Uu7-qq-Tjd"/>
+                                                <constraint firstItem="ZO8-ue-4lt" firstAttribute="top" secondItem="czV-VL-pAB" secondAttribute="top" constant="12" id="Zek-Yv-Y0M"/>
+                                                <constraint firstAttribute="bottom" secondItem="R8X-Zc-7jz" secondAttribute="bottom" constant="12" id="jGS-GT-LBI"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZO8-ue-4lt" secondAttribute="trailing" constant="8" id="p2X-eL-iSU"/>
+                                                <constraint firstItem="R8X-Zc-7jz" firstAttribute="leading" secondItem="czV-VL-pAB" secondAttribute="leading" id="tJt-2W-prg"/>
+                                                <constraint firstItem="R8X-Zc-7jz" firstAttribute="top" secondItem="czV-VL-pAB" secondAttribute="top" constant="12" id="ucc-fD-naz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="favoriteButton" destination="40r-76-KKl" id="JPd-VL-fko"/>
+                                            <outlet property="parkDetailsView" destination="ZO8-ue-4lt" id="X5e-xe-GKI"/>
+                                            <outlet property="parkImageView" destination="R8X-Zc-7jz" id="yw6-qt-9rU"/>
+                                            <outlet property="parkLocationLabel" destination="3Vp-Wb-3Ip" id="7f7-84-5Ph"/>
+                                            <outlet property="parkNameLabel" destination="R2T-In-mBp" id="Mbg-cn-TXZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3rO-NC-eVT" firstAttribute="width" secondItem="ug7-DT-Lp0" secondAttribute="width" multiplier="0.922705" id="A1h-CG-DIR"/>
+                            <constraint firstItem="3rO-NC-eVT" firstAttribute="top" secondItem="RUV-0R-1j2" secondAttribute="top" constant="16" id="AdQ-ut-xoC"/>
+                            <constraint firstItem="4hY-Vb-ZA6" firstAttribute="top" secondItem="3rO-NC-eVT" secondAttribute="bottom" constant="8" id="B7y-s1-vFF"/>
+                            <constraint firstItem="4hY-Vb-ZA6" firstAttribute="bottom" secondItem="RUV-0R-1j2" secondAttribute="bottom" id="DJr-il-Rrg"/>
+                            <constraint firstItem="3rO-NC-eVT" firstAttribute="leading" secondItem="RUV-0R-1j2" secondAttribute="leading" constant="16" id="W17-ry-U3o"/>
+                            <constraint firstItem="4hY-Vb-ZA6" firstAttribute="leading" secondItem="RUV-0R-1j2" secondAttribute="leading" constant="16" id="fTG-yA-6ap"/>
+                            <constraint firstItem="4hY-Vb-ZA6" firstAttribute="width" secondItem="ug7-DT-Lp0" secondAttribute="width" multiplier="0.942029" id="xFo-tx-oaR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RUV-0R-1j2"/>
                     </view>
                     <navigationItem key="navigationItem" id="lW9-nU-qzu"/>
+                    <connections>
+                        <outlet property="favoriteParksButton" destination="3rO-NC-eVT" id="1XL-au-5Zw"/>
+                        <outlet property="favoriteParksTableView" destination="4hY-Vb-ZA6" id="DML-2h-Zkf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S0E-86-SzA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-51" y="1892"/>
+            <point key="canvasLocation" x="-52.173913043478265" y="1891.7410714285713"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

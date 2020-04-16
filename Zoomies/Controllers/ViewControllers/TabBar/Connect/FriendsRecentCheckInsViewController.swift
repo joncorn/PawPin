@@ -11,8 +11,6 @@ import UIKit
 class FriendsRecentCheckInsViewController: UIViewController {
   
   // MARK: - Outlets
-  // Header
-  @IBOutlet weak var recentCheckInsHeader: UIButton!
   // Tableview
   @IBOutlet weak var checkInsTableView: UITableView!
   
@@ -29,7 +27,6 @@ class FriendsRecentCheckInsViewController: UIViewController {
   // MARK: - Methods
   func setupUI() {
     // Corner radius
-    StyleGuide.styleViewsCornerRadius(recentCheckInsHeader)
     StyleGuide.styleViewsCornerRadius(checkInsTableView)
     // Tableview
     checkInsTableView.separatorStyle = .none

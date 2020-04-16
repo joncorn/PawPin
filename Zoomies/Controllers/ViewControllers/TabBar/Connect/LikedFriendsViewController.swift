@@ -11,8 +11,6 @@ import UIKit
 class LikedFriendsViewController: UIViewController {
   
   // MARK: - Outlets
-  // Header
-  @IBOutlet weak var likedFriendsHeader: UIButton!
   // Tableview
   @IBOutlet weak var likedFriendsTableView: UITableView!
   
@@ -22,14 +20,13 @@ class LikedFriendsViewController: UIViewController {
     // DataSource/Delegate
     likedFriendsTableView.dataSource = self
     likedFriendsTableView.delegate = self
-    
+    // UI
     setupUI()
   }
   
   // MARK: - Methods
   func setupUI() {
     // Corner radius
-    StyleGuide.styleViewsCornerRadius(likedFriendsHeader)
     StyleGuide.styleViewsCornerRadius(likedFriendsTableView)
     // Tableview
     likedFriendsTableView.separatorStyle = .none

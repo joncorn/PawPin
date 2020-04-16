@@ -11,6 +11,8 @@ import UIKit
 class FriendsRecentCheckInsViewController: UIViewController {
   
   // MARK: - Outlets
+  // View
+  @IBOutlet weak var headerView: UIView!
   // Tableview
   @IBOutlet weak var checkInsTableView: UITableView!
   
@@ -27,9 +29,11 @@ class FriendsRecentCheckInsViewController: UIViewController {
   // MARK: - Methods
   func setupUI() {
     // Corner radius
-    StyleGuide.styleViewsCornerRadius(checkInsTableView)
+    StyleGuide.styleViewsCornerRadius(headerView)
     // Tableview
     checkInsTableView.separatorStyle = .none
+    // Drop shadow
+    headerView.dropShadowHeader()
   }
   
 } // Class end

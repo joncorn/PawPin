@@ -10,83 +10,80 @@ import UIKit
 
 class ParksViewController: UIViewController {
   
-  // MARK: - OUTLETS
-  // Views
+  //  MARK: - Outlets
+  //  Views
   @IBOutlet weak var headerView: UIView!
   @IBOutlet weak var scrollView: UIScrollView!
-  // Map button
+  //  Map button
   @IBOutlet weak var parkMapImageView: UIImageView!
-  // Header buttons
+  //  Header buttons
   @IBOutlet weak var recentParkSearchButton: UIButton!
   @IBOutlet weak var favoriteParksButton: UIButton!
-  // Tableviews
+  //  Tableviews
   @IBOutlet weak var recentParkSearchTableView: UITableView!
   @IBOutlet weak var favoriteParksTableView: UITableView!
   
-  // MARK: - VIEW LIFECYCLE
+  //  MARK: - View Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    // DataSource/Delegates
+    //  DataSource/Delegates
     recentParkSearchTableView.delegate = self
     recentParkSearchTableView.dataSource = self
     favoriteParksTableView.delegate = self
     favoriteParksTableView.dataSource = self
-    // UI
+    //  UI
     setupUI()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    // Reset scrollview position
+    //  Reset scrollview position
     scrollView.setContentOffset(CGPoint.zero, animated: false)
     recentParkSearchTableView.setContentOffset(CGPoint.zero, animated: false)
     favoriteParksTableView.setContentOffset(CGPoint.zero, animated: false)
   }
   
-  // MARK: - ACTIONS
+  //  MARK: - Actions
   @IBAction func parkMapTapped(_ sender: UITapGestureRecognizer) {
     print("map")
     performSegue(withIdentifier: Constants.Storyboard.Segues.toParkMap, sender: self)
   }
   
-  // MARK: - METHODS
+  //  MARK: - Methods
   func setupUI() {
-    setupElements()
+    setupViews()
     setupTableViews()
   }
   
-  func setupElements() {
-    // Corner radius
+  func setupViews() {
+    //  Corner radius
     StyleGuide.styleViewsCornerRadius(parkMapImageView)
     StyleGuide.styleViewsCornerRadius(recentParkSearchButton)
     StyleGuide.styleViewsCornerRadius(favoriteParksButton)
-    // Allow action when image is tapped
+    //  Allow action when image is tapped
     parkMapImageView.isUserInteractionEnabled = true
-    // Drop shadow
+    //  Drop shadow
     headerView.dropShadowHeader()
   }
   
   func setupTableViews() {
-    // Corner radius
+    //  Corner radius
     StyleGuide.styleViewsCornerRadius(recentParkSearchTableView)
     StyleGuide.styleViewsCornerRadius(favoriteParksTableView)
     StyleGuide.styleViewsCornerRadius(headerView)
-    // Separator style
+    //  Separator style
     recentParkSearchTableView.separatorStyle = .none
     favoriteParksTableView.separatorStyle = .none
   }
   
-} // Class end
+} //  Class end
 
-// MARK: - TABLEVIEW EXT.
+//  MARK: - TABLEVIEW EXT.
 extension ParksViewController: UITableViewDelegate, UITableViewDataSource {
-  
-  // MARK:  numberOfRowsInSection
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 5
   }
   
-  // MARK:  didSelectRowAt
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     if tableView == self.recentParkSearchTableView {
       tableView.deselectRow(at: indexPath, animated: true)
@@ -97,27 +94,22 @@ extension ParksViewController: UITableViewDelegate, UITableViewDataSource {
     }
   }
   
-  // MARK:  cellForRowAt
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if tableView == self.recentParkSearchTableView {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "recentParkCell", for: indexPath) as? RecentParkSearchTableViewCell else { return UITableViewCell()}
-      // configure cell here
-      
+      //  configure cell here
       cell.setupElements()
-      
       return cell
     }
 
     if tableView == self.favoriteParksTableView {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteParkCell", for: indexPath) as? FavoriteParksTableViewCell else { return UITableViewCell()}
-      // configure cell here
-      
+      //  configure cell here
       cell.setupElements()
-      
       return cell
     }
     
     return UITableViewCell()
   }
   
-}
+} // Ext. end

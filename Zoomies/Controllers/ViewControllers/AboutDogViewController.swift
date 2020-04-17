@@ -51,6 +51,11 @@ class AboutDogViewController: UIViewController {
       showError(error!)
       return
     }
+    
+    // Upload info to firebase
+    
+    // Segue to dog pic VC
+    self.performSegue(withIdentifier: Constants.Storyboard.Segues.toDogPic, sender: self)
   }
   
   // MARK: - METHODS
@@ -74,4 +79,43 @@ class AboutDogViewController: UIViewController {
     StyleGuide.styleViewsCornerRadius(nextButton)
   }
   
+  func setupKeyboard() {
+    setupTextFields()
+    setupTapGesture()
+  }
+  
+  func setupTextFields() {
+    
+    // Create toolbar
+    let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: view.frame.size.width, height: 30)))
+    
+    // Create left side empty space so that done button set on right side
+    let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+    
+    // Create done button
+    let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonTapped))
+    
+    toolbar.setItems([flexSpace, doneButton], animated: false)
+    toolbar.sizeToFit()
+    
+    // Add toolbar to keyboards
+    breedTextField.inputAccessoryView = toolbar
+    ageTextField.inputAccessoryView = toolbar
+    
+  }
+  
+  @objc func doneButtonTapped() {
+    self.view.endEditing(true)
+  }
+  
+  func setupTapGesture() {
+    let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+    view.addGestureRecognizer(tap)
+  }
+  
 } // Class end
+
+// MARK: - UITestFieldDelegate
+extension AboutDogViewController: UITextFieldDelegate {
+  
+}

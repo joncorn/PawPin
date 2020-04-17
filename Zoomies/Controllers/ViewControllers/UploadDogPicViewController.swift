@@ -24,5 +24,14 @@ class UploadDogPicViewController: UIViewController {
   }
   
   // MARK: - ACTIONS
+  @IBAction func nextButtonTapped(_ sender: Any) {
+    
+    // Validate picture?
+    
+    // Upload picture to firebase
+    
+    // Segue to home screen
+    self.performSegue(withIdentifier: Constants.Storyboard.Segues.toHomeScreen, sender: self)
+  }
   
 }

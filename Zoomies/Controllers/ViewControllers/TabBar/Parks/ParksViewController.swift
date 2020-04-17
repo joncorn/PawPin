@@ -78,7 +78,7 @@ class ParksViewController: UIViewController {
   
 } //  Class end
 
-//  MARK: - TABLEVIEW EXT.
+//  MARK: - TableViewDelegate
 extension ParksViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 5

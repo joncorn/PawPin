@@ -10,7 +10,7 @@ import UIKit
 
 class ConnectViewController: UIViewController {
   
-  // MARK: - OUTLETS
+  // MARK: - Outlets
   // Views
   @IBOutlet weak var headerView: UIView!
   @IBOutlet weak var scrollView: UIScrollView!
@@ -21,7 +21,7 @@ class ConnectViewController: UIViewController {
   @IBOutlet weak var likedFriendsTableView: UITableView!
   @IBOutlet weak var friendsRecentCheckInsTableView: UITableView!
   
-  // MARK: - VIEW LIFECYCLE
+  // MARK: - View Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
     // DataSource/Delegates
@@ -41,7 +41,7 @@ class ConnectViewController: UIViewController {
     friendsRecentCheckInsTableView.setContentOffset(CGPoint.zero, animated: false)
   }
   
-  // MARK: - METHODS
+  // MARK: - Methods
   func setupUI() {
     setupElements()
     setupTableViews()
@@ -63,61 +63,50 @@ class ConnectViewController: UIViewController {
     likedFriendsTableView.separatorStyle = .none
     friendsRecentCheckInsTableView.separatorStyle = .none
   }
-}
+  
+} //  Class end
 
-// MARK: - TABLEVIEWDELEGATE
+//  MARK: - TableViewDelegate
+
 extension ConnectViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    
-    // MARK:  LikedFriends Tableview
     if tableView == likedFriendsTableView {
       return 3
     }
-
-    // MARK:  RecentCheckIns Tableview
     if tableView == friendsRecentCheckInsTableView {
       return 5
     }
-    
     return 0
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-    // MARK:  didSelectRowAt
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      if tableView == self.likedFriendsTableView {
-        tableView.deselectRow(at: indexPath, animated: true)
-      }
-      
-      if tableView == self.friendsRecentCheckInsTableView {
-        tableView.deselectRow(at: indexPath, animated: true)
-      }
-    }
-    
-    // MARK:  LikedFriends Tableview
     if tableView == likedFriendsTableView {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "friendCell", for: indexPath)
         as? ConnectLikedFriendsTableViewCell else { return UITableViewCell() }
       // Build cell
-      
       cell.setupElements()
-      
       return cell
     }
     
-    // MARK:  RecentCheckIns Tableview
     if tableView == friendsRecentCheckInsTableView {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "checkInCell", for: indexPath)
         as? ConnectFriendsCheckInsTableViewCell else { return UITableViewCell() }
       // Build cell
-      
       cell.setupElements()
-      
       return cell
     }
     
     return UITableViewCell()
   }
   
-} // ext. end
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == self.likedFriendsTableView {
+          tableView.deselectRow(at: indexPath, animated: true)
+        }
+        
+        if tableView == self.friendsRecentCheckInsTableView {
+          tableView.deselectRow(at: indexPath, animated: true)
+        }
+      }
+  
+} //  Ext. end

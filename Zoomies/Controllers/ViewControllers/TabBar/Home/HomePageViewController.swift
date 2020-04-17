@@ -51,11 +51,11 @@ class HomePageViewController: UIViewController {
   
   //  MARK: - Methods
   func setupUI() {
-    setupElements()
+    setupViews()
     setupKeyboard()
   }
   
-  func setupElements() {
+  func setupViews() {
     //  Corner radius
     StyleGuide.styleViewsCornerRadius(statusView)
     StyleGuide.styleViewsCornerRadius(checkInsTableView)

@@ -10,67 +10,67 @@ import UIKit
 
 class HomePageViewController: UIViewController {
   
-  // MARK: - OUTLETS
-  // Views
+  //  MARK: - Outlets
+  //  Views
   @IBOutlet weak var headerView: UIView!
   @IBOutlet weak var scrollView: UIScrollView!
-  // Status text field
+  //  Status text field
   @IBOutlet weak var statusView: UIView!
   @IBOutlet weak var statusTextField: UITextField!
-  // Recent Check Ins
+  //  Recent Check Ins
   @IBOutlet weak var checkInsTableView: UITableView!
-  // Favorite Parks
+  //  Favorite Parks
   @IBOutlet weak var favoriteParksTableView: UITableView!
   
-  // MARK: - VIEW LIFECYCLE
+  //  MARK: - View Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    // DataSource/Delegates
+    //  DataSource/Delegates
     favoriteParksTableView.delegate = self
     favoriteParksTableView.dataSource = self
     checkInsTableView.delegate = self
     checkInsTableView.dataSource = self
-    // UI
+    //  UI
     setupUI()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    // Hide navbar
+    //  Hide navbar
     hideNavigationBar(animated: animated)
-    // Reset tableviews positions
+    //  Reset tableviews positions
     checkInsTableView.setContentOffset(CGPoint.zero, animated: false)
     favoriteParksTableView.setContentOffset(CGPoint.zero, animated: false)
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    // Reset scrollview position
+    //  Reset scrollview position
     scrollView.setContentOffset(CGPoint.zero, animated: true)
   }
   
-  // MARK: - METHODS
+  //  MARK: - Methods
   func setupUI() {
     setupElements()
     setupKeyboard()
   }
   
   func setupElements() {
-    // Corner radius
+    //  Corner radius
     StyleGuide.styleViewsCornerRadius(statusView)
     StyleGuide.styleViewsCornerRadius(checkInsTableView)
     StyleGuide.styleViewsCornerRadius(favoriteParksTableView)
     StyleGuide.styleViewsCornerRadius(headerView)
-    // Seperator Style
+    //  Seperator Style
     favoriteParksTableView.separatorStyle = .none
     checkInsTableView.separatorStyle = .none
     checkInsTableView.allowsSelection = false
-    // Header view
+    //  Header view
     headerView.dropShadowHeader()
   }
   
   func hideNavigationBar(animated: Bool) {
-    // Hide navigation bar after logging in
+    //  Hide navigation bar after logging in
     self.navigationController?.setNavigationBarHidden(true, animated: animated)
   }
   
@@ -80,15 +80,13 @@ class HomePageViewController: UIViewController {
   }
   
   func setupTextFields() {
-    // Create toolbar
     let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: view.frame.size.width, height: 30)))
-    // Create left side empty space so that done button set on right side
     let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-    // Create done button
     let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonTapped))
+    
     toolbar.setItems([flexSpace, doneButton], animated: false)
     toolbar.sizeToFit()
-    // Add toolbar to keyboards
+    
     statusTextField.inputAccessoryView = toolbar
   }
   
@@ -101,15 +99,14 @@ class HomePageViewController: UIViewController {
     view.addGestureRecognizer(tap)
   }
   
-} // class end
+} //  Class end
 
-// MARK: - TABLEVIEW EXT.
+//  MARK: - TableViewDelegate
 extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 5
   }
   
-  // MARK:  didSelectRowAt
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     if tableView == favoriteParksTableView {
       tableView.deselectRow(at: indexPath, animated: true)
@@ -117,7 +114,6 @@ extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
     }
   }
   
-  // MARK:  cellForRowAt
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if tableView == checkInsTableView {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "checkInCell", for: indexPath) as? CheckInsTableViewCell
@@ -148,4 +144,5 @@ extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
       // throw data to landing
     }
   }
-}
+  
+} //  Ext. end

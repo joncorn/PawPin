@@ -10,19 +10,19 @@ import UIKit
 
 class LandingViewController: UIViewController {
   
-  //  MARK: - Outlets
+  //  MARK: - Outlets -
   //  Buttons
   @IBOutlet weak var SignUpButton: UIButton!
   @IBOutlet weak var LogInButton: UIButton!
   
-  //  MARK: - View Lifecycle
+  //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
     //  UI
     setupButtons()
   }
   
-  //  MARK: - Methods
+  //  MARK: - Methods -
   func setupButtons() {
     //  Rounded edges
     StyleGuide.styleLoginSignupButton(SignUpButton)

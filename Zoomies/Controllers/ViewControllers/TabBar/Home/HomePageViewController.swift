@@ -10,7 +10,7 @@ import UIKit
 
 class HomePageViewController: UIViewController {
   
-  //  MARK: - Outlets
+  //  MARK: - Outlets -
   //  Views
   @IBOutlet weak var headerView: UIView!
   @IBOutlet weak var scrollView: UIScrollView!
@@ -22,7 +22,7 @@ class HomePageViewController: UIViewController {
   //  Favorite Parks
   @IBOutlet weak var favoriteParksTableView: UITableView!
   
-  //  MARK: - View Lifecycle
+  //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
     //  DataSource/Delegates
@@ -49,7 +49,7 @@ class HomePageViewController: UIViewController {
     scrollView.setContentOffset(CGPoint.zero, animated: true)
   }
   
-  //  MARK: - Methods
+  //  MARK: - Methods -
   func setupUI() {
     setupViews()
     setupKeyboard()
@@ -101,7 +101,7 @@ class HomePageViewController: UIViewController {
   
 } //  Class end
 
-//  MARK: - TableViewDelegate
+//  MARK: - TableViewDelegate -
 extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 5
@@ -134,7 +134,7 @@ extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
     return UITableViewCell()
   }
   
-  // MARK: - Prepare for segue
+  // MARK: - Prepare for segue -
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == Constants.Storyboard.Segues.toParkDetails {
       guard let destinationVC = segue.destination as? ParkDetailsViewController,

@@ -10,46 +10,45 @@ import UIKit
 
 class FriendsRecentCheckInsViewController: UIViewController {
   
-  // MARK: - Outlets
-  // View
+  //  MARK: - Outlets -
+  //  View
   @IBOutlet weak var headerView: UIView!
-  // Tableview
+  //  Tableview
   @IBOutlet weak var checkInsTableView: UITableView!
   
-  // MARK: - View Lifecycle
+  //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
-    // DataSource/Delegate
+    //  DataSource/Delegate
     checkInsTableView.dataSource = self
     checkInsTableView.delegate = self
-    // UI
+    //  UI
     setupUI()
   }
   
-  // MARK: - Methods
+  //  MARK: - Methods -
   func setupUI() {
-    // Corner radius
+    //  Corner radius
     StyleGuide.styleViewsCornerRadius(headerView)
-    // Tableview
+    //  Tableview
     checkInsTableView.separatorStyle = .none
-    // Drop shadow
+    //  Drop shadow
     headerView.dropShadowHeader()
   }
   
-} // Class end
+} //  Class end
 
-// MARK: - Tableview DataSource/Delegate
+//  MARK: - TableViewDelegate -
 extension FriendsRecentCheckInsViewController: UITableViewDataSource, UITableViewDelegate {
-  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 20
+    return 20 //  Mock number
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "checkInCell", for: indexPath) as? ConnectFriendsCheckInsTableViewCell else {return UITableViewCell()}
     // Create cell
-    cell.setupElements()
+    cell.setupViews()
     return cell
   }
   
-} // Ext. end
+} //  Ext. end

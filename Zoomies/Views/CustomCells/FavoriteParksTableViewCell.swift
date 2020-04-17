@@ -10,32 +10,24 @@ import UIKit
 
 class FavoriteParksTableViewCell: UITableViewCell {
 
-  // MARK: - OUTLETS
-  
-  // Labels
+  //  MARK: - Outlets -
+  //  Labels
   @IBOutlet weak var parkNameLabel: UILabel!
   @IBOutlet weak var parkLocationLabel: UILabel!
-  
-  // Favorite button
+  //  Favorite button
   @IBOutlet weak var favoriteButton: UIButton!
-  
-  // Park image
+  //  Park image
   @IBOutlet weak var parkImageView: UIImageView!
-  
-  // Park details view
+  //  Park details view
   @IBOutlet weak var parkDetailsView: UIView!
   
-  // MARK: - ACTIONS
-  
-  // MARK: - METHODS
-  func setupElements() {
-    
-    // Stylize views
+  //  MARK: - Methods -
+  func setupViews() {
+    //  Corner radius
     StyleGuide.styleViewsCornerRadius(parkImageView)
     StyleGuide.styleViewsCornerRadius(parkDetailsView)
-    
-    // Drop shadow on parkDetailView
+    //  Drop shadow on parkDetailView
     parkDetailsView.dropShadow()
   }
 
-}
+} //  Class end

@@ -15,7 +15,7 @@ protocol HandleMapSearch: class {
 
 class parkLocationSearchTable: UITableViewController {
   
-  // MARK: - PROPERTIES
+  // MARK: - Properties -
   
   // Stashes search results
   var matchingItems: [MKMapItem] = []
@@ -25,14 +25,14 @@ class parkLocationSearchTable: UITableViewController {
   
   weak var delegate: HandleMapSearch?
   
-  // MARK: - VIEW LIFECYCLE
+  // MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
     
     self.tableView.separatorStyle = .none
   }
   
-  // MARK: - METHODS
+  // MARK: - Methods -
   func parseAddress(selectedItem: MKPlacemark) -> String {
     // Put space between "4" and "Melrose Place"
     let firstSpace = (selectedItem.subThoroughfare != nil && selectedItem.thoroughfare != nil) ? " " : ""
@@ -58,7 +58,7 @@ class parkLocationSearchTable: UITableViewController {
   
 } // Class end
 
-// MARK: - SearchController delegate
+// MARK: - SearchControllerDelegate -
 extension parkLocationSearchTable: UISearchResultsUpdating {
   func updateSearchResults(for searchController: UISearchController) {
     
@@ -84,7 +84,7 @@ extension parkLocationSearchTable: UISearchResultsUpdating {
   
 } // Ext. end
 
-// MARK: - TableView DataSource
+// MARK: - TableViewDelegate -
 extension parkLocationSearchTable {
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return matchingItems.count
@@ -97,21 +97,17 @@ extension parkLocationSearchTable {
     // Placemark is the name of the map item
     let selectedItem = matchingItems[indexPath.row].placemark
     
-    cell.setupElements()
+    cell.setupViews()
     cell.parkNameLabel.text = selectedItem.name
     cell.parkLocationLabel.text = parseAddress(selectedItem: selectedItem)
     
     return cell
   }
-} // Ext. end
-
-// MARK: - DidSelectRowAt
-extension parkLocationSearchTable {
-  // When result is selected, find correct placemark based on row number
-  // Then pass placemark to map controller
+  
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let selectedItem = matchingItems[indexPath.row].placemark
-    delegate?.dropPinZoomIn(selectedItem)
-    dismiss(animated: true, completion: nil)
-  }
-}
+     let selectedItem = matchingItems[indexPath.row].placemark
+     delegate?.dropPinZoomIn(selectedItem)
+     dismiss(animated: true, completion: nil)
+   }
+  
+} // Ext. end

@@ -10,23 +10,19 @@ import UIKit
 
 class RecentParkSearchTableViewCell: UITableViewCell {
 
-  // MARK: - OUTLETS
-  
-  // Image
+  //  MARK: - Outlets -
+  //  Image
   @IBOutlet weak var parkImageView: UIImageView!
-  
-  // View
+  //  View
   @IBOutlet weak var parkDetailsView: UIView!
   
-  // MARK: - METHODS
-  func setupElements() {
-    
-    // Stylize views
+  //  MARK: - Methods -
+  func SetupViews() {
+    //  Corner radius
     StyleGuide.styleViewsCornerRadius(parkImageView)
     StyleGuide.styleViewsCornerRadius(parkDetailsView)
-    
-    // Drop shadow on park detail view
+    //  Drop shadow on park detail view
     parkDetailsView.dropShadow()
   }
   
-}
+} //  Class end

@@ -10,27 +10,22 @@ import UIKit
 
 class parkLocationsSearchTableViewCell: UITableViewCell {
 
-  // MARK: - OUTLETS
-  
-  // Image
+  //  MARK: - Outlets -
+  //  Image
   @IBOutlet weak var parkImageView: UIImageView!
-  
-  // View
+  //  View
   @IBOutlet weak var parkDetailsView: UIView!
-  
-  // Labels
+  //  Labels
   @IBOutlet weak var parkNameLabel: UILabel!
   @IBOutlet weak var parkLocationLabel: UILabel!
   
-  // MARK: - METHODS
-  func setupElements() {
-
-    // Stylize views
+  //  MARK: - Methods -
+  func setupViews() {
+    //  Stylize views
     StyleGuide.styleViewsCornerRadius(parkImageView)
     StyleGuide.styleViewsCornerRadius(parkDetailsView)
-    
-    // Drop shadow
+    //  Drop shadow
     parkDetailsView.dropShadow()
   }
   
-}
+} //  Class end

@@ -10,7 +10,7 @@ import UIKit
 
 class ParksViewController: UIViewController {
   
-  //  MARK: - Outlets
+  //  MARK: - Outlets -
   //  Views
   @IBOutlet weak var headerView: UIView!
   @IBOutlet weak var scrollView: UIScrollView!
@@ -23,7 +23,7 @@ class ParksViewController: UIViewController {
   @IBOutlet weak var recentParkSearchTableView: UITableView!
   @IBOutlet weak var favoriteParksTableView: UITableView!
   
-  //  MARK: - View Lifecycle
+  //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
     //  DataSource/Delegates
@@ -43,13 +43,13 @@ class ParksViewController: UIViewController {
     favoriteParksTableView.setContentOffset(CGPoint.zero, animated: false)
   }
   
-  //  MARK: - Actions
+  //  MARK: - Actions -
   @IBAction func parkMapTapped(_ sender: UITapGestureRecognizer) {
     print("map")
     performSegue(withIdentifier: Constants.Storyboard.Segues.toParkMap, sender: self)
   }
   
-  //  MARK: - Methods
+  //  MARK: - Methods -
   func setupUI() {
     setupViews()
     setupTableViews()
@@ -78,7 +78,7 @@ class ParksViewController: UIViewController {
   
 } //  Class end
 
-//  MARK: - TableViewDelegate
+//  MARK: - TableViewDelegate -
 extension ParksViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 5
@@ -98,18 +98,18 @@ extension ParksViewController: UITableViewDelegate, UITableViewDataSource {
     if tableView == self.recentParkSearchTableView {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "recentParkCell", for: indexPath) as? RecentParkSearchTableViewCell else { return UITableViewCell()}
       //  configure cell here
-      cell.setupElements()
+      cell.SetupViews()
       return cell
     }
 
     if tableView == self.favoriteParksTableView {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteParkCell", for: indexPath) as? FavoriteParksTableViewCell else { return UITableViewCell()}
       //  configure cell here
-      cell.setupElements()
+      cell.setupViews()
       return cell
     }
     
     return UITableViewCell()
   }
   
-} // Ext. end
+} //  Ext. end

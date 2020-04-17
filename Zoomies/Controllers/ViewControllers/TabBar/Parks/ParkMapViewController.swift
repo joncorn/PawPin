@@ -11,16 +11,16 @@ import MapKit
 
 class ParkMapViewController: UIViewController {
   
-  // MARK: - PROPERTIES
+  // MARK: - Properties -
   let locationManager = CLLocationManager()
   var resultSearchController: UISearchController? = nil
   // Using this to cache any incoming placemarks
   var selectedPin: MKPlacemark? = nil
   
-  // MARK: - OUTLETS
+  // MARK: - Outlets -
   @IBOutlet weak var parkMapView: MKMapView!
   
-  // MARK: - VIEW LIFECYCLE
+  // MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -30,7 +30,7 @@ class ParkMapViewController: UIViewController {
     setupSearchBar()
   }
   
-  // MARK: - METHODS
+  // MARK: - Methods -
   @objc func getDirections() {
     // API call that luanches the apple maps app with driving instructions
     // Converting selectedPin to a MKMapItem which is used to tell apple maps the location
@@ -78,7 +78,7 @@ class ParkMapViewController: UIViewController {
 } // Class end
 
 
-// MARK: - CLLocationManagerDelegate
+// MARK: - CLLocationManagerDelegate -
 extension ParkMapViewController: CLLocationManagerDelegate {
   
   // Gets called when the user responds to the permission dialog
@@ -108,7 +108,7 @@ extension ParkMapViewController: CLLocationManagerDelegate {
   }
 } // Ext. end
 
-// MARK: - HandleMapSearch Delegate
+// MARK: - HandleMapSearchDelegate -
 extension ParkMapViewController: HandleMapSearch {
   func dropPinZoomIn(_ placemark: MKPlacemark) {
     // Cache the pin
@@ -135,7 +135,7 @@ extension ParkMapViewController: HandleMapSearch {
 }
 
 
-// MARK: - MKMapViewDelegate
+// MARK: - MKMapViewDelegate -
 extension ParkMapViewController: MKMapViewDelegate {
   
   // Customizes the appearance of map pins and callouts
@@ -163,4 +163,5 @@ extension ParkMapViewController: MKMapViewDelegate {
     
     return pinView
   }
-}
+  
+} //  Ext. end

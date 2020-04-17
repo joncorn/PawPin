@@ -10,7 +10,7 @@ import UIKit
 
 class SignUpViewController: UIViewController {
   
-  //  MARK: - Outlets
+  //  MARK: - Outlets -
   //  Views
   @IBOutlet weak var lastNameView: UIView!
   @IBOutlet weak var firstNameView: UIView!
@@ -21,7 +21,7 @@ class SignUpViewController: UIViewController {
   @IBOutlet weak var signUpButton: UIButton!
   @IBOutlet weak var errorLabel: UILabel!
   
-  //  MARK: - View Lifecycle
+  //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
     //  Delegates
@@ -40,7 +40,7 @@ class SignUpViewController: UIViewController {
     lastNameTextField.text = ""
   }
   
-  //  MARK: - Actions
+  //  MARK: - Actions -
   @IBAction func nextButtonTapped(_ sender: Any) {
     //  Check if text fields are valid, show error if not
     let error = SignupUtility().validateName(firstName: firstNameTextField, lastName: lastNameTextField)
@@ -51,7 +51,7 @@ class SignUpViewController: UIViewController {
     self.performSegue(withIdentifier: "toEmailPassVC", sender: self)
   }
   
-  //  MARK: - Methods
+  //  MARK: - Methods -
   func setupUI() {
     setupViews()
     setupKeyboard()
@@ -98,7 +98,7 @@ class SignUpViewController: UIViewController {
     view.addGestureRecognizer(tap)
   }
   
-  //  MARK: - Segue
+  //  MARK: - PrepareForSegue -
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "toEmailPassVC" {
       guard let destinationVC = segue.destination as? SignUpEmailPassViewController,
@@ -113,7 +113,7 @@ class SignUpViewController: UIViewController {
   
 } //  Class end
 
-//  MARK: - TextFieldDelegate
+//  MARK: - TextFieldDelegate -
 extension SignUpViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     //  On return, begins editing next text field

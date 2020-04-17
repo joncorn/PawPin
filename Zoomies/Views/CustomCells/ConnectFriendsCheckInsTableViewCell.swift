@@ -10,26 +10,22 @@ import UIKit
 
 class ConnectFriendsCheckInsTableViewCell: UITableViewCell {
   
-  // MARK: - OUTLETS
-  
-  // Views
+  //  MARK: - Outlets -
+  //  Views
   @IBOutlet weak var friendDogImageView: UIImageView!
   @IBOutlet weak var checkInDetailView: UIView!
-  
-  // Labels
+  //  Labels
   @IBOutlet weak var friendDogNameLabel: UILabel!
   @IBOutlet weak var checkInLocationLabel: UILabel!
   @IBOutlet weak var checkInTimeLabel: UILabel!
   
-  // MARK: - METHODS
-  func setupElements() {
-
-    // Stylize views
+  //  MARK: - Methods -
+  func setupViews() {
+    //  Corner radius
     StyleGuide.styleViewsCornerRadius(friendDogImageView)
     StyleGuide.styleViewsCornerRadius(checkInDetailView)
-    
-    // Drop shadow
+    //  Drop shadow
     checkInDetailView.dropShadow()
   }
   
-}
+} //  Class end

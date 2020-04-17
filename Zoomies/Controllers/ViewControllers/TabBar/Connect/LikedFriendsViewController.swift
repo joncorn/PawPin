@@ -10,47 +10,45 @@ import UIKit
 
 class LikedFriendsViewController: UIViewController {
   
-  // MARK: - Outlets
-  // View
+  //  MARK: - Outlets -
+  //  View
   @IBOutlet weak var headerView: UIView!
-  // Tableview
+  //  Tableview
   @IBOutlet weak var likedFriendsTableView: UITableView!
   
-  // MARK: - View Lifecycle
+  //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
-    // DataSource/Delegate
+    //  DataSource/Delegate
     likedFriendsTableView.dataSource = self
     likedFriendsTableView.delegate = self
-    // UI
+    //  UI
     setupUI()
   }
   
-  // MARK: - Methods
+  //  MARK: - Methods -
   func setupUI() {
-    // Corner radius
+    //  Corner radius
     StyleGuide.styleViewsCornerRadius(headerView)
-    // Tableview
+    //  Tableview
     likedFriendsTableView.separatorStyle = .none
-    // Drop shadow
+    //  Drop shadow
     headerView.dropShadowHeader()
   }
   
-} // Class end
+} //  Class end
 
-// MARK: - Tableview DataSource/Delegate
+//  MARK: - TableViewDelegate -
 extension LikedFriendsViewController: UITableViewDataSource, UITableViewDelegate {
-  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 20
+    return 20 //  Mock number
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "friendCell", for: indexPath) as? ConnectLikedFriendsTableViewCell else { return UITableViewCell()}
-    // Setup cell
-    cell.setupElements()
+    //  Setup cell
+    cell.setupViews()
     return cell
   }
   
-  
-} // Ext. end
+} //  Ext. end

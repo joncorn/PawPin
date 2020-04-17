@@ -10,21 +10,20 @@ import UIKit
 
 class CheckInsTableViewCell: UITableViewCell {
 
-  // MARK: - OUTLETS
+  //  MARK: - Outlets -
+  //  Views
   @IBOutlet weak var checkInView: UIView!
-  
+  //  Labels
   @IBOutlet weak var checkInDateLabel: UILabel!
   @IBOutlet weak var checkInTimeLabel: UIView!
   @IBOutlet weak var parkNameLabel: UIView!
   
-  // MARK: - METHODS
-  func setupElements() {
-    
-    // Stylize views
+  //  MARK: - Methods -
+  func setupViews() {
+    //  Corner radius
     StyleGuide.styleViewsCornerRadius(checkInView)
-    
-    // Drop shadow
+    //  Drop shadow
     checkInView.dropShadow()
   }
   
-}
+} //  Class end

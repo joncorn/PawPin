@@ -10,16 +10,16 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController {
   
-  //  MARK: - Properties
+  //  MARK: - Properties -
   let activityIndicator = UIActivityIndicatorView(style: .medium)
   
-  //  MARK: - Outlets
+  //  MARK: - Outlets -
   @IBOutlet weak var emailView: UIView!
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var errorLabel: UILabel!
   @IBOutlet weak var sendButton: UIButton!
   
-  //  MARK: - View Lifecycle
+  //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
     //  Delegate
@@ -28,7 +28,7 @@ class ForgotPasswordViewController: UIViewController {
     setupUI()
   }
   
-  //  MARK: - Actions
+  //  MARK: - Actions -
   @IBAction func sendButtonTapped(_ sender: Any) {
     guard let email = emailTextField.text, email != "" else {
       self.showError("Enter your email")
@@ -54,7 +54,7 @@ class ForgotPasswordViewController: UIViewController {
     self.popBack(2)
   }
   
-  //  MARK: - Methods
+  //  MARK: - Methods -
   func setupUI() {
     setupViews()
     setupKeyboard()
@@ -100,7 +100,7 @@ class ForgotPasswordViewController: UIViewController {
   
 } //  Class end
 
-//  MARK: - UITextFieldDelegate
+//  MARK: - UITextFieldDelegate -
 extension ForgotPasswordViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     //  Dismiss keyboard when return is pressed

@@ -10,28 +10,23 @@ import UIKit
 
 class ConnectLikedFriendsTableViewCell: UITableViewCell {
 
-  // MARK: - OUTLETS
-  
-  // Views
+  //  MARK: - Outlets -
+  //  Views
   @IBOutlet weak var friendDetailView: UIView!
   @IBOutlet weak var friendDogImageView: UIImageView!
-  
-  // Labels
+  //  Labels
   @IBOutlet weak var friendNameLabel: UILabel!
   @IBOutlet weak var friendDogNameLabel: UILabel!
-  
-  // Buttons
+  //  Buttons
   @IBOutlet weak var likedButton: UIButton!
   
-  // MARK: - METHODS
-  func setupElements() {
-    
-    // Stylize views
+  //  MARK: - Methods -
+  func setupViews() {
+    //  Stylize views
     StyleGuide.styleViewsCornerRadius(friendDetailView)
     StyleGuide.styleViewsCornerRadius(friendDogImageView)
-    
-    // Drop shadow
+    //  Drop shadow
     friendDetailView.dropShadow()
   }
   
-}
+} //  Class end

@@ -10,17 +10,16 @@ import UIKit
 
 class ProfileDogCollectionViewCell: UICollectionViewCell {
   
-  // MARK: - OUTLETS
-  
-  // Label
+  //  MARK: - Outlets -
+  //  Label
   @IBOutlet weak var dogNameLabel: UILabel!
-  
-  // Image
+  //  Image
   @IBOutlet weak var dogImageView: UIImageView!
   
-  // MARK: - METHODS
-  func setupElements() {
-    dogImageView.layer.cornerRadius = StyleGuide.Constants.dogCornerRadius
+  //  MARK: - Methods -
+  func setupViews() {
+    //  Corner radius
+    StyleGuide.styleViewsCornerRadius(dogImageView)
   }
   
-}
+} //  Class end

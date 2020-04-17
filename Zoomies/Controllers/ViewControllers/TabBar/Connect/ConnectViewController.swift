@@ -10,64 +10,63 @@ import UIKit
 
 class ConnectViewController: UIViewController {
   
-  // MARK: - Outlets
-  // Views
+  //  MARK: - Outlets -
+  //  Views
   @IBOutlet weak var headerView: UIView!
   @IBOutlet weak var scrollView: UIScrollView!
-  // Header buttons
+  //  Header buttons
   @IBOutlet weak var likedFriendsButton: UIButton!
   @IBOutlet weak var friendsCheckInsButton: UIButton!
-  // Table views
+  //  Table views
   @IBOutlet weak var likedFriendsTableView: UITableView!
   @IBOutlet weak var friendsRecentCheckInsTableView: UITableView!
   
-  // MARK: - View Lifecycle
+  //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
-    // DataSource/Delegates
+    //  DataSource/Delegates
     likedFriendsTableView.dataSource = self
     likedFriendsTableView.delegate = self
     friendsRecentCheckInsTableView.dataSource = self
     friendsRecentCheckInsTableView.delegate = self
-    // UI
+    //  UI
     setupUI()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    // Reset view positions
+    //  Reset view positions
     scrollView.setContentOffset(CGPoint.zero, animated: false)
     likedFriendsTableView.setContentOffset(CGPoint.zero, animated: false)
     friendsRecentCheckInsTableView.setContentOffset(CGPoint.zero, animated: false)
   }
   
-  // MARK: - Methods
+  //  MARK: - Methods -
   func setupUI() {
-    setupElements()
+    setupViews()
     setupTableViews()
   }
   
-  func setupElements() {
-    // Corner radius
+  func setupViews() {
+    //  Corner radius
     StyleGuide.styleViewsCornerRadius(likedFriendsButton)
     StyleGuide.styleViewsCornerRadius(friendsCheckInsButton)
     StyleGuide.styleViewsCornerRadius(friendsRecentCheckInsTableView)
     StyleGuide.styleViewsCornerRadius(likedFriendsTableView)
     StyleGuide.styleViewsCornerRadius(headerView)
-    // Drop shadow
+    //  Drop shadow
     headerView.dropShadowHeader()
   }
   
   func setupTableViews() {
-    // Tableview separator style
+    //  Tableview separator style
     likedFriendsTableView.separatorStyle = .none
     friendsRecentCheckInsTableView.separatorStyle = .none
   }
   
 } //  Class end
 
-//  MARK: - TableViewDelegate
-
+//  MARK: - TableViewDelegate -
 extension ConnectViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if tableView == likedFriendsTableView {
@@ -83,16 +82,16 @@ extension ConnectViewController: UITableViewDataSource, UITableViewDelegate {
     if tableView == likedFriendsTableView {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "friendCell", for: indexPath)
         as? ConnectLikedFriendsTableViewCell else { return UITableViewCell() }
-      // Build cell
-      cell.setupElements()
+      //  Build cell
+      cell.setupViews()
       return cell
     }
     
     if tableView == friendsRecentCheckInsTableView {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "checkInCell", for: indexPath)
         as? ConnectFriendsCheckInsTableViewCell else { return UITableViewCell() }
-      // Build cell
-      cell.setupElements()
+      //  Build cell
+      cell.setupViews()
       return cell
     }
     

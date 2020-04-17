@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
   
-  //  MARK: - Outlets
+  //  MARK: - Outlets -
   //  Status bar
   @IBOutlet weak var statusView: UIView!
   @IBOutlet weak var statusTextField: UITextField!
@@ -20,7 +20,7 @@ class ProfileViewController: UIViewController {
   @IBOutlet weak var editButton: UIButton!
   @IBOutlet weak var settingsButton: UIButton!
   
-  //  MARK: - View Lifecycle
+  //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
     //  DataSource/Delegate
@@ -30,7 +30,7 @@ class ProfileViewController: UIViewController {
     setupUI()
   }
   
-  //  MARK: - Methods
+  //  MARK: - Methods -
   func setupUI() {
     setupViews()
     setupKeyboard()
@@ -88,7 +88,7 @@ class ProfileViewController: UIViewController {
   
 } //  Class end
 
-//  MARK: - CollectionViewDelegate
+//  MARK: - CollectionViewDelegate -
 extension ProfileViewController: UICollectionViewDataSource, UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return 5
@@ -98,7 +98,7 @@ extension ProfileViewController: UICollectionViewDataSource, UICollectionViewDel
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dogCell", for: indexPath)
       as? ProfileDogCollectionViewCell else { return UICollectionViewCell()}
     // Build cell
-    cell.setupElements()
+    cell.setupViews()
     return cell
   }
   

@@ -10,7 +10,7 @@ import UIKit
 
 class AboutDogViewController: UIViewController {
   
-  //  MARK: - Outlets
+  //  MARK: - Outlets -
   //  Dog breed text field
   @IBOutlet weak var breedView: UIView!
   @IBOutlet weak var breedTextField: UITextField!
@@ -30,7 +30,7 @@ class AboutDogViewController: UIViewController {
   @IBOutlet weak var errorLabel: UILabel!
   @IBOutlet weak var nextButton: UIButton!
   
-  //  MARK: - View Lifecycle
+  //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
     //  UI
@@ -43,7 +43,7 @@ class AboutDogViewController: UIViewController {
     errorLabel.alpha = 0
   }
   
-  //  MARK: - Actions
+  //  MARK: - Actions -
   @IBAction func nextButtonTapped(_ sender: Any) {
     //  Checks if the text fields have a value, if not, show error
     let error = SignupUtility().validateBreedAge(dogBreed: breedTextField, dogAge: ageTextField)
@@ -58,7 +58,7 @@ class AboutDogViewController: UIViewController {
     self.performSegue(withIdentifier: Constants.Storyboard.Segues.toDogPic, sender: self)
   }
   
-  //  MARK: - Methods
+  //  MARK: - Methods -
   func setupUI() {
     setupViews()
     setupKeyboard()
@@ -112,7 +112,7 @@ class AboutDogViewController: UIViewController {
   
 } //  Class end
 
-//  MARK: - UITestFieldDelegate
+//  MARK: - UITestFieldDelegate -
 extension AboutDogViewController: UITextFieldDelegate {
   
 } //  Ext. end

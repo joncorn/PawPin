@@ -10,18 +10,16 @@ import UIKit
 
 class UploadDogPicViewController: UIViewController {
   
-  //  MARK: - Properties
-  
-  //  MARK: - Outlets
+  //  MARK: - Outlets -
   @IBOutlet weak var DogPicImageView: UIImageView!
   @IBOutlet weak var submitButton: UIButton!
   
-  //  MARK: - View Lifecycle
+  //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
   }
   
-  //  MARK: - Actions
+  //  MARK: - Actions -
   @IBAction func nextButtonTapped(_ sender: Any) {
     
     //  Validate picture?

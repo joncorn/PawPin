@@ -10,13 +10,13 @@ import UIKit
 
 class FavoriteParksViewController: UIViewController {
   
-  // MARK: - Outlets
+  // MARK: - Outlets -
   // Header
   @IBOutlet weak var favoriteParksButton: UIButton!
   // Tableview
   @IBOutlet weak var favoriteParksTableView: UITableView!
   
-  // MARK: - View Lifecycle
+  // MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
     // DataSource/Delegate
@@ -26,7 +26,7 @@ class FavoriteParksViewController: UIViewController {
     setupUI()
   }
   
-  // MARK: - Methods
+  // MARK: - Methods -
   func setupUI() {
     // Corner radius
     StyleGuide.styleViewsCornerRadius(favoriteParksTableView)
@@ -37,7 +37,7 @@ class FavoriteParksViewController: UIViewController {
   
 } // Class end
 
-// MARK: - TableviewDataSource
+// MARK: - TableviewDelegate -
 extension FavoriteParksViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 20
@@ -45,7 +45,7 @@ extension FavoriteParksViewController: UITableViewDataSource, UITableViewDelegat
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteParkCell", for: indexPath) as? FavoriteParksTableViewCell else {return UITableViewCell()}
-    cell.setupElements()
+    cell.setupViews()
     return cell
   }
   

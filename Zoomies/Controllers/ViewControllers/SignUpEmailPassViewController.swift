@@ -10,7 +10,7 @@ import UIKit
 
 class SignUpEmailPassViewController: UIViewController {
   
-  //  MARK: - Properties
+  //  MARK: Properties -
   var firstNameLanding: String? {
     didSet {
       //  Troubleshooting
@@ -24,7 +24,7 @@ class SignUpEmailPassViewController: UIViewController {
     }
   }
   
-  //  MARK: - Outlets
+  //  MARK: - Outlets -
   //  Views
   @IBOutlet weak var emailView: UIView!
   @IBOutlet weak var passwordView: UIView!
@@ -36,7 +36,7 @@ class SignUpEmailPassViewController: UIViewController {
   //  Buttons
   @IBOutlet weak var submitButton: UIButton!
   
-  //  MARK: - View Lifecycle
+  //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
     //  Delegates
@@ -55,7 +55,7 @@ class SignUpEmailPassViewController: UIViewController {
     passwordTextField.text = ""
   }
   
-  //  MARK: - Actions
+  //  MARK: - Actions -
   @IBAction func submitButtonTapped(_ sender: Any) {
     //  If there aren't any values in the name fields, user won't be created
     guard let firstName = firstNameLanding,
@@ -71,7 +71,7 @@ class SignUpEmailPassViewController: UIViewController {
       let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
       let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
       
-      //  MARK:  Create user
+      //  MARK: Create user
       FirebaseNetworking.createUser(firstName: firstName, lastName: lastName, email: email, password: password, errorLabel: errorLabel) { (error) in
         if !error {
           print("There was an error.")
@@ -82,7 +82,7 @@ class SignUpEmailPassViewController: UIViewController {
     }
   }
   
-  //  MARK: - Methods
+  //  MARK: - Methods -
   func setupUI () {
     setupViews()
     setupKeyboard()
@@ -130,7 +130,7 @@ class SignUpEmailPassViewController: UIViewController {
   
 } //  Class end
 
-//  MARK: - UITextFieldDelegate
+//  MARK: - UITextFieldDelegate -
 extension SignUpEmailPassViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     //  On return, begins editing next text field

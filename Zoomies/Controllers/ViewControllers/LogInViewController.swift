@@ -11,7 +11,7 @@ import FirebaseAuth
 
 class LogInViewController: UIViewController {
   
-  //  MARK: - Outlets
+  //  MARK: - Outlets -
   //  Views
   @IBOutlet weak var emailView: UIView!
   @IBOutlet weak var passwordView: UIView!
@@ -22,7 +22,7 @@ class LogInViewController: UIViewController {
   @IBOutlet weak var loginButton: UIButton!
   @IBOutlet weak var errorLabel: UILabel!
   
-  //  MARK: - View Lifecycle
+  //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
     //  Delegates
@@ -41,7 +41,7 @@ class LogInViewController: UIViewController {
     passwordTextField.text = ""
   }
   
-  //  MARK: - Actions
+  //  MARK: - Actions -
   @IBAction func logInButtonTapped(_ sender: Any) {
     let error = validateFields()
     if error != nil {
@@ -62,7 +62,7 @@ class LogInViewController: UIViewController {
     }
   }
   
-  //  MARK: - Methods
+  //  MARK: - Methods -
   func setupUI() {
     setupViews()
     setupKeyboard()
@@ -129,7 +129,7 @@ class LogInViewController: UIViewController {
   
 } //  Class end
 
-//  MARK: - UITextFieldDelegate
+//  MARK: - UITextFieldDelegate -
 extension LogInViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     //  On return, begins editing next text field

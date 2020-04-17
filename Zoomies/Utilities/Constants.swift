@@ -18,6 +18,8 @@ struct Constants {
       static let recentParks = "toRecentParksVC"
       static let toParkMap = "toParkMapVC"
       static let toParkDetails = "toParkDetailsVC"
+      static let toDogInfo = "toDogInfoVC"
+      static let toDogPic = "toDogPicVC"
     }
 
     struct VCReference {

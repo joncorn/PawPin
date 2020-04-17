@@ -287,7 +287,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type..." textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="Vo6-oX-2hu">
                                         <rect key="frame" x="16" y="12" width="358" height="41"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.7725490196" green="0.81176470590000005" blue="0.75294117650000003" alpha="0.53799229449999997" colorSpace="custom" customColorSpace="sRGB"/>
@@ -446,7 +446,7 @@
                         <outlet property="passwordTextField" destination="Gha-4m-T5s" id="wbM-Sv-zwQ"/>
                         <outlet property="passwordView" destination="lby-7G-Mc6" id="1mj-IA-c4N"/>
                         <outlet property="submitButton" destination="2jp-Jr-aaw" id="P8l-47-uQK"/>
-                        <segue destination="rSq-Jd-XY5" kind="show" identifier="toHomeScreenRef" id="KBz-1r-e9Q"/>
+                        <segue destination="Ia6-H9-hW1" kind="show" identifier="toDogInfoVC" id="D6q-KX-RcD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFr-Nb-cNT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -476,7 +476,7 @@
                                         <rect key="frame" x="16" y="12" width="358" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.7725490196" green="0.81176470590000005" blue="0.75294117650000003" alpha="0.53799229449999997" colorSpace="custom" customColorSpace="sRGB"/>
@@ -615,14 +615,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIM-Ha-E7I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3462" y="-394"/>
+            <point key="canvasLocation" x="2877" y="-238"/>
         </scene>
         <!--Upload Dog Pic View Controller-->
         <scene sceneID="rGV-Sj-DYf">
             <objects>
                 <viewController id="3fY-Ea-u8z" customClass="UploadDogPicViewController" customModule="PawPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZCb-sP-GB2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About your pup.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iH-r3-sNC">
@@ -654,6 +654,7 @@
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="dT1-Kh-zwD" eventType="touchUpInside" id="9sA-al-3Zc"/>
                                     <action selector="nextButtonTapped:" destination="Ia6-H9-hW1" eventType="touchUpInside" id="RNe-Zf-cdT"/>
+                                    <action selector="nextButtonTapped:" destination="3fY-Ea-u8z" eventType="touchUpInside" id="eUy-nj-jj9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjn-8z-mQD">
@@ -676,11 +677,12 @@
                     <connections>
                         <outlet property="DogPicImageView" destination="8IG-DQ-Hc9" id="n1k-bk-9XS"/>
                         <outlet property="submitButton" destination="yom-hp-cnG" id="uL3-yQ-cwz"/>
+                        <segue destination="rSq-Jd-XY5" kind="show" identifier="toHomeScreenRef" id="G5o-as-ddt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OH0-k5-gqt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4204" y="-394"/>
+            <point key="canvasLocation" x="3628" y="-238"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="GUl-HT-9jU">
@@ -727,7 +729,7 @@
                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hBv-Dz-D0n">
                                         <rect key="frame" x="16" y="12" width="358" height="41"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.7725490196" green="0.81176470590000005" blue="0.75294117650000003" alpha="0.53799229449999997" colorSpace="custom" customColorSpace="sRGB"/>
@@ -848,31 +850,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYc-Xw-MKb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1371.0144927536232" y="463.39285714285711"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="6cz-UP-121">
-            <objects>
-                <viewController storyboardIdentifier="HomeVC" id="OvS-xJ-z0d" customClass="HomeViewController" customModule="PawPin" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Per-iU-DZ5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qq7-Le-RJd">
-                                <rect key="frame" x="136" y="433" width="143" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="kMM-6v-wVX"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="k1v-gI-FhB"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f5s-7e-E8J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5014" y="113"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N2w-N9-9dq">
@@ -1024,7 +1001,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AjZ-tr-7aQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2137.68115942029" y="462.72321428571428"/>
+            <point key="canvasLocation" x="1371" y="1193"/>
         </scene>
         <!--Password Reset Sent View Controller-->
         <scene sceneID="Okc-dg-c6T">
@@ -1081,7 +1058,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VvW-MA-pEc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2876.811594202899" y="462.72321428571428"/>
+            <point key="canvasLocation" x="2139" y="1193"/>
         </scene>
         <!--tabBar-->
         <scene sceneID="fjr-9u-kKs">
@@ -1091,7 +1068,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SB7-6L-Sle" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3649" y="52"/>
+            <point key="canvasLocation" x="3628" y="463"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

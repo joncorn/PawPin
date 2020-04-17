@@ -10,38 +10,37 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController {
   
-  // MARK: - PROPERTIES
+  //  MARK: - Properties
   let activityIndicator = UIActivityIndicatorView(style: .medium)
   
-  // MARK: - OUTLETS
+  //  MARK: - Outlets
   @IBOutlet weak var emailView: UIView!
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var errorLabel: UILabel!
   @IBOutlet weak var sendButton: UIButton!
   
-  // MARK: - VIEW LIFECYCLE
+  //  MARK: - View Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Delegate
+    //  Delegate
     emailTextField.delegate = self
-    // UI
+    //  UI
     setupUI()
   }
   
-  // MARK: - ACTIONS
+  //  MARK: - Actions
   @IBAction func sendButtonTapped(_ sender: Any) {
     guard let email = emailTextField.text, email != "" else {
       self.showError("Enter your email")
       return
     }
-    
     let error = SignupUtility().validateEmail(email: email)
     if error != nil {
       showError(error!)
       return
     }
     
-    // password reset call
+    //  MARK:  Reset Password
     FirebaseNetworking.resetPassword(email: email, onSuccess: {
       self.view.endEditing(true)
       self.performSegue(withIdentifier: "toEmailSentVC", sender: self)
@@ -51,21 +50,20 @@ class ForgotPasswordViewController: UIViewController {
   }
   
   @IBAction func backToLoginButtonTapped(_ sender: Any) {
+    //  Pop back to specific view on stack
     self.popBack(2)
   }
   
-  
-  // MARK: - METHODS
+  //  MARK: - Methods
   func setupUI() {
-    setupElements()
-    setupTextFields()
-    setupTapGesture()
+    setupViews()
+    setupKeyboard()
   }
   
-  func setupElements() {
-    // Hide error label
+  func setupViews() {
+    //  Hide error label
     errorLabel.alpha = 0
-    // Corner radius
+    //  Corner radius
     StyleGuide.styleViewsCornerRadius(emailView)
     StyleGuide.styleViewsCornerRadius(sendButton)
   }
@@ -73,6 +71,11 @@ class ForgotPasswordViewController: UIViewController {
   func showError(_ message: String) {
     errorLabel.text = message
     errorLabel.alpha = 1
+  }
+  
+  func setupKeyboard() {
+    setupTextFields()
+    setupTapGesture()
   }
   
   func setupTextFields() {
@@ -95,12 +98,14 @@ class ForgotPasswordViewController: UIViewController {
     view.addGestureRecognizer(tap)
   }
   
-} // Class end
+} //  Class end
 
-// MARK: - UITextFieldDelegate
+//  MARK: - UITextFieldDelegate
 extension ForgotPasswordViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    //  Dismiss keyboard when return is pressed
     self.view.endEditing(true)
     return false
   }
-}
+  
+} //  Ext. end

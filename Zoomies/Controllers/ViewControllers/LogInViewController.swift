@@ -11,34 +11,37 @@ import FirebaseAuth
 
 class LogInViewController: UIViewController {
   
-  // MARK: - Outlets
-  // Views
+  //  MARK: - Outlets
+  //  Views
   @IBOutlet weak var emailView: UIView!
   @IBOutlet weak var passwordView: UIView!
-  // Text fields
+  //  Text fields
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
-  // Login button, erro label
+  //  Login button, erro label
   @IBOutlet weak var loginButton: UIButton!
   @IBOutlet weak var errorLabel: UILabel!
   
-  // MARK: - View Lifecycle
+  //  MARK: - View Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Delegates
+    //  Delegates
     emailTextField.delegate = self
     passwordTextField.delegate = self
-    // UI
+    //  UI
     setupUI()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    // Make error label invisible
+    //  Make error label invisible
     errorLabel.alpha = 0
+    //  Reset text fields
+    emailTextField.text = ""
+    passwordTextField.text = ""
   }
   
-  // MARK: - Actions
+  //  MARK: - Actions
   @IBAction func logInButtonTapped(_ sender: Any) {
     let error = validateFields()
     if error != nil {
@@ -47,7 +50,7 @@ class LogInViewController: UIViewController {
       let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
       let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
       
-      // MARK:  Signing in user
+      //  MARK:  Signing in user
       Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
         if error != nil {
           self.errorLabel.text = error!.localizedDescription
@@ -59,12 +62,10 @@ class LogInViewController: UIViewController {
     }
   }
   
-  // MARK: - Methods
-  
+  //  MARK: - Methods
   func setupUI() {
-    setupElements()
-    setupTextFields()
-    setupTapGesture()
+    setupViews()
+    setupKeyboard()
   }
   
   func showError(_ message: String) {
@@ -73,6 +74,7 @@ class LogInViewController: UIViewController {
   }
   
   func validateFields() -> String? {
+    //  Validate text fields and returns error string for errorLabel
     if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
       passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
       return "Please fill in both fields"
@@ -90,13 +92,18 @@ class LogInViewController: UIViewController {
     return nil
   }
   
-  func setupElements() {
-    // Hide error label
+  func setupViews() {
+    //  Hide error label
     errorLabel.alpha = 0
-    // Corner radius
+    //  Corner radius
     StyleGuide.styleViewsCornerRadius(emailView)
     StyleGuide.styleViewsCornerRadius(passwordView)
     StyleGuide.styleViewsCornerRadius(loginButton)
+  }
+  
+  func setupKeyboard() {
+    setupTextFields()
+    setupTapGesture()
   }
   
   func setupTextFields() {
@@ -120,18 +127,18 @@ class LogInViewController: UIViewController {
     view.addGestureRecognizer(tap)
   }
   
-} // Class end
+} //  Class end
 
-// MARK: - UITextFieldDelegate
+//  MARK: - UITextFieldDelegate
 extension LogInViewController: UITextFieldDelegate {
-  
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    //  On return, begins editing next text field
     if textField == emailTextField {
       passwordTextField.becomeFirstResponder()
     } else {
       passwordTextField.resignFirstResponder()
     }
-    
     return true
   }
-}
+  
+} //  Ext. end

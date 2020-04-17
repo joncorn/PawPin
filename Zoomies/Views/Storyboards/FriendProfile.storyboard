@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eBq-DK-xPW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Friend Profile View Controller-->
+        <scene sceneID="cR5-fT-ZeT">
+            <objects>
+                <viewController id="eBq-DK-xPW" customClass="FriendProfileViewController" customModule="PawPin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="74x-Pp-eU5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face-nerve-paralysis" translatesAutoresizingMaskIntoConstraints="NO" id="CPv-bx-pBi">
+                                <rect key="frame" x="0.0" y="44" width="414" height="291"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rusty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eox-tz-Ozu">
+                                <rect key="frame" x="16" y="421" width="382" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="Ugi-G8-XXQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sammy Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFo-SQ-ViS">
+                                <rect key="frame" x="16" y="472" width="338" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="CkW-rS-p15"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QT3-yW-3y7">
+                                <rect key="frame" x="362" y="472" width="36" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="WgG-c4-xd1"/>
+                                    <constraint firstAttribute="width" constant="36" id="fRl-24-K4p"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="heartEmpty"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fek-6G-FvD">
+                                <rect key="frame" x="16" y="561" width="65" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="J0K-FH-Zq5"/>
+                                    <constraint firstAttribute="height" constant="29" id="dqb-mr-Q48"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iak-kF-O5b">
+                                <rect key="frame" x="16" y="702" width="91" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TLf-tQ-a7P"/>
+                                    <constraint firstAttribute="width" constant="91" id="WBl-fW-tEQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GLA-px-IBq">
+                                <rect key="frame" x="16" y="748" width="331" height="80.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laborador" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DVk-Ww-Pt6">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 years old" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lfa-ce-17a">
+                                        <rect key="frame" x="0.0" y="29.5" width="331" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Small Dog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PUd-Kz-Mhy">
+                                        <rect key="frame" x="0.0" y="59" width="331" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80.5" id="mZ9-nh-t8u"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mot-P4-kPw">
+                                <rect key="frame" x="16" y="598" width="382" height="65"/>
+                                <color key="backgroundColor" red="0.7725490196" green="0.81176470590000005" blue="0.75294117650000003" alpha="0.53799229449999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="7Vd-lb-Ibq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CPv-bx-pBi" firstAttribute="leading" secondItem="GCU-uZ-cW7" secondAttribute="leading" id="501-Od-Edn"/>
+                            <constraint firstItem="cFo-SQ-ViS" firstAttribute="top" secondItem="eox-tz-Ozu" secondAttribute="bottom" constant="8" id="5Uq-r2-XKb"/>
+                            <constraint firstItem="Fek-6G-FvD" firstAttribute="centerY" secondItem="GCU-uZ-cW7" secondAttribute="centerY" multiplier="1.2699" id="Aa9-r1-G4W"/>
+                            <constraint firstItem="CPv-bx-pBi" firstAttribute="width" secondItem="74x-Pp-eU5" secondAttribute="width" id="Jr0-9k-fos"/>
+                            <constraint firstItem="GLA-px-IBq" firstAttribute="leading" secondItem="GCU-uZ-cW7" secondAttribute="leading" constant="16" id="LlQ-G8-xqu"/>
+                            <constraint firstItem="QT3-yW-3y7" firstAttribute="top" secondItem="eox-tz-Ozu" secondAttribute="bottom" constant="8" id="Ly2-Ua-ajp"/>
+                            <constraint firstItem="cFo-SQ-ViS" firstAttribute="leading" secondItem="GCU-uZ-cW7" secondAttribute="leading" constant="16" id="N0l-r4-HNC"/>
+                            <constraint firstItem="GCU-uZ-cW7" firstAttribute="trailing" secondItem="QT3-yW-3y7" secondAttribute="trailing" constant="16" id="NzP-bf-ivZ"/>
+                            <constraint firstItem="eox-tz-Ozu" firstAttribute="centerX" secondItem="GCU-uZ-cW7" secondAttribute="centerX" id="QCO-Yn-ebc"/>
+                            <constraint firstItem="iak-kF-O5b" firstAttribute="leading" secondItem="GCU-uZ-cW7" secondAttribute="leading" constant="16" id="VNI-Ec-wjz"/>
+                            <constraint firstItem="GLA-px-IBq" firstAttribute="top" secondItem="iak-kF-O5b" secondAttribute="bottom" constant="16" id="Vfy-jI-Kvq"/>
+                            <constraint firstItem="Fek-6G-FvD" firstAttribute="centerX" secondItem="GCU-uZ-cW7" secondAttribute="centerX" multiplier="0.235" id="cFV-4O-KXu"/>
+                            <constraint firstItem="mot-P4-kPw" firstAttribute="leading" secondItem="GCU-uZ-cW7" secondAttribute="leading" constant="16" id="eEl-Jm-JhP"/>
+                            <constraint firstItem="CPv-bx-pBi" firstAttribute="height" secondItem="74x-Pp-eU5" secondAttribute="height" multiplier="0.324777" id="edv-uc-c5L"/>
+                            <constraint firstItem="GLA-px-IBq" firstAttribute="width" secondItem="74x-Pp-eU5" secondAttribute="width" multiplier="0.8" id="fYs-GW-4ht"/>
+                            <constraint firstItem="cFo-SQ-ViS" firstAttribute="width" secondItem="74x-Pp-eU5" secondAttribute="width" multiplier="0.816425" id="ik7-93-BON"/>
+                            <constraint firstItem="CPv-bx-pBi" firstAttribute="top" secondItem="GCU-uZ-cW7" secondAttribute="top" id="nDZ-mA-lXO"/>
+                            <constraint firstItem="iak-kF-O5b" firstAttribute="top" secondItem="mot-P4-kPw" secondAttribute="bottom" constant="39" id="o4j-c3-aPu"/>
+                            <constraint firstItem="eox-tz-Ozu" firstAttribute="centerY" secondItem="GCU-uZ-cW7" secondAttribute="centerY" multiplier="0.977" id="tfy-tc-8gV"/>
+                            <constraint firstItem="mot-P4-kPw" firstAttribute="top" secondItem="Fek-6G-FvD" secondAttribute="bottom" constant="8" id="vad-tz-GC4"/>
+                            <constraint firstItem="mot-P4-kPw" firstAttribute="width" secondItem="74x-Pp-eU5" secondAttribute="width" multiplier="0.922705" id="yAH-5g-b99"/>
+                            <constraint firstItem="eox-tz-Ozu" firstAttribute="width" secondItem="74x-Pp-eU5" secondAttribute="width" multiplier="0.922705" id="zss-Tf-qCh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GCU-uZ-cW7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LEf-GH-rpk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="70.982142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="face-nerve-paralysis" width="590" height="428"/>
+        <image name="heartEmpty" width="36" height="33"/>
+    </resources>
+</document>

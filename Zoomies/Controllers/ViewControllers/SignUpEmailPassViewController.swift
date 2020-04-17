@@ -10,54 +10,39 @@ import UIKit
 
 class SignUpEmailPassViewController: UIViewController {
   
-  //  MARK: Properties -
-  var firstNameLanding: String? {
-    didSet {
-      //  Troubleshooting
-      print(firstNameLanding as Any)
-    }
-  }
-  var lastNameLanding: String? {
-    didSet {
-      //  Troubleshooting
-      print(lastNameLanding as Any)
-    }
-  }
+  //  MARK: - Properties -
+  var firstNameLanding: String?
+  var lastNameLanding: String?
   
   //  MARK: - Outlets -
-  //  Views
   @IBOutlet weak var emailView: UIView!
   @IBOutlet weak var passwordView: UIView!
-  //  Textfields
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
-  //  Labels
   @IBOutlet weak var errorLabel: UILabel!
-  //  Buttons
   @IBOutlet weak var submitButton: UIButton!
   
   //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
-    //  Delegates
+    
     emailTextField.delegate = self
     passwordTextField.delegate = self
-    //  UI
+    
     setupUI()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    //  Make error label invisible
+    
     errorLabel.alpha = 0
-    //  Reset text fields
     emailTextField.text = ""
     passwordTextField.text = ""
   }
   
   //  MARK: - Actions -
   @IBAction func submitButtonTapped(_ sender: Any) {
-    //  If there aren't any values in the name fields, user won't be created
+    //  If first and last name's are nil, don't create user
     guard let firstName = firstNameLanding,
       let lastName = lastNameLanding else { return }
     
@@ -89,9 +74,7 @@ class SignUpEmailPassViewController: UIViewController {
   }
   
   func setupViews() {
-    //  Make error label invisible
     errorLabel.alpha = 0
-    //  Corner radius
     StyleGuide.styleViewsCornerRadius(emailView)
     StyleGuide.styleViewsCornerRadius(passwordView)
     StyleGuide.styleViewsCornerRadius(submitButton)

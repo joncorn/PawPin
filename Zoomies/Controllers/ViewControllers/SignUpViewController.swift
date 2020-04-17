@@ -11,31 +11,27 @@ import UIKit
 class SignUpViewController: UIViewController {
   
   //  MARK: - Outlets -
-  //  Views
   @IBOutlet weak var lastNameView: UIView!
   @IBOutlet weak var firstNameView: UIView!
-  //  Text Fields
   @IBOutlet weak var firstNameTextField: UITextField!
   @IBOutlet weak var lastNameTextField: UITextField!
-  //  Button, label
   @IBOutlet weak var signUpButton: UIButton!
   @IBOutlet weak var errorLabel: UILabel!
   
   //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
-    //  Delegates
+    
     self.firstNameTextField.delegate = self
     self.lastNameTextField.delegate = self
-    //  UI
+    
     setupUI()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    //  Make error label invisible
+    
     errorLabel.alpha = 0
-    //  Reset text fields
     firstNameTextField.text = ""
     lastNameTextField.text = ""
   }
@@ -58,9 +54,7 @@ class SignUpViewController: UIViewController {
   }
   
   func setupViews() {
-    //  Error label
     errorLabel.alpha = 0
-    //  Corner radius
     StyleGuide.styleViewsCornerRadius(firstNameView)
     StyleGuide.styleViewsCornerRadius(lastNameView)
     StyleGuide.styleViewsCornerRadius(signUpButton)

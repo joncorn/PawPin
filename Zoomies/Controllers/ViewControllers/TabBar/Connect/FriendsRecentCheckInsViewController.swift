@@ -11,28 +11,23 @@ import UIKit
 class FriendsRecentCheckInsViewController: UIViewController {
   
   //  MARK: - Outlets -
-  //  View
   @IBOutlet weak var headerView: UIView!
-  //  Tableview
   @IBOutlet weak var checkInsTableView: UITableView!
   
   //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
-    //  DataSource/Delegate
+    
     checkInsTableView.dataSource = self
     checkInsTableView.delegate = self
-    //  UI
+    
     setupUI()
   }
   
   //  MARK: - Methods -
   func setupUI() {
-    //  Corner radius
     StyleGuide.styleViewsCornerRadius(headerView)
-    //  Tableview
     checkInsTableView.separatorStyle = .none
-    //  Drop shadow
     headerView.dropShadowHeader()
   }
   

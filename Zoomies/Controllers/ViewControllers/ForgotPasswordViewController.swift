@@ -22,9 +22,9 @@ class ForgotPasswordViewController: UIViewController {
   //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
-    //  Delegate
+    
     emailTextField.delegate = self
-    //  UI
+    
     setupUI()
   }
   
@@ -34,6 +34,7 @@ class ForgotPasswordViewController: UIViewController {
       self.showError("Enter your email")
       return
     }
+    //  Validate email
     let error = SignupUtility().validateEmail(email: email)
     if error != nil {
       showError(error!)
@@ -61,9 +62,7 @@ class ForgotPasswordViewController: UIViewController {
   }
   
   func setupViews() {
-    //  Hide error label
     errorLabel.alpha = 0
-    //  Corner radius
     StyleGuide.styleViewsCornerRadius(emailView)
     StyleGuide.styleViewsCornerRadius(sendButton)
   }

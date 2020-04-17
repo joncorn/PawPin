@@ -11,41 +11,37 @@ import UIKit
 class HomePageViewController: UIViewController {
   
   //  MARK: - Outlets -
-  //  Views
   @IBOutlet weak var headerView: UIView!
   @IBOutlet weak var scrollView: UIScrollView!
-  //  Status text field
   @IBOutlet weak var statusView: UIView!
   @IBOutlet weak var statusTextField: UITextField!
-  //  Recent Check Ins
   @IBOutlet weak var checkInsTableView: UITableView!
-  //  Favorite Parks
   @IBOutlet weak var favoriteParksTableView: UITableView!
   
   //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
-    //  DataSource/Delegates
+    
     favoriteParksTableView.delegate = self
     favoriteParksTableView.dataSource = self
     checkInsTableView.delegate = self
     checkInsTableView.dataSource = self
-    //  UI
+    
     setupUI()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    //  Hide navbar
+    
     hideNavigationBar(animated: animated)
-    //  Reset tableviews positions
+    
     checkInsTableView.setContentOffset(CGPoint.zero, animated: false)
     favoriteParksTableView.setContentOffset(CGPoint.zero, animated: false)
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    //  Reset scrollview position
+    
     scrollView.setContentOffset(CGPoint.zero, animated: true)
   }
   
@@ -56,21 +52,19 @@ class HomePageViewController: UIViewController {
   }
   
   func setupViews() {
-    //  Corner radius
     StyleGuide.styleViewsCornerRadius(statusView)
     StyleGuide.styleViewsCornerRadius(checkInsTableView)
     StyleGuide.styleViewsCornerRadius(favoriteParksTableView)
     StyleGuide.styleViewsCornerRadius(headerView)
-    //  Seperator Style
+    
     favoriteParksTableView.separatorStyle = .none
     checkInsTableView.separatorStyle = .none
     checkInsTableView.allowsSelection = false
-    //  Header view
+    
     headerView.dropShadowHeader()
   }
   
   func hideNavigationBar(animated: Bool) {
-    //  Hide navigation bar after logging in
     self.navigationController?.setNavigationBarHidden(true, animated: animated)
   }
   
@@ -119,7 +113,7 @@ extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "checkInCell", for: indexPath) as? CheckInsTableViewCell
         else {return UITableViewCell()}
       // Setup cell
-      cell.setupElements()
+      cell.setupViews()
       return cell
     }
     
@@ -127,7 +121,7 @@ extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "parkCell", for: indexPath) as? FavoriteParksTableViewCell
         else { return UITableViewCell()}
       // Setup cell
-      cell.setupElements()
+      cell.setupViews()
       return cell
     }
     

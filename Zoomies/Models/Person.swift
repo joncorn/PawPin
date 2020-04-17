@@ -10,7 +10,7 @@ import Foundation
 
 class Person {
   
-  // MARK:  Properites
+  //  MARK: - Properites -
   var firstName: String
   var lastName: String
   var status: String
@@ -18,7 +18,7 @@ class Person {
   var dogParks: [DogPark]
   var dogs: [Dog]
   
-  // MARK:  Initializer
+  //  MARK: - Initializer -
   init(firstName: String, lastName: String, status: String, checkIns: [CheckIn] = [], dogParks: [DogPark] = [], dogs: [Dog] = []) {
     self.firstName = firstName
     self.lastName = lastName

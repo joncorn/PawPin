@@ -11,33 +11,29 @@ import UIKit
 class ParksViewController: UIViewController {
   
   //  MARK: - Outlets -
-  //  Views
   @IBOutlet weak var headerView: UIView!
   @IBOutlet weak var scrollView: UIScrollView!
-  //  Map button
   @IBOutlet weak var parkMapImageView: UIImageView!
-  //  Header buttons
   @IBOutlet weak var recentParkSearchButton: UIButton!
   @IBOutlet weak var favoriteParksButton: UIButton!
-  //  Tableviews
   @IBOutlet weak var recentParkSearchTableView: UITableView!
   @IBOutlet weak var favoriteParksTableView: UITableView!
   
   //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
-    //  DataSource/Delegates
+    
     recentParkSearchTableView.delegate = self
     recentParkSearchTableView.dataSource = self
     favoriteParksTableView.delegate = self
     favoriteParksTableView.dataSource = self
-    //  UI
+    
     setupUI()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    //  Reset scrollview position
+    //  Reset view position
     scrollView.setContentOffset(CGPoint.zero, animated: false)
     recentParkSearchTableView.setContentOffset(CGPoint.zero, animated: false)
     favoriteParksTableView.setContentOffset(CGPoint.zero, animated: false)
@@ -45,7 +41,6 @@ class ParksViewController: UIViewController {
   
   //  MARK: - Actions -
   @IBAction func parkMapTapped(_ sender: UITapGestureRecognizer) {
-    print("map")
     performSegue(withIdentifier: Constants.Storyboard.Segues.toParkMap, sender: self)
   }
   
@@ -56,22 +51,19 @@ class ParksViewController: UIViewController {
   }
   
   func setupViews() {
-    //  Corner radius
     StyleGuide.styleViewsCornerRadius(parkMapImageView)
     StyleGuide.styleViewsCornerRadius(recentParkSearchButton)
     StyleGuide.styleViewsCornerRadius(favoriteParksButton)
-    //  Allow action when image is tapped
+    
     parkMapImageView.isUserInteractionEnabled = true
-    //  Drop shadow
+    
     headerView.dropShadowHeader()
   }
   
   func setupTableViews() {
-    //  Corner radius
     StyleGuide.styleViewsCornerRadius(recentParkSearchTableView)
     StyleGuide.styleViewsCornerRadius(favoriteParksTableView)
     StyleGuide.styleViewsCornerRadius(headerView)
-    //  Separator style
     recentParkSearchTableView.separatorStyle = .none
     favoriteParksTableView.separatorStyle = .none
   }

@@ -10,7 +10,7 @@ import UIKit
 
 class Dog {
   
-  // MARK:  Properties
+  //  MARK: - Properties -
   var name: String
   var size: [DogSize]
   var breed: String
@@ -28,7 +28,7 @@ class Dog {
     var Large: Bool = false
   }
   
-  // MARK:  Initializer
+  //  MARK: - Initializer -
   init(name: String, size: [DogSize], breed: String, status: String, image: [DogPic] = [], owner: String) {
     self.name = name
     self.size = size

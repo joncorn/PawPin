@@ -12,31 +12,27 @@ import FirebaseAuth
 class LogInViewController: UIViewController {
   
   //  MARK: - Outlets -
-  //  Views
   @IBOutlet weak var emailView: UIView!
   @IBOutlet weak var passwordView: UIView!
-  //  Text fields
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
-  //  Login button, erro label
   @IBOutlet weak var loginButton: UIButton!
   @IBOutlet weak var errorLabel: UILabel!
   
   //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
-    //  Delegates
+    
     emailTextField.delegate = self
     passwordTextField.delegate = self
-    //  UI
+    
     setupUI()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    //  Make error label invisible
+    
     errorLabel.alpha = 0
-    //  Reset text fields
     emailTextField.text = ""
     passwordTextField.text = ""
   }
@@ -73,6 +69,13 @@ class LogInViewController: UIViewController {
     errorLabel.alpha = 1
   }
   
+  func setupViews() {
+    errorLabel.alpha = 0
+    StyleGuide.styleViewsCornerRadius(emailView)
+    StyleGuide.styleViewsCornerRadius(passwordView)
+    StyleGuide.styleViewsCornerRadius(loginButton)
+  }
+  
   func validateFields() -> String? {
     //  Validate text fields and returns error string for errorLabel
     if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
@@ -90,15 +93,6 @@ class LogInViewController: UIViewController {
       return "Please make sure your password is at least 8 characters, and contains a number and a special character"
     }
     return nil
-  }
-  
-  func setupViews() {
-    //  Hide error label
-    errorLabel.alpha = 0
-    //  Corner radius
-    StyleGuide.styleViewsCornerRadius(emailView)
-    StyleGuide.styleViewsCornerRadius(passwordView)
-    StyleGuide.styleViewsCornerRadius(loginButton)
   }
   
   func setupKeyboard() {

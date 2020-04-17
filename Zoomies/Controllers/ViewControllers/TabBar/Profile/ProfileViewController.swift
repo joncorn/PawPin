@@ -11,22 +11,19 @@ import UIKit
 class ProfileViewController: UIViewController {
   
   //  MARK: - Outlets -
-  //  Status bar
   @IBOutlet weak var statusView: UIView!
   @IBOutlet weak var statusTextField: UITextField!
-  //  Dogs collection view
   @IBOutlet weak var dogsCollectionView: UICollectionView!
-  //  Buttons
   @IBOutlet weak var editButton: UIButton!
   @IBOutlet weak var settingsButton: UIButton!
   
   //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
-    //  DataSource/Delegate
+    
     dogsCollectionView.delegate = self
     dogsCollectionView.dataSource = self
-    //  UI
+    
     setupUI()
   }
   
@@ -37,7 +34,6 @@ class ProfileViewController: UIViewController {
   }
   
   func setupViews() {
-    //  Corner radius
     StyleGuide.styleViewsCornerRadius(statusView)
   }
   

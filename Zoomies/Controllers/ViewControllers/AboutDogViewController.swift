@@ -11,35 +11,29 @@ import UIKit
 class AboutDogViewController: UIViewController {
   
   //  MARK: - Outlets -
-  //  Dog breed text field
   @IBOutlet weak var breedView: UIView!
   @IBOutlet weak var breedTextField: UITextField!
-  //  Dog age text field
   @IBOutlet weak var ageView: UIView!
   @IBOutlet weak var ageTextField: UITextField!
-  //  Small size check box
   @IBOutlet weak var smallDogSizeView: UIView!
   @IBOutlet weak var smallCheckBoxButton: UIButton!
-  //  Medium size check box
   @IBOutlet weak var mediumDogSizeView: UIView!
   @IBOutlet weak var mediumCheckBoxButton: UIButton!
-  //  Large size check box
   @IBOutlet weak var largeDogSizeView: UIView!
   @IBOutlet weak var largeCheckBoxButton: UIButton!
-  //  Button, error label
   @IBOutlet weak var errorLabel: UILabel!
   @IBOutlet weak var nextButton: UIButton!
   
   //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
-    //  UI
+    
     setupUI()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    //  Make error label invisible
+    
     errorLabel.alpha = 0
   }
   
@@ -70,9 +64,7 @@ class AboutDogViewController: UIViewController {
   }
   
   func setupViews() {
-    //  Hide error label
     errorLabel.alpha = 0
-    //  Corner radius
     StyleGuide.styleViewsCornerRadius(breedView)
     StyleGuide.styleViewsCornerRadius(ageView)
     StyleGuide.styleViewsCornerRadius(smallDogSizeView)

@@ -11,25 +11,22 @@ import UIKit
 class ConnectViewController: UIViewController {
   
   //  MARK: - Outlets -
-  //  Views
   @IBOutlet weak var headerView: UIView!
   @IBOutlet weak var scrollView: UIScrollView!
-  //  Header buttons
   @IBOutlet weak var likedFriendsButton: UIButton!
   @IBOutlet weak var friendsCheckInsButton: UIButton!
-  //  Table views
   @IBOutlet weak var likedFriendsTableView: UITableView!
   @IBOutlet weak var friendsRecentCheckInsTableView: UITableView!
   
   //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
-    //  DataSource/Delegates
+    
     likedFriendsTableView.dataSource = self
     likedFriendsTableView.delegate = self
     friendsRecentCheckInsTableView.dataSource = self
     friendsRecentCheckInsTableView.delegate = self
-    //  UI
+    
     setupUI()
   }
   
@@ -48,18 +45,16 @@ class ConnectViewController: UIViewController {
   }
   
   func setupViews() {
-    //  Corner radius
     StyleGuide.styleViewsCornerRadius(likedFriendsButton)
     StyleGuide.styleViewsCornerRadius(friendsCheckInsButton)
     StyleGuide.styleViewsCornerRadius(friendsRecentCheckInsTableView)
     StyleGuide.styleViewsCornerRadius(likedFriendsTableView)
     StyleGuide.styleViewsCornerRadius(headerView)
-    //  Drop shadow
+    
     headerView.dropShadowHeader()
   }
   
   func setupTableViews() {
-    //  Tableview separator style
     likedFriendsTableView.separatorStyle = .none
     friendsRecentCheckInsTableView.separatorStyle = .none
   }

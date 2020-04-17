@@ -11,14 +11,11 @@ import UIKit
 class ProfileDogCollectionViewCell: UICollectionViewCell {
   
   //  MARK: - Outlets -
-  //  Label
   @IBOutlet weak var dogNameLabel: UILabel!
-  //  Image
   @IBOutlet weak var dogImageView: UIImageView!
   
   //  MARK: - Methods -
   func setupViews() {
-    //  Corner radius
     StyleGuide.styleViewsCornerRadius(dogImageView)
   }
   

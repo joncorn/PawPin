@@ -11,28 +11,23 @@ import UIKit
 class LikedFriendsViewController: UIViewController {
   
   //  MARK: - Outlets -
-  //  View
   @IBOutlet weak var headerView: UIView!
-  //  Tableview
   @IBOutlet weak var likedFriendsTableView: UITableView!
   
   //  MARK: - View Lifecycle -
   override func viewDidLoad() {
     super.viewDidLoad()
-    //  DataSource/Delegate
+    
     likedFriendsTableView.dataSource = self
     likedFriendsTableView.delegate = self
-    //  UI
+    
     setupUI()
   }
   
   //  MARK: - Methods -
   func setupUI() {
-    //  Corner radius
     StyleGuide.styleViewsCornerRadius(headerView)
-    //  Tableview
     likedFriendsTableView.separatorStyle = .none
-    //  Drop shadow
     headerView.dropShadowHeader()
   }
   

@@ -10,34 +10,34 @@ import UIKit
 
 class ProfileViewController: UIViewController {
   
-  // MARK: - OUTLETS
-  // Status bar
+  //  MARK: - Outlets
+  //  Status bar
   @IBOutlet weak var statusView: UIView!
   @IBOutlet weak var statusTextField: UITextField!
-  // Dogs collection view
+  //  Dogs collection view
   @IBOutlet weak var dogsCollectionView: UICollectionView!
-  // Buttons
+  //  Buttons
   @IBOutlet weak var editButton: UIButton!
   @IBOutlet weak var settingsButton: UIButton!
   
-  // MARK: - VIEW LIFECYCLE
+  //  MARK: - View Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    // DataSource/Delegate
+    //  DataSource/Delegate
     dogsCollectionView.delegate = self
     dogsCollectionView.dataSource = self
-    // UI
+    //  UI
     setupUI()
   }
   
-  // MARK: - METHODS
+  //  MARK: - Methods
   func setupUI() {
-    setupElements()
+    setupViews()
     setupKeyboard()
   }
   
-  func setupElements() {
-    // Corner radius
+  func setupViews() {
+    //  Corner radius
     StyleGuide.styleViewsCornerRadius(statusView)
   }
   
@@ -48,15 +48,13 @@ class ProfileViewController: UIViewController {
   }
   
   func setupTextFields() {
-    // Create toolbar
     let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: view.frame.size.width, height: 30)))
-    // Create left side empty space so that done button set on right side
     let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-    // Create done button
     let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonTapped))
+    
     toolbar.setItems([flexSpace, doneButton], animated: false)
     toolbar.sizeToFit()
-    // Add toolbar to keyboards
+    
     statusTextField.inputAccessoryView = toolbar
   }
   
@@ -88,9 +86,9 @@ class ProfileViewController: UIViewController {
     }
   }
   
-} // Class end
+} //  Class end
 
-// MARK: - COLLECTIONVIEW DELEGATE
+//  MARK: - CollectionViewDelegate
 extension ProfileViewController: UICollectionViewDataSource, UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return 5
@@ -100,10 +98,8 @@ extension ProfileViewController: UICollectionViewDataSource, UICollectionViewDel
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dogCell", for: indexPath)
       as? ProfileDogCollectionViewCell else { return UICollectionViewCell()}
     // Build cell
-    
     cell.setupElements()
-    
     return cell
   }
   
-}
+} //  Ext. end

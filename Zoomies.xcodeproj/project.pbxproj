@@ -146,6 +146,22 @@
 			path = Connect;
 			sourceTree = "<group>";
 		};
+		6D15E1C424497BB000DF98DD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6DBA9F5A2417FC1C0087002F /* HomePageViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6D15E1C524497BBB00DF98DD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				6D7F5A2E24366A2800B4BBDB /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		6D3C17038D531937F3FD8C67 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,10 +185,10 @@
 		6D7F5A28243669CD00B4BBDB /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				6DBA9F5A2417FC1C0087002F /* HomePageViewController.swift */,
+				6D15E1C424497BB000DF98DD /* Home */,
 				6D60CE27243A3C03008AF5EC /* Parks */,
 				6D15E1BB2447DEC000DF98DD /* Connect */,
-				6D7F5A2E24366A2800B4BBDB /* ProfileViewController.swift */,
+				6D15E1C524497BBB00DF98DD /* Profile */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";

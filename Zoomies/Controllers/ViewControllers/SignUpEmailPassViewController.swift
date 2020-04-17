@@ -10,64 +10,68 @@ import UIKit
 
 class SignUpEmailPassViewController: UIViewController {
   
-  // MARK: - PROPERTIES
+  //  MARK: - Properties
   var firstNameLanding: String? {
     didSet {
-      // Troubleshooting
+      //  Troubleshooting
       print(firstNameLanding as Any)
     }
   }
   var lastNameLanding: String? {
     didSet {
-      // Troubleshooting
+      //  Troubleshooting
       print(lastNameLanding as Any)
     }
   }
   
-  // MARK: - OUTLETS
+  //  MARK: - Outlets
+  //  Views
   @IBOutlet weak var emailView: UIView!
   @IBOutlet weak var passwordView: UIView!
-  // Textfields
+  //  Textfields
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
-  // Labels
+  //  Labels
   @IBOutlet weak var errorLabel: UILabel!
-  // Buttons
+  //  Buttons
   @IBOutlet weak var submitButton: UIButton!
   
-  // MARK: - VIEW LIFECYCLE
+  //  MARK: - View Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Delegates
+    //  Delegates
     emailTextField.delegate = self
     passwordTextField.delegate = self
-    // UI
+    //  UI
     setupUI()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    // Make error label invisible
+    //  Make error label invisible
     errorLabel.alpha = 0
+    //  Reset text fields
+    emailTextField.text = ""
+    passwordTextField.text = ""
   }
   
-  // MARK: - ACTIONS
+  //  MARK: - Actions
   @IBAction func submitButtonTapped(_ sender: Any) {
-    // If there aren't any values in the name fields, user won't be created
+    //  If there aren't any values in the name fields, user won't be created
     guard let firstName = firstNameLanding,
       let lastName = lastNameLanding else { return }
     
-    // Validate fields
+    //  Validate fields
     let error = SignupUtility().validateEmailPass(email: emailTextField, password: passwordTextField)
     if error != nil {
       showError(error!)
     } else {
       
-      // If there's no error, grab what's in the text fields..
+      //  If there's no error, grab what's in the text fields..
       let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
       let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
       
-      // MARK:  Create user
+      //  MARK:  Create user
       FirebaseNetworking.createUser(firstName: firstName, lastName: lastName, email: email, password: password, errorLabel: errorLabel) { (error) in
         if !error {
           print("There was an error.")
@@ -78,17 +82,16 @@ class SignUpEmailPassViewController: UIViewController {
     }
   }
   
-  // MARK: - METHODS
+  //  MARK: - Methods
   func setupUI () {
-    setupElements()
-    setupTextFields()
-    setupTapGesture()
+    setupViews()
+    setupKeyboard()
   }
   
-  func setupElements() {
-    // Make error label invisible
+  func setupViews() {
+    //  Make error label invisible
     errorLabel.alpha = 0
-    // Corner radius
+    //  Corner radius
     StyleGuide.styleViewsCornerRadius(emailView)
     StyleGuide.styleViewsCornerRadius(passwordView)
     StyleGuide.styleViewsCornerRadius(submitButton)
@@ -97,6 +100,11 @@ class SignUpEmailPassViewController: UIViewController {
   func showError(_ message: String) {
     errorLabel.text = message
     errorLabel.alpha = 1
+  }
+  
+  func setupKeyboard() {
+    setupTextFields()
+    setupTapGesture()
   }
   
   func setupTextFields() {
@@ -120,18 +128,18 @@ class SignUpEmailPassViewController: UIViewController {
     view.addGestureRecognizer(tap)
   }
   
-} // Class end
+} //  Class end
 
-// MARK: - UITextFieldDelegate
+//  MARK: - UITextFieldDelegate
 extension SignUpEmailPassViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    
+    //  On return, begins editing next text field
     if textField == emailTextField {
       passwordTextField.becomeFirstResponder()
     } else {
       passwordTextField.resignFirstResponder()
     }
-    
     return true
   }
-}
+  
+} //  Ext. end

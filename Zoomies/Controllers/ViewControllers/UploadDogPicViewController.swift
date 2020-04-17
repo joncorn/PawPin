@@ -10,28 +10,26 @@ import UIKit
 
 class UploadDogPicViewController: UIViewController {
   
-  // MARK: - PROPERTIES
+  //  MARK: - Properties
   
-  
-  
-  // MARK: - OUTLETS
+  //  MARK: - Outlets
   @IBOutlet weak var DogPicImageView: UIImageView!
   @IBOutlet weak var submitButton: UIButton!
   
-  // MARK: - VIEW LIFECYCLE
+  //  MARK: - View Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
   }
   
-  // MARK: - ACTIONS
+  //  MARK: - Actions
   @IBAction func nextButtonTapped(_ sender: Any) {
     
-    // Validate picture?
+    //  Validate picture?
     
-    // Upload picture to firebase
+    //  Upload picture to firebase
     
-    // Segue to home screen
+    //  Segue to home screen
     self.performSegue(withIdentifier: Constants.Storyboard.Segues.toHomeScreen, sender: self)
   }
   
-}
+} //  Class end

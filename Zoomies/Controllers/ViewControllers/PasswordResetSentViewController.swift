@@ -10,15 +10,15 @@ import UIKit
 
 class PasswordResetSentViewController: UIViewController {
   
-  // MARK: - VIEW LIFECYCLE
+  //  MARK: - View Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
   }
   
-  // MARK: - ACTIONS
+  //  MARK: - Actions
   @IBAction func backToLoginButtonTapped(_ sender: Any) {
-    // Popback to view number on stack
+    //  Pop back to specific view
     self.popBack(3)
   }
   
-}
+} //  Class end
